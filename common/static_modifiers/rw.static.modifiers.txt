@@ -1,0 +1,42 @@
+# Development straight gives less.
+
+development = {
+	allowed_num_of_buildings = 0.1
+	supply_limit_modifier = 0.02
+	local_missionary_strength = -0.001
+	land_forcelimit	= 0.04		# 40%
+	naval_forcelimit = 0.04		# 40%
+	local_sailors = 30			# Halved
+	province_trade_power_value = 0.2
+	local_amount_of_banners = 0.033 # Halved
+	local_amount_of_cawa = 0.0625 # Halved
+	local_amount_of_carolean = 0.05 # Halved
+	local_amount_of_hussars = 0.005 # Halved
+}
+
+states_in_hre = {
+	land_forcelimit	= 0.2	# 40%
+	global_manpower = 0.2 # 40%
+}
+
+free_cities_in_hre = {
+	global_tax_income = 2
+	global_manpower = 0.4 	# 40%
+	land_forcelimit	= 0.2	# 40%
+}
+
+scaled_trade_league_leader = { #scaled by number of members
+	trade_steering = 0.05
+	naval_forcelimit = 0.8	# 40%
+	global_sailors = 400	# 40%
+	land_forcelimit = 0.4	# 40%
+	global_manpower = 0.4	# 40%
+}
+
+BYZ_pronoia_land_forcelimit_penalty = {
+	land_forcelimit = -2
+}
+
+BYZ_extra_forcelimit_for_pronoiars = {
+	land_forcelimit = 2
+}
