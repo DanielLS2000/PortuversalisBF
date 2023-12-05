@@ -1,0 +1,5 @@
+﻿l_english:
+ is_subject_other_than_tributary_trigger_tooltip: "Is Subject other than Tributary or Sphere"
+ is_free_or_tributary_trigger_tooltip: "Is Independent, Tributary or Sphere"
+ 
+ CW_WARNTRIBUTARY: "$ENEMY$ is protected by $COUNTRY$ who will likely defend them."

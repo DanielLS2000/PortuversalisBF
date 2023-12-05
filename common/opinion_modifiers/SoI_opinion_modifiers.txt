@@ -1,0 +1,19 @@
+generic_great_opinion = {
+	opinion = 100
+	yearly_decay = 3
+}
+
+generic_good_opinion = {
+	opinion = 50
+	yearly_decay = 3
+}
+
+generic_bad_opinion = {
+	opinion = -50
+	yearly_decay = 3
+}
+
+generic_terrible_opinion = {
+	opinion = -100
+	yearly_decay = 3
+}

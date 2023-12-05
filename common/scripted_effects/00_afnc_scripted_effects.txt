@@ -1,0 +1,230 @@
+on_change_tag_effect = {
+	#Vanilla
+		hidden_effect = {
+			restore_country_name = yes
+			restore_country_color = yes
+			#England specific
+			if = { limit = { has_country_modifier = royal_impressment_act_modifier } remove_country_modifier = royal_impressment_act_modifier }
+			if = { limit = { has_country_modifier = isolationism_act_modifier } remove_country_modifier = isolationism_act_modifier }
+			if = { limit = { has_country_modifier = colonial_act_modifier } remove_country_modifier = colonial_act_modifier }
+			if = { limit = { has_country_modifier = military_reassignment_act_modifier } remove_country_modifier = military_reassignment_act_modifier }
+			if = { limit = { has_country_modifier = acts_of_development_modifier } remove_country_modifier = acts_of_development_modifier }
+			if = { limit = { has_country_modifier = global_empire_act_modifier } remove_country_modifier = global_empire_act_modifier }
+			if = { limit = { has_country_modifier = naval_reassignment_act_modifier } remove_country_modifier = naval_reassignment_act_modifier }
+			if = { limit = { has_country_modifier = diplomatic_act_modifier } remove_country_modifier = diplomatic_act_modifier }
+			if = { limit = { has_country_modifier = internal_focus_act_modifier } remove_country_modifier = internal_focus_act_modifier }
+		}
+	#Alternative Formable Nation Colors
+		#Commonwealth
+			if = {
+				limit = {
+					AND = {
+						tag = PLC #Commonwealth
+						OR = {
+							was_tag = LIT #Lithuania
+							culture = lithuanian
+						}
+					}
+				}
+				set_country_flag = has_overriden_color_flag
+				change_country_color = {
+					color = { 167 54 111 }
+				}
+			}
+		#France
+			else_if = {
+				limit = {
+					AND = {
+						tag = FRA #France
+						was_tag = BUR #Burgundy
+					}
+				}
+				set_country_flag = has_overriden_color_flag
+				change_country_color = {
+					color = { 94 30 70 }
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						tag = FRA #France
+						OR = {
+							was_tag = PRO #Provence
+							culture = occitain
+						}
+					}
+				}
+				set_country_flag = has_overriden_color_flag
+				change_country_color = {
+					color = { 137 170 191 }
+				}
+			}
+		#Germany
+			else_if = {
+				limit = {
+					AND = {
+						tag = GER #Germany
+						OR = {
+							was_tag = HAB #Austria
+							was_tag = STY #Styria
+							was_tag = TIR #Tirol
+							culture = austrian
+						}
+					}
+				}
+				set_country_flag = has_overriden_color_flag
+				change_country_color = {
+					color = { 102 117 118 }
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						tag = GER #Germany
+						OR = {
+							was_tag = PRU #Prussia
+							was_tag = BRA #Brandenburg
+							was_tag = TEU #Teutonic Order
+							culture = prussian
+						}
+					}
+				}
+				set_country_flag = has_overriden_color_flag
+				change_country_color = {
+					color = { 57 68 69 }
+				}
+			}
+		#Great Britain
+			else_if = {
+				limit = {
+					AND = {
+						tag = GBR #Great Britain
+						OR = {
+							was_tag = SCO #Scotland
+							was_tag = HSC #Gaeldom
+							was_tag = LOI #The Isles
+							culture = scottish
+							culture = highlander
+						}
+					}
+				}
+				set_country_flag = has_overriden_color_flag
+				change_country_color = {
+					color = { 0 36 125 }
+				}
+			}
+		#Russia
+			else_if = {
+				limit = {
+					AND = {
+						tag = RUS #Russia
+						OR = {
+							was_tag = NOV #Novgorod
+							culture = novgorodian
+						}
+					}
+				}
+				set_country_flag = has_overriden_color_flag
+				change_country_color = {
+					color = { 47 89 28 }
+				}
+			}
+		#Scandinavia
+			else_if = {
+				limit = {
+					AND = {
+						tag = SCA #Scandinavia
+						OR = {
+							was_tag = FIN #Finland
+							culture = finnish
+						}
+					}
+				}
+				set_country_flag = has_overriden_color_flag
+				change_country_color = {
+					color = { 186 225 225 }
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						tag = SCA #Scandinavia
+						OR = {
+							was_tag = NOR #Norway
+							was_tag = ICE #Iceland
+							culture = norwegian
+							culture = icelandic
+						}
+					}
+				}
+				set_country_flag = has_overriden_color_flag
+				change_country_color = {
+					color = { 108 156 211 }
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						tag = SCA #Scandinavia
+						OR = {
+							was_tag = SWE #Sweden
+							culture = swedish
+						}
+					}
+				}
+				set_country_flag = has_overriden_color_flag
+				change_country_color = {
+					color = { 37 97 164 }
+				}
+			}
+		#Spain
+			else_if = {
+				limit = {
+					AND = {
+						tag = SPA #Spain
+						OR = {
+							was_tag = ARA #Aragon
+							was_tag = CAT #Catalonia
+							was_tag = VAL #Valencia
+							was_tag = MJO #Majorca
+							culture = aragonese
+							culture = catalan
+						}
+					}
+				}
+				set_country_flag = has_overriden_color_flag
+				change_country_color = {
+					color = { 200 100 31 }
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						tag = SPA #Spain
+						OR = {
+							was_tag = NAV #Navarra
+							culture = basque
+						}
+					}
+				}
+				set_country_flag = has_overriden_color_flag
+				change_country_color = {
+					color = { 252 237 101 }
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						tag = SPA #Spain
+						OR = {
+							was_tag = POR #Portugal
+							culture = portuguese
+						}
+					}
+				}
+				set_country_flag = has_overriden_color_flag
+				change_country_color = {
+					color = { 72 140 169 }
+				}
+			}
+	}

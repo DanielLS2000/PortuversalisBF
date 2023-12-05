@@ -1,0 +1,19 @@
+is_subject_other_than_tributary_trigger = { #Ie Tags that cannot conduct independent diplomacy
+	custom_trigger_tooltip = {
+		tooltip = is_subject_other_than_tributary_trigger_tooltip
+		is_subject = yes
+		NOT = { is_subject_of_type = tributary_state }
+		NOT = { is_subject_of_type = sphere_member }
+	}
+}
+
+is_free_or_tributary_trigger = { #I.e. Tags that can conduct independent diplomacy
+	custom_trigger_tooltip = {
+		tooltip = is_free_or_tributary_trigger_tooltip
+		OR = {
+			is_subject = no
+			is_subject_of_type = tributary_state
+			is_subject_of_type = sphere_member
+		}
+	}
+}
