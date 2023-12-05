@@ -98,7 +98,7 @@ RB_ClampRevolutions = {
 	trigger = {
 		current_age = age_of_revolutions
 	}
-	governing_capacity_modifier = -0.2
+	governing_capacity_modifier = -0.25
 }
 
 RB_MissionToCivilize = {

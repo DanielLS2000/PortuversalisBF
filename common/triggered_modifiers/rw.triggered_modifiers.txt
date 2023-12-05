@@ -12,7 +12,6 @@ rw_depleted_manpower = {
 		manpower_percentage = 0.05
 	}
 	
-	land_morale = -0.1
 	manpower_recovery_speed = 0.1
 }
 
@@ -21,8 +20,6 @@ rw_no_manpower = {
 		NOT = { manpower_percentage = 0.05 }
 	}
 	
-	land_morale = -0.15
-	discipline = -0.05
 	manpower_recovery_speed = 0.2
 }
 
