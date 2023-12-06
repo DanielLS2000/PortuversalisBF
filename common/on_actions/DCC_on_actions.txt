@@ -1,0 +1,11 @@
+
+on_startup = {
+	set_global_flag = default
+	set_global_flag = default_factor
+	set_global_flag = default_ai
+	set_global_flag = DCC_installed
+	if = {
+		limit = { has_global_flag = beyond_typus_mod_enabled }
+		set_global_flag = beyond_typus_compat_DCC
+	}
+}

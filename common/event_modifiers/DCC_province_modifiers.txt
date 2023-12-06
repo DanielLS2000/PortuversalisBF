@@ -1,0 +1,7 @@
+DCC_encourage_own_culture = {
+	local_unrest = -7
+}
+
+DCC_discourage_their_culture = {
+	local_unrest = 0.5
+}

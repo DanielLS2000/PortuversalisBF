@@ -136,7 +136,7 @@ under_governing_capacity_modifier = {
 	ae_impact = 0.2
 	
 	global_tax_modifier = -0.2
-	development_cost = 0.15
+	development_cost = 0.1
 	build_cost = 0.15
 	yearly_corruption = 0.15
 
@@ -155,7 +155,7 @@ reverse_under_governing_capacity_modifier = {
 	ae_impact = -0.2
 
 	global_tax_modifier = 0.2
-	development_cost = -0.15
+	development_cost = -0.1
 	build_cost = -0.15
 	yearly_corruption = -0.15
 
