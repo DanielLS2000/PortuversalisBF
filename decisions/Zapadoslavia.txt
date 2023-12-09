@@ -1,0 +1,176 @@
+country_decisions = {
+
+	zpd_form_decision = {
+		major = yes
+		potential = {
+			culture_group = west_slavic
+			NOT = { has_country_flag = zpd_form_flag }
+			NOT = {
+				exists = ZPD
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = bohemia_area
+				area = erzgebirge_area
+				area = moravia_area
+				area = lusatia_area
+				area = silesia_area
+				area = wielkopolska_area
+				area = mazovia_area
+				area = central_poland_area
+				area = malopolska_area
+				area = sandomierz_area
+				area = kuyavia_area
+				area = slovakia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			stability = 1
+			adm_tech = 10
+			is_at_war = no
+			bohemia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			erzgebirge_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			moravia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lusatia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			silesia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			slovakia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			wielkopolska_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mazovia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			central_poland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			malopolska_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sandomierz_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kuyavia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = zpd_form_flag
+			change_tag = ZPD
+			change_technology_group = eastern
+			change_unit_type = eastern 
+			custom_tooltip = ZPD_formation_tt
+			IF = {
+				limit = {
+					senior_union_with = POL
+					NOT = {
+						POL = {
+							num_of_cities = 47
+						}
+					}
+				}
+				inherit = POL
+			}
+			IF = {
+				limit = {
+					senior_union_with = BOH
+					NOT = {
+						BOH = {
+							num_of_cities = 47
+						}
+					}
+				}
+				inherit = BOH
+			}
+			add_prestige = 50
+			set_government_rank = 3
+			IF = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+	}
+	
+	reign_in_the_hungarians = {
+		major = yes
+		potential = {
+			tag = ZPD
+			NOT = { has_country_flag = reigned_in_hungary_flag }
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = transdanubia_area
+				area = alfold_area
+			}
+		}
+		
+		allow = {
+			transdanubia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}	
+			alfold_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			IF = {
+				limit = {
+					senior_union_with = HUN
+					NOT = {
+						HUN = { num_of_cities = 40 }
+					}
+				}
+				adm_power = 200
+				dip_power = 200
+			}
+		}
+		
+		effect = {
+			add_prestige = 25
+			add_legitimacy = 25
+			add_accepted_culture = hungarian
+			custom_tooltip = reign_in_hungary_tt
+			IF = {
+				limit = {
+					senior_union_with = HUN
+					NOT = {
+						HUN = { num_of_cities = 40 }
+					}
+				}
+				inherit = HUN
+				add_adm_power = -200
+				add_dip_power = -200
+			}
+			set_country_flag = reigned_in_hungary_flag
+		}
+	}
+}

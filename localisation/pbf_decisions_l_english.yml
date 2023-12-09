@@ -1,0 +1,25 @@
+﻿l_english:
+# Nation Formation
+## North German Confederation
+ ngc_form_decision_title:0 "Unite North Germany!"
+ ngc_form_decision_desc:0 "With most of northern Germany under our control, we may finally unite into one German Kingdom!  Gott mitt uns!"
+## South German Confederation 
+ sgc_form_decision_title:0 "Unite South Germany!"
+ sgc_form_decision_desc:0 "With most of southern Germany under our control, we may finally unite into one German Kingdom!  Gott mitt uns!"
+## Rhineland
+ rhi_form_decision_title:0 "Create the Rhineland"
+ rhi_form_decision_desc:0 "The Rhineland has a strong legacy in Germany, both for being the borderland between Rome and the German Tribes, and for being one of the most industrialized places in the world in the 19th and 20th centuries.  We should unite this prosperous land into one country!"
+## Aragon-Italy
+ ari_form_decision_title:0 "Unite Aragon and Italy"
+ ari_form_decision_desc:0 "With most of Italy under our control, we can unite our lands to form one country.  The lands of Aragon and Italy have always been very wealthy, and its people ferocious, with this, no one could conquer us.  We will be the masters of Iberia, Italy, and the seas."
+## Carolingian Empire
+ crl_form_decision_title:0 "Reclaim Charlemagne's Legacy"
+ crl_form_decision_desc:0 "Finally under our control are most of the lands of the Carolingian Empire.  We must claim Charlmagne's Legacy!"
+## Illyria
+ ily_form_decision_title:0 "Unite Illyria"
+ ily_form_decision_desc:0 "With all of Illyria under our control, we may consolidate Illyria into one united country, one which accepts all its peoples.  All shall work together under Illyria for a better future!"
+## Zapadoslavia
+ zpd_form_decision_title:0 "Unite the West Slavs"
+ zpd_form_decision_desc:0 "The West Slavs have always been shunned, by Slavs, for being too Western, and by the West, for being too Slavic.  We must tear off these shackles and unite our peoples into one Kingdom, the Kingdom of Zapadoslavia!"
+ reign_in_the_hungarians_title:0 "Reign in the Hungarians"
+ reign_in_the_hungarians_desc:0 "Many of the southern Slavs argue Hungarians are really just Slavs like the rest of us.  However, many also argue they aren't Slavic at all.  Regardless, we believe it will be easy to integrate them into the Union should we control their lands."

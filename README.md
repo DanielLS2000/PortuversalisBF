@@ -15,17 +15,21 @@
 - Você recebe nerfs gradualmente maiores partindo de 50% para 100% de gov cap usado
 - Unrest e corrupção buffados
 - Desastre fatal caso país alcançe 50 de corrupção e tenha 105% de gov capacity usado
+### Instituições
+- Instituições se espalham bem mais devagar que no base game e as 2 ultimas instituições(Iluminismo e Industrialização) são exclusivas para europeus
 ### Conteudo Interessante
 - Mecânica de Esferas de Influencia similar ao Victoria II
 - Mecânica de fusão de colônias
 - Evento que remove todos os nativos com habilidade de migrar no Novo Mundo
 - Culturas mudam dinamicamente
-- Evento declarando independencia para vassalos com mais de 70% de libery desire
+- Evento declarando independencia para vassalos/colonias com mais de 70% de libery desire
+- Novos formaveis como Aragon-Italy, North/South German Federation e Rhineland, entre outros
 
-## Mods Incorporados
+## Mods Incorporados (Total/Parcialmente)
 - Responsible Blobbing
 - Responsible Warfare
 - Reborned Military Update
+- Peratus Balance and Flavor
 - Decisive Battles
 - Dynamic Culture Conversion
 - New World Names Fan Fork

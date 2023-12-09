@@ -1,0 +1,8 @@
+# New Formables
+CRL = "countries/Carolingian Empire.txt"
+NGC = "countries/North German Confederation.txt"
+RHI = "countries/Rhineland.txt"
+ARI = "countries/Aragon-Italy.txt"
+ILY = "countries/Illyria.txt"
+ZPD = "countries/Zapadoslavia.txt"
+SGC = "countries/South German Confederation.txt"
