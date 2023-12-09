@@ -24,6 +24,7 @@
 - Culturas mudam dinamicamente
 - Evento declarando independencia para vassalos/colonias com mais de 70% de libery desire
 - Novos formaveis como Aragon-Italy, North/South German Federation e Rhineland, entre outros
+- TGE e GME totalmente integrados!
 
 ## Mods Incorporados (Total/Parcialmente)
 - Responsible Blobbing
@@ -43,3 +44,5 @@
 - Eurocentric Institutions
 - Remove Natives
 - No More Border Gore!
+- Trade Goods Expanded
+- Great Monuments Expanded

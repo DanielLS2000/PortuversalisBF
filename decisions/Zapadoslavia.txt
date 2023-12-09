@@ -4,7 +4,6 @@ country_decisions = {
 		major = yes
 		potential = {
 			culture_group = west_slavic
-			NOT = { has_country_flag = zpd_form_flag }
 			NOT = {
 				exists = ZPD
 			}
@@ -29,7 +28,7 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			stability = 1
-			adm_tech = 10
+			adm_tech = 22
 			is_at_war = no
 			bohemia_area = {
 				type = all
@@ -81,11 +80,8 @@ country_decisions = {
 			}
 		}
 		effect = {
-			set_country_flag = zpd_form_flag
 			change_tag = ZPD
-			change_technology_group = eastern
-			change_unit_type = eastern 
-			custom_tooltip = ZPD_formation_tt
+			# custom_tooltip = ZPD_formation_tt
 			IF = {
 				limit = {
 					senior_union_with = POL

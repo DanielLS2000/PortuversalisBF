@@ -4,7 +4,6 @@ country_decisions = {
 		major = yes
 		potential = {
 			culture = hessian
-			NOT = { has_country_flag = rhi_form_flag }
 			NOT = {
 				exists = RHI
 			}
@@ -55,7 +54,6 @@ country_decisions = {
 			}
 		}
 		effect = {
-			set_country_flag = rhi_form_flag
 			change_tag = RHI
 			add_prestige = 25
 			if = {

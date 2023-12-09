@@ -4,7 +4,7 @@ country_decisions = {
 			major = yes
 			potential = {
 				culture_group = germanic
-				NOT = { has_country_flag = sgc_formed_flag }
+				capital_scope = { region = south_german_region }
 				NOT = {
 					exists = SGC
 				}
@@ -13,11 +13,9 @@ country_decisions = {
 						tag = GER
 						tag = NGC
 						tag = PRU
-						tag = HAB
-						tag = AUE 
-						tag = AUH
 					}
 				}
+				
 			}
 			provinces_to_highlight = {
 				OR = {
@@ -29,17 +27,13 @@ country_decisions = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 			allow = {
-				adm_tech = 10
+				adm_tech = 22
 				is_free_or_tributary_trigger = yes
 				stability = 1
 				is_at_war = no
-				IF = {
+				if = {
 					limit = {
-						OR = {
-							tag = HAB
-							tag = AUE
-							tag = AUH
-						}
+						tag = HAB
 					}
 					num_of_owned_provinces_with = {
 						value = 35
@@ -66,9 +60,8 @@ country_decisions = {
 				}
 			}
 			effect = {
-				set_country_flag = sgc_formed_flag
 				change_tag = SGC
-				IF = {
+				if = {
 					limit = {
 						has_reform = free_city
 					}

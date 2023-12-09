@@ -5,7 +5,6 @@ country_decisions = {
 		potential = {
 			culture_group = french
 			NOT = { exists = CRL }
-			NOT = { has_country_flag = carolingian_empire_flag }
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -70,10 +69,9 @@ country_decisions = {
 			}
 		}
 		effect = {
-			set_country_flag = carolingian_empire_flag
 			change_tag = CRL
 			set_government_rank = 3
-			add_government_reform = carolingian_monarchy
+			# add_government_reform = carolingian_monarchy
 			add_prestige = 50
 			if = {
 				limit = {
