@@ -36,5 +36,6 @@
 - High LD Vassal Declare War
 - Alternative Formable Nation Colors
 - Colony Merging
+- Eurocentric Institutions
 - Remove Natives
 - No More Border Gore!
