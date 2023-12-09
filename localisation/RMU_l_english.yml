@@ -1,0 +1,5 @@
+﻿l_english:
+ 
+ SLACK_TEXT:1 "We will slacken recruiting standards lowering our Army Professionalism by $DROP|Y$ and as long we are above §Y20§! Professionalism we will have the following modifier:"
+ #CANT_SLACKEN_TOO_LOW:0 "We have too low Army Professionalism to slacken recruiting standards. We need at least §Y20§! Army Professionalism first and stay above §Y20§! Professionalism."
+ ARMY_PROFESSIONALISM_STATIC_MODIFIERS_DESC:1 "§YImmediate Gain:§!\nRecruit General: §G+1%§!\nRecruit Mercenary: §R-2.5%§!"

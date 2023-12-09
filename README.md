@@ -20,15 +20,20 @@
 - Mecânica de fusão de colônias
 - Evento que remove todos os nativos com habilidade de migrar no Novo Mundo
 - Culturas mudam dinamicamente
+- Evento declarando independencia para vassalos com mais de 70% de libery desire
 
 ## Mods Incorporados
 - Responsible Blobbing
 - Responsible Warfare
+- Reborned Military Update
 - Decisive Battles
 - Dynamic Culture Conversion
 - New World Names Fan Fork
 - Better Trade Company Names
 - Spheres of Influence
+- Realistic African Colonization
+- Eurocentric Colonization
+- High LD Vassal Declare War
 - Alternative Formable Nation Colors
 - Colony Merging
 - Remove Natives

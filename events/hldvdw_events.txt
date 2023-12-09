@@ -1,0 +1,74 @@
+namespace = hldvdw_events
+
+country_event = {
+	id = hldvdw_events.1
+	title = hldvdw_events.1.t
+	desc = hldvdw_events.1.d
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	
+	trigger = {
+		ai = yes
+		is_subject = yes
+		liberty_desire = 70
+	}
+
+	mean_time_to_happen = {
+		years = 40
+
+		modifier = {
+			factor = 0.6
+			liberty_desire = 80
+		}
+
+		modifier = {
+			factor = 0.6
+			liberty_desire = 90
+		}
+
+		modifier = {
+			factor = 0.6
+			liberty_desire = 99
+		}
+
+		modifier = { # Extra fast for player supported countries
+			factor = 0.5
+			liberty_desire = 90
+			any_country = {
+				is_supporting_independence_of = ROOT
+				ai = no
+			}
+		}
+
+		modifier = { # less likely to take effect for tributaries, as they're semi-independant
+			factor = 1.5
+			is_subject_of_type = tributary_state
+		}
+	}
+
+	option = {
+		name = hldvdw_events.1.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { is_colonial_nation = yes }
+
+			declare_war_with_cb = {
+				who = overlord
+				casus_belli = cb_colonial_independence_war
+			}
+		}
+		else_if = {
+			limit = { has_reform = daimyo }
+
+			declare_war_with_cb = {
+				who = overlord
+				casus_belli = cb_daimyo_annex
+			}
+		}
+		else = {
+			declare_war_with_cb = {
+				who = overlord
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}

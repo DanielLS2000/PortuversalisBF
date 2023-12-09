@@ -1,0 +1,20 @@
+country_decisions = {
+	start_colonizing_mod = {
+		potential = {
+			has_country_modifier = euro_colonize
+		}
+		allow = {
+			stability = 2
+			treasury = 1000
+			dip = 6
+		}
+		effect = {
+			add_treasury = -1000
+			remove_country_modifier = euro_colonize
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

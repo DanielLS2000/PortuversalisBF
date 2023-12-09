@@ -4,4 +4,4 @@
 
 -- changed warscore max from battles from vanilla 40
 
-NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 60
+NDefines.NMilitary.WARSCORE_MAX_FROM_BATTLES = 50

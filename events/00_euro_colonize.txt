@@ -1,0 +1,47 @@
+########################################
+# Eurocentric Colonization mod
+########################################
+
+namespace = onlyeurocolonize
+country_event = {
+	id = onlyeurocolonize.1
+	title = EC_EVT1TITLE
+	desc = EC_EVT1DESC
+	hidden = yes
+	
+	trigger = {
+		NOT = { has_country_flag = euro_colonize_happened }
+		OR = {
+			technology_group = ottoman
+			technology_group = muslim
+			technology_group = indian
+			technology_group = east_african
+			technology_group = central_african
+			technology_group = chinese
+			technology_group = nomad_group
+			technology_group = sub_saharan
+			technology_group = north_american
+			technology_group = mesoamerican
+			technology_group = south_american
+			technology_group = andean
+			technology_group = aboriginal_tech
+			technology_group = polynesian_tech
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		add_country_modifier = {
+			name = "euro_colonize"
+			duration = -1
+		}
+		set_country_flag = euro_colonize_happened
+	}
+	
+	option = {
+		add_prestige = 1
+	}
+}

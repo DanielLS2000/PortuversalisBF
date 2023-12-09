@@ -1,0 +1,4 @@
+rac_modifier = {
+	local_missionary_strength = -0.05
+	picture = "tolerance_heretic"
+}
