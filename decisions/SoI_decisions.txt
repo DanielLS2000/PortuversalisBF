@@ -17,7 +17,11 @@ country_decisions = {
 		allow = {
 			dip_power = 50
 			is_at_war = no
-			NOT = { is_part_of_hre = yes }
+			OR = {
+				NOT = { is_part_of_hre = yes }
+				hre_religion_treaty = yes
+			}
+			is_year = 1609
 			custom_trigger_tooltip = {
 				tooltip = befriend_great_power_tt_1
 				capital_scope = {

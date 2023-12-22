@@ -1,0 +1,24 @@
+no_settlers = {
+	global_colonial_growth = -50
+	colonist_placement_chance = -0.1
+	colony_cost_modifier = 0.5
+}
+
+very_low_settlers = {
+	global_colonial_growth = -25
+	colonist_placement_chance = -0.05
+}
+
+low_settlers = {
+	global_colonial_growth = -10
+}
+
+some_settlers = {
+	global_colonial_growth = 10
+	colonist_placement_chance = 0.05
+}
+
+many_settlers = {
+	global_colonial_growth = 25
+	colonist_placement_chance = 0.1
+}

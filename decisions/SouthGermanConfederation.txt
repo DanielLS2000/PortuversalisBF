@@ -4,6 +4,7 @@ country_decisions = {
 			major = yes
 			potential = {
 				culture_group = germanic
+				adm_tech = 22
 				capital_scope = { region = south_german_region }
 				NOT = {
 					exists = SGC

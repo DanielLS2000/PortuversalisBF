@@ -1,0 +1,11 @@
+﻿l_english:
+# ToolsTips
+ TOO_EARLY_FOR_SPHERES_TT: "Spheres are only avaliable from 1609 onwards"
+ does_not_border_tt: "We do not border [From.GetName]."
+ is_ally_of_enemy_tt: "[From.GetName] is an ally of our enemy."
+ 
+ # Province Development/Decreasement over prosperity and devastation
+ dev_decreased_recently: "Development Decreased"
+ desc_dev_decreased_recently: "Development in this province has recently been decreased due to high devastation."
+ dev_increased_recently: "Development Increased"
+ desc_dev_increased_recently: "Development in this province has recently been increased due to high prosperity."

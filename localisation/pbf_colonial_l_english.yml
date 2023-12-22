@@ -1,0 +1,29 @@
+﻿l_english:
+# Colonization Pool
+ maxNumOfSettlers:0 "Maximum Number of Settlers"
+ usedSettlers:0 "Used Settlers"
+ freeSettlers:0 "Free Settlers"
+ numOfColonies:0 "Colonies"
+ settler_pool_tt:0 "Our §Y[Root.maxNumOfSettlers.GetName]§! is [Root.maxNumOfSettlers.GetValue].\nWe currently have [Root.numOfColonies.GetValue] §Y[Root.numOfColonies.GetName]§!, causing our §Y[Root.usedSettlers.GetName]§! to be [Root.usedSettlers.GetValue].\nWe have [Root.freeSettlers.GetValue] §Y[Root.freeSettlers.GetName]§!."
+
+ no_settlers:0 "No Settlers"
+ desc_no_settlers:0 "We no settlers available for colonizing."
+ very_low_settlers:0 "Very Low Settlers"
+ desc_very_low_settlers:0 "We have almost no settlers available for colonizing."
+ low_settlers:0 "Low Settlers"
+ desc_low_settlers:0 "We have few settlers available for colonizing."
+ some_settlers:0 "Some Settlers"
+ desc_some_settlers:0 "We have some settlers available for colonizing."
+ many_settlers:0 "Many Settlers"
+ desc_many_settlers:0 "We have many settlers available for colonizing."
+
+ add_settlers_tt:0 "500 settlers will be added to the settler pool for §Y5§! years"
+ 
+ btc_events.16_t:0 "[Root.Country.GetName] Settler Pool"
+ btc_events.16_d:0 "A country's settler pool represents its ability to send people over to newly colonized provinces. It goes without saying that countries with a higher population have more people to send, and thus the bigger a country is the more capable they are at sending more people overseas.\n\nEvery country has a maximum number of possible settlers. This is determined by the number of state provinces they have as well as total development.\n\nThe base value for the settler pool is 1000 for every country. To that is added the total number of state provinces times 30. Further to that is added the total development of the country times 2.\n\nEach colony a country is developing reduces the pool by 1000. Once the colony is complete, the 1000 will be replenished to the pool.\n\nThere are a number of modifiers related to how many free settlers you have in comparison to the total settler pool:\n\nMany Settlers: over 2000 settlers. This gives you +25 global colonial growth and +5% colonist placement chance.\nSome Settlers: between 1000 and 1999 settlers. This gives you +10 global colonial growth.\nLow Settlers: between 500 and 999 settlers. This gives you -10 global colonial growth.\nVery Low Settlers: between 1 and 499 settlers. This gives you -25 global colonial growth and -5% colonist placement chance.\nNo Settlers: 0 or less settlers. This gives you -50 global colonial growth, -10% colonist placement chance and +50% colony cost."
+ btc_events.16a:0 "Encourage people to go to the colonies." 
+ btc_events.16b:0 "Understood."
+ btc_events.161_t:0 "Settler Pool Back To Normal"
+ btc_events.161_d:0 "Our encouragement initiative from 5 years ago has expired. Shall we renew it again?"
+ btc_events.161a:0 "Renew it."
+ btc_events.161b:0 "Understood."

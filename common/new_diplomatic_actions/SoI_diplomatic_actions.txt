@@ -264,9 +264,7 @@ buy_influence_action = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = FROM_IS_HRE_TT
-				FROM = {
-					is_part_of_hre = no
-				}
+				hre_religion_treaty = yes
 			}
 		}
 		if = {
@@ -284,6 +282,15 @@ buy_influence_action = {
 						with = FROM
 					}
 				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { is_year = 1609 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = TOO_EARLY_FOR_SPHERES_TT
+				is_year = 1609
 			}
 		}
 	}
@@ -410,9 +417,16 @@ discredit_action = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = FROM_IS_HRE_TT
-				FROM = {
-					is_part_of_hre = no
-				}
+				hre_religion_treaty = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = { is_year = 1609 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = TOO_EARLY_FOR_SPHERES_TT
+				is_year = 1609
 			}
 		}
 		if = {
@@ -584,9 +598,16 @@ expel_advisors_action = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = FROM_IS_HRE_TT
-				FROM = {
-					is_part_of_hre = no
-				}
+				hre_religion_treaty = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = { is_year = 1609 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = TOO_EARLY_FOR_SPHERES_TT
+				is_year = 1609
 			}
 		}
 		if = {
@@ -733,9 +754,16 @@ ban_embassy_action = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = FROM_IS_HRE_TT
-				FROM = {
-					is_part_of_hre = no
-				}
+				hre_religion_treaty = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = { is_year = 1609 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = TOO_EARLY_FOR_SPHERES_TT
+				is_year = 1609
 			}
 		}
 		if = {
@@ -972,9 +1000,16 @@ add_to_sphere_action = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = FROM_IS_HRE_TT
-				FROM = {
-					is_part_of_hre = no
-				}
+				hre_religion_treaty = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = { is_year = 1609 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = TOO_EARLY_FOR_SPHERES_TT
+				is_year = 1609
 			}
 		}
 	}

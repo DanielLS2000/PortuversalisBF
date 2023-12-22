@@ -1,0 +1,69 @@
+##pulse event to check mercs####
+country_event = {
+    id = gecko.18
+   title = gecko.18.t
+    desc = gecko.18.d
+picture = COURT_eventPicture
+
+   trigger = {
+		ROOT = {
+				ai = no
+			}
+		 OR = {
+			has_country_modifier = mercs_bought 
+			has_country_modifier = We_stand_alone
+			has_country_modifier = increased_merc_quality
+		}
+		 NOT = { has_country_modifier = Minor}
+   }
+	hidden = yes
+    mean_time_to_happen = {
+        days = 30
+    }
+	
+	immediate = {
+
+		export_to_variable = {
+					which = geckomercFL
+					value = land_forcelimit
+					who = ROOT
+			}
+			divide_variable = {
+					which = geckomercFL
+					value = 100
+			}
+			multiply_variable = {
+					which = geckomercFL
+					value = 33
+			}
+			change_variable = {
+					which = geckomercFL
+					value = 20
+			}
+			multiply_variable = { 
+								which = geckomercFL
+								which = availablegeckomercs
+			}
+			if = {
+				limit = {
+					has_idea = gc_compagnies_ordonnance
+				}
+				multiply_variable = { 
+								which = geckomercFL
+								value = 1.15
+				}
+			}
+			else = {
+				#nothing
+			}
+			export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+			}
+	}
+
+	option = {
+	}
+}
+

@@ -1,0 +1,323 @@
+# Settler Pool Calculations #
+
+country_event = {
+	id = btc_events.14
+	title = btc_events.14_t
+	desc = btc_events.14_d
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+
+		export_to_variable = {
+			which = numProvincesInStates
+			value = trigger_value:num_of_provinces_in_states
+		}
+		multiply_variable = {
+			which = numProvincesInStates	# provinces in states * 30
+			value = 30
+		}
+		export_to_variable = {
+			which = totalDevelopment
+			value = trigger_value:total_development
+		}
+		multiply_variable = {
+			which = totalDevelopment	# total development * 2
+			value = 2
+		}
+		change_variable = {
+			which = numProvincesInStates
+			which = totalDevelopment
+		}
+		change_variable = {
+			which = numProvincesInStates
+			value = 1000				# base value
+		}
+		# Decision add 1000 settlers
+		if = {
+			limit = {
+				has_country_flag = decisionAddSettlers_flag
+			}
+			change_variable = {
+				which = numProvincesInStates
+				value = 500
+			}
+		}
+		if = {
+			limit = {
+				had_country_flag = {
+					flag = decisionAddSettlers_flag
+					days = 1825
+				}
+			}
+			clr_country_flag = decisionAddSettlers_flag
+			country_event = {
+				id = btc_events.161
+			}
+		}
+
+		set_variable = {
+			which = maxNumOfSettlers	# maximum number of settlers of a country
+			which = numProvincesInStates
+		}
+		# AI Bonus
+		export_to_variable = {
+			which = numOfColonists	# current number of colonies
+			value = trigger_value:num_of_colonists
+		}
+		if = {
+			limit = {
+				ai = yes		# ai gets 500 extra settlers per each colonist
+			}
+			multiply_variable = {
+				which = numOfColonists
+				value = 500
+			}
+			change_variable = {
+				which = maxNumOfSettlers
+				which = numOfColonists
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = siberian_frontier
+			}
+			change_variable = {
+				which = maxNumOfSettlers
+				value = 3000
+			}
+		}
+
+		export_to_variable = {
+			which = numOfColonies	# current number of colonies
+			value = trigger_value:num_of_colonies
+		}
+		set_variable = {
+			which = usedSettlers
+			which = numOfColonies
+		}
+		multiply_variable = {
+			which = usedSettlers	# settlers currently colonizing
+			value = 1000
+		}
+
+		set_variable = {
+			which = proxyMaxNumOfSettlers
+			which = maxNumOfSettlers
+		}
+		subtract_variable = {
+			which = proxyMaxNumOfSettlers
+			which = usedSettlers
+		}
+		set_variable = {
+			which = freeSettlers	# currently available settlers
+			which = proxyMaxNumOfSettlers
+		}
+	}
+
+	option = {
+		name = btc_events.14a
+
+		set_variable = {
+			which = 0settlers	# 0% of max settlers
+			value = 0			
+		}
+		change_variable = {
+			which = 0settlers
+			value = 1
+		}
+
+		set_variable = {
+			which = 25settlers
+			which = maxNumOfSettlers
+		}
+		multiply_variable = {
+			which = 25settlers	# 25% of max settlers
+			value = 0.25
+		}
+
+		set_variable = {
+			which = 50settlers
+			which = maxNumOfSettlers
+		}
+		multiply_variable = {
+			which = 50settlers	# 50% of max settlers
+			value = 0.50
+		}
+
+		set_variable = {
+			which = 75settlers
+			which = maxNumOfSettlers
+		}
+		multiply_variable = {
+			which = 75settlers	# 75% of max settlers
+			value = 0.75
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = freeSettlers
+						# which = 0settlers
+						value = 1
+					}
+				}
+			}
+			add_country_modifier = {
+				name = no_settlers
+				duration = -1
+			}
+			remove_country_modifier = very_low_settlers
+			remove_country_modifier = low_settlers
+			remove_country_modifier = some_settlers
+			remove_country_modifier = many_settlers
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = freeSettlers
+					# which = 0settlers
+					value = 1
+				}
+				NOT = {
+					check_variable = {
+						which = freeSettlers
+						# which = 25settlers
+						value = 500
+					}
+				}
+			}
+			add_country_modifier = {
+				name = very_low_settlers
+				duration = -1
+			}
+			remove_country_modifier = no_settlers
+			remove_country_modifier = low_settlers
+			remove_country_modifier = some_settlers
+			remove_country_modifier = many_settlers
+		}
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						which = freeSettlers
+						# which = 25settlers
+						value = 500
+					}
+					NOT = {
+						check_variable = {
+							which = freeSettlers
+							# which = 50settlers
+							value = 1000
+						}
+					}
+				}
+			}
+			add_country_modifier = {
+				name = low_settlers
+				duration = -1
+			}
+			remove_country_modifier = no_settlers
+			remove_country_modifier = very_low_settlers
+			remove_country_modifier = some_settlers
+			remove_country_modifier = many_settlers
+		}
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						which = freeSettlers
+						# which = 50settlers
+						value = 1000
+					}
+					NOT = {
+						check_variable = {
+							which = freeSettlers
+							# which = 75settlers
+							value = 2000
+						}
+					}
+				}
+			}
+			add_country_modifier = {
+				name = some_settlers
+				duration = -1
+			}
+			remove_country_modifier = no_settlers
+			remove_country_modifier = very_low_settlers
+			remove_country_modifier = low_settlers
+			remove_country_modifier = many_settlers
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = freeSettlers
+					# which = 75settlers
+					value = 2000
+				}
+			}
+			add_country_modifier = {
+				name = many_settlers
+				duration = -1
+			}
+			remove_country_modifier = no_settlers
+			remove_country_modifier = very_low_settlers
+			remove_country_modifier = low_settlers
+			remove_country_modifier = some_settlers
+		}
+	}
+}
+
+country_event = {
+	id = btc_events.16
+	title = btc_events.16_t
+	desc = btc_events.16_d
+	picture = tutorial_picture
+
+	is_triggered_only = yes
+
+	option = {
+		name = btc_events.16a
+
+		trigger = {
+			NOT = { has_country_flag = decisionAddSettlers_flag }
+		}
+
+		add_years_of_income = -0.25
+		custom_tooltip = add_settlers_tt
+		hidden_effect = {
+			set_country_flag = decisionAddSettlers_flag
+		}
+	}
+
+	option = {
+		name = btc_events.16b
+	}
+}
+
+country_event = {
+	id = btc_events.161
+	title = btc_events.161_t
+	desc = btc_events.161_d
+	picture = tutorial_picture
+
+	is_triggered_only = yes
+
+	option = {
+		name = btc_events.161a
+
+		add_years_of_income = -0.25
+		custom_tooltip = add_settlers_tt
+		hidden_effect = {
+			set_country_flag = decisionAddSettlers_flag
+		}
+	}
+
+	option = {
+		name = btc_events.161b
+	}
+}

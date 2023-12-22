@@ -1,0 +1,112 @@
+
+#Sermons on the Apocalypse
+province_event = {
+	id = autocolcul_events.1
+	title = autocolcul_events.1.t
+	desc = autocolcul_events.1.d
+	hidden = yes
+	
+	trigger = {
+		owner = {
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+		}
+		has_owner_culture = no
+		is_core = owner
+		NOT = { nationalism = 1 }
+		OR = {
+			development = 20
+			has_port = yes
+			any_neighbor_province = { 
+				has_owner_culture = yes 
+				owned_by = ROOT
+			}
+		}
+		NOT = { 
+			area = apacheria_area
+			area = colorado_plateau_area
+			area = llano_estacado_area
+			area = lower_plains_area
+			area = high_plains_area
+			area = dakota_area
+			area = south_dakota_area
+			area = upper_missouri_area
+			area = snake_river_area
+			area = red_river_area 
+			area = assiniboia_area
+			area = saskatchewan_area
+			area = athabasca_area
+			area = prairies_area
+			area = badlands_area
+			area = interior_plateau_area
+		}
+		OR = {
+			culture_group = andean_group
+			culture_group = apachean
+			culture_group = araucanian
+			culture_group = aridoamerican
+			culture_group = carribean
+			culture_group = caddoan
+			culture_group = central_algonquian
+			culture_group = central_american
+			culture_group = chibchan
+			culture_group = eastern_algonquian
+			culture_group = iroquoian
+			culture_group = maranon
+			culture_group = maya
+			culture_group = muskogean
+			culture_group = na_dene
+			culture_group = otomanguean
+			culture_group = penutian
+			culture_group = plains_algonquian
+			culture_group = siouan
+			culture_group = sonoran
+			culture_group = je_tupi
+		}
+	}
+	
+	is_mtth_scaled_to_size = 1
+	
+	mean_time_to_happen = {
+		months = 32
+		modifier = {
+			factor = 0.625
+			owner = {
+				stability = 3
+			}
+		}
+		modifier = {
+			factor = 0.75
+			owner = {
+				stability = 2
+				NOT = { stability = 3 }
+			}
+		}
+		modifier = {
+			factor = 0.875
+			owner = {
+				stability = 1
+				NOT = { stability = 2 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				NOT = { stability = 0 }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			is_year = 1700
+		}
+	}
+	
+	option = {
+		name = autocolcul_events.1.a #Try to calm the situation down.
+		ai_chance = { factor = 5 }
+		change_culture = owner
+		change_religion = owner
+	}
+}

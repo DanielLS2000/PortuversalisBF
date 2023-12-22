@@ -1,0 +1,15 @@
+# Nationalism only on tech 29 now before it was 23
+cb_nationalist = {
+
+	prerequisites_self = {
+		dip_tech = 29
+		is_free_or_tributary_trigger = yes
+		is_revolutionary = no
+	}
+
+	prerequisites = {
+		culture_group_claim = FROM
+	}
+
+	war_goal = take_province_nationalist
+}

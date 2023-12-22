@@ -4,6 +4,8 @@ country_decisions = {
 		major = yes
 		potential = {
 			culture_group = french
+			1878 = { owned_by = ROOT }
+			183 = { owned_by = ROOT }
 			NOT = { exists = CRL }
 		}
 		provinces_to_highlight = {

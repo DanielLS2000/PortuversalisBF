@@ -4,6 +4,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			culture_group = west_slavic
+			adm_tech = 22
 			NOT = {
 				exists = ZPD
 			}
