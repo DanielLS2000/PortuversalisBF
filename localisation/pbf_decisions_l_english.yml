@@ -1,25 +1,31 @@
 ﻿l_english:
 # Nation Formation
 ## North German Confederation
- ngc_form_decision_title:0 "Unite North Germany!"
- ngc_form_decision_desc:0 "With most of northern Germany under our control, we may finally unite into one German Kingdom!  Gott mitt uns!"
+ ngc_form_decision_title: "Unite North Germany!"
+ ngc_form_decision_desc: "With most of northern Germany under our control, we may finally unite into one German Kingdom!  Gott mitt uns!"
 ## South German Confederation 
- sgc_form_decision_title:0 "Unite South Germany!"
- sgc_form_decision_desc:0 "With most of southern Germany under our control, we may finally unite into one German Kingdom!  Gott mitt uns!"
+ sgc_form_decision_title: "Unite South Germany!"
+ sgc_form_decision_desc: "With most of southern Germany under our control, we may finally unite into one German Kingdom!  Gott mitt uns!"
 ## Rhineland
- rhi_form_decision_title:0 "Create the Rhineland"
- rhi_form_decision_desc:0 "The Rhineland has a strong legacy in Germany, both for being the borderland between Rome and the German Tribes, and for being one of the most industrialized places in the world in the 19th and 20th centuries.  We should unite this prosperous land into one country!"
+ rhi_form_decision_title: "Create the Rhineland"
+ rhi_form_decision_desc: "The Rhineland has a strong legacy in Germany, both for being the borderland between Rome and the German Tribes, and for being one of the most industrialized places in the world in the 19th and 20th centuries.  We should unite this prosperous land into one country!"
 ## Aragon-Italy
- ari_form_decision_title:0 "Unite Aragon and Italy"
- ari_form_decision_desc:0 "With most of Italy under our control, we can unite our lands to form one country.  The lands of Aragon and Italy have always been very wealthy, and its people ferocious, with this, no one could conquer us.  We will be the masters of Iberia, Italy, and the seas."
+ ari_form_decision_title: "Unite Aragon and Italy"
+ ari_form_decision_desc: "With most of Italy under our control, we can unite our lands to form one country.  The lands of Aragon and Italy have always been very wealthy, and its people ferocious, with this, no one could conquer us.  We will be the masters of Iberia, Italy, and the seas."
 ## Carolingian Empire
- crl_form_decision_title:0 "Reclaim Charlemagne's Legacy"
- crl_form_decision_desc:0 "Finally under our control are most of the lands of the Carolingian Empire.  We must claim Charlmagne's Legacy!"
+ crl_form_decision_title: "Reclaim Charlemagne's Legacy"
+ crl_form_decision_desc: "Finally under our control are most of the lands of the Carolingian Empire.  We must claim Charlmagne's Legacy!"
 ## Illyria
- ily_form_decision_title:0 "Unite Illyria"
- ily_form_decision_desc:0 "With all of Illyria under our control, we may consolidate Illyria into one united country, one which accepts all its peoples.  All shall work together under Illyria for a better future!"
+ ily_form_decision_title: "Unite Illyria"
+ ily_form_decision_desc: "With all of Illyria under our control, we may consolidate Illyria into one united country, one which accepts all its peoples.  All shall work together under Illyria for a better future!"
 ## Zapadoslavia
- zpd_form_decision_title:0 "Unite the West Slavs"
- zpd_form_decision_desc:0 "The West Slavs have always been shunned, by Slavs, for being too Western, and by the West, for being too Slavic.  We must tear off these shackles and unite our peoples into one Kingdom, the Kingdom of Zapadoslavia!"
+ zpd_form_decision_title: "Unite the West Slavs"
+ zpd_form_decision_desc: "The West Slavs have always been shunned, by Slavs, for being too Western, and by the West, for being too Slavic.  We must tear off these shackles and unite our peoples into one Kingdom, the Kingdom of Zapadoslavia!"
  reign_in_the_hungarians_title:0 "Reign in the Hungarians"
  reign_in_the_hungarians_desc:0 "Many of the southern Slavs argue Hungarians are really just Slavs like the rest of us.  However, many also argue they aren't Slavic at all.  Regardless, we believe it will be easy to integrate them into the Union should we control their lands."
+## Austro-Bavaria
+ austra_bavaria_nation_title: "Unite the Crowns of Austria and Bavaria"
+ austra_bavaria_nation_desc: "The likes of the Protestant Reformation and the German Renaissance are bringing to light many new ideas and also several new feuds that both Austrians and Bavarians are trying to sort out. Staying true to Catholicism and refusing to bow to the harsh rhetoric of various other states in the Holy Roman Empire, it would seem that Austrians and Bavarians have a lot in common when it comes to politics and religion alone. Perhaps these similarities can be joined together into a firm union between the two crowns so that a bastion of Catholicism remains in the Holy Roman Empire whilst fighting for what is truly just inside the its borders."
+## Belgium
+ belgium_nation_title: "Belgian Independence?"
+ belgium_nation_desc: "The Dutch think so highly of themselves and the French pressure our people from the west and south, and still the Germanic people to our southeast encroach on our position in Europe. What are the Flemish and Walloon people supposed to do when they feel that no ther state around them treats them as an equal part of matters? Politics on both a communal level and a state level have continued to glaze over the fact that the Flemish and Walloon people toil away without end, but with new ideas spreading and political opportunities coming about, we need to seek an independent state for both people groups."

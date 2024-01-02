@@ -17,13 +17,21 @@
 - Desastre fatal caso país alcançe 50 de corrupção e tenha 105% de gov capacity usado
 ### Instituições
 - Instituições se espalham bem mais devagar que no base game e as 2 ultimas instituições(Iluminismo e Industrialização) são exclusivas para europeus
+### Novos Formaveis
+- Aragon-Italy
+- North/South German Confederation
+- Rhineland
+- Austria-Bavaria
+- Belgium
+- Illyria
+- Zapadoslavia
+- Carolingian Empire
 ### Conteudo Interessante
 - Mecânica de Esferas de Influencia similar ao Victoria II
 - Mecânica de fusão de colônias
 - Evento que remove todos os nativos com habilidade de migrar no Novo Mundo
 - Culturas mudam dinamicamente
 - Evento declarando independencia para vassalos/colonias com mais de 70% de libery desire
-- Novos formaveis como Aragon-Italy, North/South German Federation e Rhineland, entre outros
 - TGE e GME totalmente integrados!
 
 ## Mods Incorporados (Total/Parcialmente)
@@ -46,3 +54,15 @@
 - No More Border Gore!
 - Trade Goods Expanded
 - Great Monuments Expanded
+
+## Todo
+- Incorporar partes do Better Renaissance Cultures
+- Impor merc limit do gecko
+- Adicionar Formaveis
+- - Lombardy
+- - Rework Arabia
+- - Occitania
+- - Great Moravia
+- - Carthage
+- - Norway-Sweden
+- - 

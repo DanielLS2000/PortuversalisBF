@@ -278,3 +278,167 @@ SGC_ideas = {
 		advisor_cost = -0.1
 	}
 }
+
+AUB_HAB_ideas = { #Austria-Bavaria, Austrian Version
+	start = {
+		imperial_authority_value = 0.10
+		diplomatic_reputation = 2.0
+	}
+	
+	bonus = {
+		monarch_diplomatic_power = 1
+	}
+	
+	trigger = {
+		tag = AUB
+		primary_culture = austrian
+	}
+	free = yes
+	
+	reinheitsgebot_for_our_beer = { #Same for both
+		production_efficiency = 0.10
+	}
+	the_troublesome_south_and_east = { #Unique
+		army_tradition_decay = -0.01
+	}
+	fugger_and_welsers_of_ab = { #Same for both
+		interest = -0.5
+		inflation_reduction = 0.05
+	}
+	navigating_hre_politics = { #Unique
+		ae_impact = -0.15
+	}
+	monpolizing_various_industries = { #Same for Both
+		global_prov_trade_power_modifier = 0.15
+	}
+	discipline_of_the_grenzers = { #Unique
+		infantry_power = 0.10
+	}
+	mastery_of_soft_power = { #Same for both
+		diplomatic_annexation_cost = -0.20
+	}
+}
+
+AUB_BAV_ideas = { #Austria-Bavaria, Bavarian Version
+	start = {
+		imperial_authority_value = 0.10
+		army_tradition = 1.0
+	}
+	
+	bonus = {
+		monarch_diplomatic_power = 1
+	}
+	
+	trigger = {
+		tag = AUB
+		primary_culture = bavarian
+	}
+	free = yes
+	
+	reinheitsgebot_for_our_beer = { #Same for both
+		production_efficiency = 0.10
+	}
+	attract_those_of_the_german_renaissance = { #Unique
+		prestige = 1.0
+		idea_cost = -0.05
+	}
+	fugger_and_welsers_of_ab = { #Same for both
+		interest = -0.5
+		inflation_reduction = 0.05
+	}
+	absolutist_power_means_a_standing_army = { #Unique
+		discipline = 0.05
+	}
+	monpolizing_various_industries = { #Same for Both
+		global_prov_trade_power_modifier = 0.15
+	}
+	army_restructuring = { #Unique
+		land_forcelimit_modifier = 0.25
+	}
+	mastery_of_soft_power = { #Same for both
+		diplomatic_annexation_cost = -0.20
+	}
+}
+
+BGM_WAL_ideas = { #Belgium, Wallonian Version
+	start = {  #Walloon identity branches from French Identity#
+		production_efficiency = 0.15
+		free_adm_policy = 1
+	}
+	
+	bonus = {
+		development_cost = -0.15
+	}
+
+	trigger = {
+		tag = BGM
+		primary_culture = wallonian
+	}
+	free = yes
+	
+	the_belgian_revolution = { #Same for both
+		land_morale = 0.10
+	}
+	continual_french_support = { #Unique
+		land_maintenance_modifier = -0.10
+	}
+	distinct_from_dutch_and_french = { #Same for both
+		manpower_recovery_speed = 0.05
+		prestige = 1.0
+	}
+	formulate_belgian_political_parties = { #Unique
+		reform_progress_growth = 0.10
+	}
+	refusal_of_pure_despotism = { #Same for Both
+		max_absolutism = -10
+		yearly_corruption = -0.10
+	}
+	evenly_distribute_the_burden = { #Unique
+		legitimacy = 1.0
+		republican_tradition = 0.5
+	}
+	shift_to_flemish_and_walloon_language = { #Same for both
+		global_unrest = -2
+	}
+}
+
+BGM_FLE_ideas = { #Belgium, Flemish Version
+	start = {  #Flemish identity branches from Dutch Identity#
+		production_efficiency = 0.15
+		free_dip_policy = 1
+	}
+	
+	bonus = {
+		global_prov_trade_power_modifier = 0.15
+	}
+	
+	trigger = {
+		tag = BGM
+		primary_culture = flemish
+	}
+	free = yes
+	
+	the_belgian_revolution = { #Same for both
+		land_morale = 0.10
+	}
+	as_thrifty_as_any_dutchmen = { #Unique
+		trade_efficiency = 0.15
+	}
+	distinct_from_dutch_and_french = { #Same for both
+		manpower_recovery_speed = 0.05
+		prestige = 1.0
+	}
+	satiate_german_and_french_minorities = { #Unique
+		global_manpower_modifier = 0.25
+	}
+	refusal_of_pure_despotism = { #Same for Both
+		max_absolutism = -10
+		yearly_corruption = -0.10
+	}
+	high_level_diplomacy = { #Unique
+		diplomatic_reputation = 1
+	}
+	shift_to_flemish_and_walloon_language = { #Same for both
+		global_unrest = -2
+	}
+}
