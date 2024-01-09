@@ -23,6 +23,8 @@
 - Rhineland
 - Austria-Bavaria
 - Belgium
+- Polabia
+- Lombardy
 - Illyria
 - Zapadoslavia
 - Carolingian Empire
@@ -35,34 +37,37 @@
 - TGE e GME totalmente integrados!
 
 ## Mods Incorporados (Total/Parcialmente)
-- Responsible Blobbing
-- Responsible Warfare
-- Reborned Military Update
-- Peratus Balance and Flavor
-- Decisive Battles
-- Dynamic Culture Conversion
-- New World Names Fan Fork
-- Better Trade Company Names
-- Spheres of Influence
-- Realistic African Colonization
-- Eurocentric Colonization
-- High LD Vassal Declare War
-- Alternative Formable Nation Colors
-- Colony Merging
-- Eurocentric Institutions
-- Remove Natives
-- No More Border Gore!
-- Trade Goods Expanded
-- Great Monuments Expanded
+- Responsible Blobbing (Mudanças)
+- Responsible Warfare (Mudanças)
+- Reborned Military Update (Total)
+- Peratus Balance and Flavor (Parcial)
+- Decisive Battles (Total)
+- Dynamic Culture Conversion (Total)
+- New World Names Fan Fork (Total)
+- Better Trade Company Names (Total)
+- Spheres of Influence (Total)
+- Realistic African Colonization (Total)
+- Eurocentric Colonization (Total)
+- High LD Vassal Declare War (Total)
+- Alternative Formable Nation Colors (Toal)
+- Colony Merging (Total)
+- Eurocentric Institutions (Total)
+- Remove Natives (Total)
+- No More Border Gore! (Total)
+- Trade Goods Expanded (Total)
+- Great Monuments Expanded (Total)
 
 ## Todo
 - Incorporar partes do Better Renaissance Cultures
 - Impor merc limit do gecko
 - Adicionar Formaveis
-- - Lombardy
 - - Rework Arabia
 - - Occitania
 - - Great Moravia
 - - Carthage
 - - Norway-Sweden
-- - 
+- Proibir Gifts e Subisidios durante guerras
+- Impedir de declarar guerra caso esteja em uma (Dessa vez no proprio diplomatic action)
+- Limitar Mil Acesss a paises vizinhos
+- Impedir alianças em caso de truce
+- 

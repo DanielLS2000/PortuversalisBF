@@ -15,8 +15,10 @@ declarewar = {
 		}
 	}
 	condition = {
-		tooltip = GRAND_CRUSADE_NO_OTHER_WAR
-		potential = { }
+		tooltip = NO_OTHER_WAR
+		potential = {
+			is_at_war = yes
+		}
 		allow = {
 			NOT = {
 				is_in_war = {

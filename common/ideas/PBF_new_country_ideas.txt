@@ -442,3 +442,86 @@ BGM_FLE_ideas = { #Belgium, Flemish Version
 		global_unrest = -2
 	}
 }
+
+PBA_ideas = {  #Polabia
+	start = {
+		infantry_power = 0.20
+		hostile_attrition = 1
+	}
+	
+	bonus = {
+		reinforce_cost_modifier = -0.33
+	}
+	
+	trigger = {
+		tag = PBA
+	}
+	free = yes
+	
+	fading_memories_reaffirmed = {
+		land_morale = 0.10
+	}
+	militarized_once_more = {
+		army_tradition_decay = -0.01
+	}
+	paid_tribute_is_returned_to_us = {
+		global_tax_modifier = 0.1
+		vassal_income = 0.25
+	}
+	revival_of_polabian_culture = {
+		production_efficiency = 0.1
+		culture_conversion_cost = -0.20
+	}
+	northern_raiders_have_taught_us = {
+		galley_power = 0.15
+		own_coast_naval_combat_bonus = 1.0
+	}
+	reorganize_land_along_polabian_lines = {
+		yearly_corruption = -0.10
+	}
+	reformation_of_the_gords = {
+		build_cost = -0.15
+		defensiveness = 0.15
+	}
+}
+
+LOM_ideas = { # Lombardy
+	start = {
+		infantry_power = 0.10
+		global_tax_modifier = 0.10
+	}
+
+	bonus = {
+		diplomats = 1
+	}
+	trigger = {
+		tag = LOM
+		}
+	free = yes
+
+	Edictum_Rothari = {
+		global_unrest = -2
+	}
+	Citta_ad_Isole = {
+		build_cost = -0.10
+	}
+	the_italian_frontier = {
+		land_attrition = -0.10
+	}
+	iron_crown_of_lombardy = {
+		legitimacy = 0.75
+		prestige = 0.5
+	}
+	italian_condottieri = {
+		mercenary_manpower = 0.2
+		mercenary_discipline = 0.05	
+	}
+	trace_italienne = {
+		fort_maintenance_modifier = -0.10
+		garrison_size = 0.10
+	}
+	gastaldi = {
+		administrative_efficiency = 0.05
+		governing_capacity_modifier = 0.10
+	}
+}
