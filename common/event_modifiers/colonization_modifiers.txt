@@ -1,3 +1,7 @@
+euro_colonize = {
+	colonists = -5
+}
+
 no_settlers = {
 	global_colonial_growth = -50
 	colonist_placement_chance = -0.1
@@ -21,4 +25,8 @@ some_settlers = {
 many_settlers = {
 	global_colonial_growth = 25
 	colonist_placement_chance = 0.1
+}
+
+quest_for_the_new_world = {
+	may_explore = yes
 }

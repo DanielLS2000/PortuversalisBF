@@ -33,4 +33,18 @@ on_mercenary_recruited = {
 			}
 		}
 	}
+
+	# Calulate new merc limit
+	#FROM = {
+	#	if = {
+	#		limit = {
+	#			ai = no
+	#		}
+	#		add_country_modifier = {
+	#			name = "mercs_bought"
+	#			duration = -1
+	#			hidden = yes
+	#		}
+	#	}
+	#}
 }

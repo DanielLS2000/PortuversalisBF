@@ -1,0 +1,5 @@
+on_monthly_pulse = {
+	events = {
+		colonial_events.14	#Monthly settler pool calculation
+	}
+}

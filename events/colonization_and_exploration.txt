@@ -1,9 +1,40 @@
-# Settler Pool Calculations #
+namespace = colonial_events
+normal_or_historical_nations = yes
+# Quest for the New World #
 
 country_event = {
-	id = btc_events.14
-	title = btc_events.14_t
-	desc = btc_events.14_d
+	id = colonial_events.1
+	title = colonial_events.1_t
+	desc = colonial_events.1_d
+	picture = EXPLORERS_eventPicture
+
+	trigger = {
+		NOT = { has_country_flag = quest_for_the_new_world }
+		NOT = { has_country_modifier = quest_for_the_new_world }
+		has_idea_group = exploration_ideas
+		OR = {
+            tag = POR
+            tag = CAS
+            dip_tech = 9
+        }
+	}
+
+	option = {
+		name = colonial_events.1a
+
+		add_country_modifier = {
+			name = quest_for_the_new_world	# may hire explorers, conquistadors and discover ocean tiles
+			duration = -1
+		}
+		set_country_flag = quest_for_the_new_world
+	}
+}
+
+# Settler Pool Calculations #
+country_event = {
+	id = colonial_events.14
+	title = colonial_events.14_t
+	desc = colonial_events.14_d
 
 	hidden = yes
 
@@ -54,7 +85,7 @@ country_event = {
 			}
 			clr_country_flag = decisionAddSettlers_flag
 			country_event = {
-				id = btc_events.161
+				id = colonial_events.161
 			}
 		}
 
@@ -119,7 +150,7 @@ country_event = {
 	}
 
 	option = {
-		name = btc_events.14a
+		name = colonial_events.14a
 
 		set_variable = {
 			which = 0settlers	# 0% of max settlers
@@ -273,15 +304,15 @@ country_event = {
 }
 
 country_event = {
-	id = btc_events.16
-	title = btc_events.16_t
-	desc = btc_events.16_d
+	id = colonial_events.16
+	title = colonial_events.16_t
+	desc = colonial_events.16_d
 	picture = tutorial_picture
 
 	is_triggered_only = yes
 
 	option = {
-		name = btc_events.16a
+		name = colonial_events.16a
 
 		trigger = {
 			NOT = { has_country_flag = decisionAddSettlers_flag }
@@ -295,20 +326,20 @@ country_event = {
 	}
 
 	option = {
-		name = btc_events.16b
+		name = colonial_events.16b
 	}
 }
 
 country_event = {
-	id = btc_events.161
-	title = btc_events.161_t
-	desc = btc_events.161_d
+	id = colonial_events.161
+	title = colonial_events.161_t
+	desc = colonial_events.161_d
 	picture = tutorial_picture
 
 	is_triggered_only = yes
 
 	option = {
-		name = btc_events.161a
+		name = colonial_events.161a
 
 		add_years_of_income = -0.25
 		custom_tooltip = add_settlers_tt
@@ -318,6 +349,6 @@ country_event = {
 	}
 
 	option = {
-		name = btc_events.161b
+		name = colonial_events.161b
 	}
 }

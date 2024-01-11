@@ -26,3 +26,23 @@ new_world_player = {
 	naval_forcelimit_modifier = -0.25
 	land_forcelimit_modifier = -0.25
 }
+
+# Merc Limiter
+#Over_merc_limit = {
+#	potential = {
+#		ROOT = {
+#			ai = no	
+#		}
+#		num_of_mercenaries = 1
+#	}
+#	trigger = {
+#		check_variable = {
+#			which = geckomercvalue
+#			which = geckomercFL
+#		}
+#		
+#	}
+#	merc_maintenance_modifier = 1.5
+#	mercenary_manpower = -1
+#	mercenary_cost = 5
+#}
