@@ -10,6 +10,7 @@ country_event = {
 		ai = yes
 		is_subject = yes
 		liberty_desire = 70
+		NOT = { truce_with = overlord }
 	}
 
 	mean_time_to_happen = {

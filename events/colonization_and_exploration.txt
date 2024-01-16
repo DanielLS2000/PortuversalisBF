@@ -13,8 +13,7 @@ country_event = {
 		NOT = { has_country_modifier = quest_for_the_new_world }
 		has_idea_group = exploration_ideas
 		OR = {
-            tag = POR
-            tag = CAS
+            culture_group = iberian
             dip_tech = 9
         }
 	}
@@ -350,5 +349,84 @@ country_event = {
 
 	option = {
 		name = colonial_events.161b
+	}
+}
+
+# Colombus Voyage
+# Land Sighted!
+country_event = {
+	id = colonial_events.17
+	title = colonial_events.17_t
+	desc = colonial_events.17_d
+	picture = EP_ISLAND_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_events.17a
+
+		trigger = {
+			tag = CAS
+		}
+
+		add_prestige = 10
+		define_explorer = {
+			name = "NAME_CRISTOBAL_COLON"
+			fire = 2
+			shock = 2
+			manuever = 6
+			siege = 0
+			trait = great_explorer_personality
+		}
+		hidden_effect = {
+			discover_province = 1580
+			discover_province = 1583
+			discover_province = 1575
+			discover_province = 1574
+			discover_province = 1504
+			discover_province = 1503	
+			discover_province = 1524
+			discover_province = 1525		
+		}
+		discover_province = 2659		
+		create_colony_mission_reward = {
+			province = 2659
+		}
+		add_country_modifier = {
+			name = discovered_caribbean
+			duration = 5475
+		}
+	}
+
+	option = {
+		name = colonial_events.17b
+
+		trigger = {
+			tag = POR
+		}
+
+		add_prestige = 10
+		define_explorer = {
+			name = "Cristóvão Colombo"
+			fire = 2
+			shock = 2
+			manuever = 6
+			siege = 0
+			trait = great_explorer_personality
+		}
+		hidden_effect = {
+			discover_province = 1580
+			discover_province = 1583
+			discover_province = 1575
+			discover_province = 1574
+			discover_province = 1504
+			discover_province = 1503
+			discover_province = 1524
+			discover_province = 1525			
+		}
+		add_country_modifier = {
+			name = discovered_caribbean
+			duration = 5475
+		}
 	}
 }
