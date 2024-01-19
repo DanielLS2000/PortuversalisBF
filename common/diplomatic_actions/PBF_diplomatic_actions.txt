@@ -38,3 +38,131 @@ milaccess = {
 		}
 	}
 }
+
+allianceaction = {
+	condition = {
+		tooltip = PIRATE_DENIED_ALLIANCE
+		potential = {
+			has_government_attribute = cannot_ally_non_pirates
+		}
+		allow = {
+			OR = {
+				NOT = { has_government_attribute = cannot_ally_non_pirates }
+				FROM = { has_government_attribute = is_pirate_republic_reform }
+			}
+		}
+	}
+	condition = {
+		tooltip = FROM_PIRATE_DENIED_ALLIANCE
+		potential = {
+			FROM = {
+				has_government_attribute = cannot_ally_non_pirates
+			}
+			NOT = { has_government_attribute = is_pirate_republic_reform }
+		}
+		allow = {
+			OR = {
+				has_government_attribute = is_pirate_republic_reform
+				NOT = { FROM = { has_government_attribute = cannot_ally_non_pirates } }
+			}
+		}
+	}
+	condition = {
+		tooltip = REPUBLIC_DENIED_ALLIANCE
+		potential = {
+			has_government_attribute = cannot_ally_non_republics
+		}
+		allow = {
+			OR = {
+				NOT = { has_government_attribute = cannot_ally_non_republics }
+				FROM = { government = republic }
+			}
+		}
+	}
+	condition = {
+		tooltip = FROM_REPUBLIC_DENIED_ALLIANCE
+		potential = {
+			FROM = {
+				has_government_attribute = cannot_ally_non_republics
+			}
+			NOT = { government = republic }
+		}
+		allow = {
+			OR = {
+				government = republic
+				NOT = { FROM = { has_government_attribute = cannot_ally_non_republics } }
+			}
+		}
+	}
+	condition = {
+		tooltip = REV_REPUBLIC_DENIED_ALLIANCE
+		potential = {
+			has_government_attribute = cannot_ally_non_republics_or_non_rev
+		}
+		allow = {
+			OR = {
+				NOT = { has_government_attribute = cannot_ally_non_republics_or_non_rev }
+				FROM = { 
+					OR = {
+						government = republic 
+						is_revolutionary = yes
+					}
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = FROM_REV_REPUBLIC_DENIED_ALLIANCE
+		potential = {
+			FROM = {
+				has_government_attribute = cannot_ally_non_republics_or_non_rev
+			}
+			NOT = { government = republic }
+			is_revolutionary = no
+		}
+		allow = {
+			OR = {
+				government = republic 
+				is_revolutionary = yes
+				NOT = { FROM = { has_government_attribute = cannot_ally_non_republics_or_non_rev } }
+			}
+		}
+	}
+	condition = {
+		tooltip = CANNOT_MAKE_ALLIANCES
+		potential = {
+			has_government_attribute = cannot_form_alliances
+		}
+		allow = {
+			NOT = { has_government_attribute = cannot_form_alliances }
+		}
+	}
+	condition = {
+		tooltip = FROM_CANNOT_MAKE_ALLIANCES
+		potential = {
+			FROM = {
+				has_government_attribute = cannot_form_alliances
+			}
+		}
+		allow = {
+			NOT = { FROM = { has_government_attribute = cannot_form_alliances } }
+		}
+	}
+    condition = {
+        tooltip = CANNOT_ALLY_BROKEN_ALLIANCE
+        potential = {
+            FROM = {
+                has_opinion_modifier = {
+					who = ROOT
+					modifier = break_alliance
+				}
+            }
+        }
+        allow = {
+            always = no
+        }
+    }
+	effect = {
+		change_asha_vahishta = { value = 2 }
+	}
+}

@@ -1,0 +1,123 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 255  204  122 }
+revolutionary_colors = { 15  5  0 }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	religious_ideas
+	diplomatic_ideas
+	economic_ideas
+	innovativeness_ideas
+	offensive_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_cuirassier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Raymond #7" = 20
+	"Alphonse #3" = 20
+	"Simon #1" = 20
+	"Guillaume #4" = 20
+	"Bertrand #1" = 20
+	"Bernard #2" = 20
+	"Pons #2" = 20
+	"Odo #1" = 20
+	"Andiru #0" = 20
+	"Antoine #0" = 20
+	"Lluís #2" = 20
+	"Pere #1" = 20
+	"Enric #0" = 20
+	"Renat #0" = 20
+	"Alfons #0" = 20
+	"Ferran #0" = 20
+	"Martí #0" = 20
+	
+	"Jeanne #0" = -1
+	"Marie #0" = -1
+	"Philippa #0" = -1
+	"Alícia #0" = -1
+	"Sofia #0" = -1
+	"Marta #0" = -1
+}
+
+leader_names = {
+	"d'Arnal" Ass�zat
+	"de Bacalan" "de Barbasan" "de Bernuy" "de Bezons" "de Boulb�ne"
+	"de Casteras" "de Caussade" "de Corneillan"
+	Delguy Delpuech
+	"d'Espagne" "d'Estadens" "d'Estissac"
+	Fabre Faure
+	"de Galard" "de Goth" "de Grossoles"
+	Imbert "de l'Isle-Jourdain"
+	"de La Broue de Gandelon" "de Lacaze" "de Ladev�ze" "de Loupiac" 
+	"de Madaillan" "Malvin de Montazet" "Martin de Vivi�s"
+	"de Nogar�de" "de Nogaret" Nogu�s
+	"d'Ouvrier"
+	Pandaries "de Pelamourgues" Per�s "de Perricard" Pons "de Pradines" "de Puechgarric"
+	"de Rabastens" "de Roux d'Alzonne"
+	Sabatier "de Saint F�lix"
+	Teyssier "de Tholozany" "de Toulouse-Foissac" "de Toulouse-Lautrec"
+	"de Villemur"
+	"de Xaintrailles"
+	Alemany Ametller Amic "de Balaguer" Barceló Blanc Canals Casanovas "de Guimerà" Casaus
+	Dalmau Desplà Destorrent Domènec "d’Espés" Ferrer "Folc de Cardona" Fontana
+	Gallart Gassol Gisbert Graner "de Grau" Guimet
+	Lleixà Llull "de Margarit" Muntaner "de Montcada" Moragues "de Mur" Nadal d’Oms
+	Pallarès Pinós Piquer Pons Rasquí "de la Riba" Ribalta Ripio Rifós "de Ripoll"
+	Salavert "de Subirats" Tamarit Vallès Vergós Vilamarí Vilaplana
+}
+
+ship_names = {
+	"l'Aucamville" "l'Auzeville-Tolosane" "le Balma" "le Beauzelle" "le Busca"
+	"le Blagnac" "le Capitole" "le Castanet-Tolosan" "le Colomiers" "le Cugneaux"
+	"l'�le-du-Ramier" "le Lab�ge" "le Labruc" "le La C�pi�re" "le La Pasqui�re"
+	"le Laran" "le Lardenne" "le Launaguet" "le Grand-Rond" "le Mirail"
+	"le Demoiselles" "le Minimes" "le Paradous" "l'Union" "le Marquisat"
+	"le Montaudran" "le Montrab�" "le Muret" "le Pechbonnieu" "le Pechbusque"
+	"le Pech David" "le Pibrac" "le Plaisance-du-Touch" "le Portet-sur-Garonne" "le Quint-Fonsegrives"
+	"la Patte-d'Oie" "le Ramonville-Saintt-Agne" "le Rangueil" "le Tournefeuille" "le Saint-Aubin"
+	"le Saint-Geni�s-Bellevue" "le Saint-Martin-du-Touch" "le Saint-Orens" "le Saint-Sernin" "le Saint-Simon"
+	"le Salvetat-Saint-Gilles" "le Soul�" "le Stade-Toulousain" "la Vieille-Toulouse" "le Villeneuve-Tolosane"
+	"Blanca Aurora" "Sant Jacob" Flama Lleona Falcó "La Bonaventura" "Sant Antoni" 
+	"Sant Miquel" "Sant Bernat" "Sant Francesc" "Santa Ágata" "Santa Eulàlia" 
+	"Sant Gabriel" "Sant Climent" "Sant Jordi" "La Reial" Trinitat "Santa Creu" 
+	"Santa Maria" "Santa Caterina" "Sant Joan Evangelista" "Santa Bàrbara" 
+	"Sant Pere de Roma" "La Gasela" "Santa Magdalena" "Sant Víctor" Magnana 
+	"Santa Ventura" "Santa Coloma" "Sant Ambrós" Constança "Sant Ferran"
+	Invencible Telèmac Sobirà "Verge del Carme" "Verge de Montserrat" Juno
+	Vigilant Eclipsi "Sant Joan Baptista" "Santíssima Trinitat" Terrible
+	Temerària "Verge de les Neus" "Jaume el Conqueridor" Mart Alerta Ceres
+	Sorpresa Empordà Catalunya "Roger de Flor" "Roger de Llúria"
+	"La Garsa"
+}
+
+army_names = {
+	 "Arm�e du Lauragais"  "Arm�e du Minervois"  "Arm�e du Cabard�s" 
+	 "Arm�e des Corbi�res" "Arm�e du Carcass�s"  "Arm�e de la Montagne Noire"
+	 "Arm�e du Quercob"    "Arm�e du Raz�s"      "Arm�e du Pays de Sault"
+	 "Arm�e de Foix"       "Arm�e du Couserans"  "Arm�e de Comminges"
+	 "Arm�e de Gascogne"   "Arm�e de Sav�s"      "Arm�e du Pays d'Aure"
+	 "Arm�e de Bigorre"    "Arm�e des Capitouls" "Arm�e de l'Albigeois"
+	 "Arm�e de $PROVINCE$" 
+}

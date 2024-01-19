@@ -215,26 +215,28 @@ ZPD_ideas = {
 	
 	zpd_idea_1 = {
 		merchants = 1
+		global_trade_power = 0.1
 	}
 	zpd_idea_2 = {
-		church_loyalty_modifier = 0.1
 		nobles_loyalty_modifier = 0.1
+		max_absolutism = 10
 	}
 	zpd_idea_3 = {
-		cavalry_power = 0.2
+		cavalry_power = 0.3
+		can_recruit_hussars = yes
 	}
 	zpd_idea_4 = {
 		diplomats = 1
 		envoy_travel_time = -0.5
 	}
 	zpd_idea_5 = {
-		manpower_recovery_speed = 0.1
+		global_manpower_modifier = 0.25
 	}
 	zpd_idea_6 = {
-		cavalry_cost = -0.1
+		land_morale = 0.15
 	}
 	zpd_idea_7 = {
-		production_efficiency = 0.1
+		production_efficiency = 0.15
 	}
 }
 
@@ -524,4 +526,44 @@ LOM_ideas = { # Lombardy
 		administrative_efficiency = 0.05
 		governing_capacity_modifier = 0.10
 	}
+}
+
+OCC_ideas = {  #Occitania
+    start = {
+        tolerance_heretic = 3
+        advisor_pool = 1
+    }
+    
+    bonus = {
+        yearly_corruption = -0.10
+    }
+    
+    trigger = {
+        tag = OCC
+    }
+    free = yes
+    
+    lingua_d_oc = {
+        same_culture_advisor_cost = -0.20
+        prestige = 1
+    }
+    united_with_our_family_across_mountains = {
+        global_manpower_modifier = 0.20
+    }
+    frankish_disunity_discarded = {
+        global_regiment_recruit_speed = -0.10
+        land_morale = 0.10
+    }    
+    troubadours_once_again = {
+        global_unrest = -2
+    }
+    diasporas_of_occitain_people = {
+        improve_relation_modifier = 0.20
+    }
+    occitain_literature_unrestricted = {
+        global_institution_spread = 0.15
+    }    
+    albigensian_crusade_memories = {
+        discipline = 0.05
+    }
 }

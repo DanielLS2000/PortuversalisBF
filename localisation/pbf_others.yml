@@ -1,3 +1,4 @@
 ﻿l_english:
 # Tooltips
  NO_OTHER_WAR: "We are already engaged in a war and are not able to started another"
+ CANNOT_ALLY_BROKEN_ALLIANCE: "We have ended our alliance with them not long ago"

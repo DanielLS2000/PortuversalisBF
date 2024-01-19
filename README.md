@@ -19,6 +19,15 @@
 ### Economia
 - Emprestimos entre paises agora possuem interesse minimo de 2%, duração minima de 1 ano e maxima de 15
 - Trade Goods Expanded totalmente integrado
+### Diplomacia
+- Não é possivel declarar mais de uma guerra ofensiva ao mesmo tempo
+- Não é possivel se aliar com países com os quais você quebrou aliança recentemente
+- Mecânica de Esferas de Influencia similar ao Victoria II
+- Mecânica de fusão de colônias
+- Vassalos tem chance de receber um evento declarando independencia se chegarem a 70% de liberty desire
+- Colonias tem o mesmo se chegarem a bater alguns criterios além do 70% de liberty desire:
+    - O Ano é 1776 ou mais
+    - Seu overlord é revolucionario
 ### Instituições
 - Instituições se espalham bem mais devagar que no base game e as 2 ultimas instituições(Iluminismo e Industrialização) são exclusivas para europeus
 ### Novos Formaveis
@@ -27,23 +36,21 @@
 - Rhineland
 - Austria-Bavaria
 - Belgium
+- Occitania
 - Polabia
 - Lombardy
 - Illyria
 - Zapadoslavia
 - Carolingian Empire
 ### Conteudo Interessante
-- Mecânica de Esferas de Influencia similar ao Victoria II
-- Mecânica de fusão de colônias
 - Evento que remove todos os nativos com habilidade de migrar no Novo Mundo
 - Culturas mudam dinamicamente, em nações coloniais certas provincias mudam tanto a cultura quanto a religião
-- Evento declarando independencia para vassalos/colonias com mais de 70% de libery desire
 - TGE e GME totalmente integrados!
 
 ## Mods Incorporados (Total/Parcialmente)
 - Responsible Blobbing (Mudanças)
 - Responsible Warfare (Mudanças)
-- Reborned Military Update (Total)
+- Reborned Military Update (Mudanças)
 - Peratus Balance and Flavor (Parcial)
 - Decisive Battles (Total)
 - Dynamic Culture Conversion (Total)
@@ -66,12 +73,10 @@
 - Impor merc limit do gecko
 - Adicionar Formaveis
 - - Rework Arabia
-- - Occitania
 - - Great Moravia
 - - Carthage
 - - Norway-Sweden
-- Proibir Gifts e Subisidios durante guerras
+- Proibir Gifts e Subisidios durante guerras (Talvez não, sei lá)
 - Impedir de declarar guerra caso esteja em uma (Dessa vez no proprio diplomatic action)
-- Limitar Mil Acesss a paises vizinhos
-- Impedir alianças em caso de truce
+- Revolucionario ganha 200 de AE com todos os países do mesmo continente
 - 

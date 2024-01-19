@@ -1,0 +1,95 @@
+country_decisions = {
+
+	occitania_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_france_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = FRA }
+			NOT = { tag = PAP }
+			NOT = { tag = SPA }
+			NOT = { tag = CAS }
+			NOT = { tag = ARA }
+			NOT = { tag = POR }
+			NOT = { tag = ASU }
+			NOT = { tag = LON }
+			OR = {
+				ai = no
+				NOT = { exists = FRA }
+			}
+			OR = {
+				primary_culture = catalan
+				primary_culture = occitain
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = languedoc_area
+				area = catalonia_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no			
+			languedoc_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			catalonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			change_tag = OCC
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			france_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = OCC
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_occitania_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
