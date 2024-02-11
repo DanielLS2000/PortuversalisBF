@@ -24,3 +24,41 @@ new_world_player = {
 	naval_forcelimit_modifier = -0.2
 	land_forcelimit_modifier = -0.2
 }
+
+ming_dinasty = {
+	potential = {
+		tag = MNG
+	}
+	trigger = {
+		current_age = age_of_discovery
+	}
+	governing_capacity_modifier = 0.2
+}
+
+debbuging_stuff = {
+	potential = {
+		was_player = yes
+	}
+	trigger = {
+		is_subject = yes
+		OR = {
+			is_colonial_nation = no
+			AND = {
+				is_colonial_nation = yes
+				OR = {
+					is_year = 1776
+					ROOT = {
+						overlord = {
+							is_revolutionary = yes
+						}
+					}
+				}
+			}
+		}
+		liberty_desire = 70
+		
+		overlord = {
+			NOT = { truce_with = ROOT }
+		}
+	}
+}

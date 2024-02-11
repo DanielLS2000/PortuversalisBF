@@ -21,6 +21,7 @@ province_event = {
 	fire_only_once = no
 	
 	trigger = {
+		is_year = 1464
 		has_owner_culture = no
 		has_owner_accepted_culture = no
 		NOT = { has_construction = culture } # no forceful culture conversion

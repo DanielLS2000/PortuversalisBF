@@ -1,5 +1,5 @@
 # Increase dev with high prosperity
-
+namespace = btc_events
 province_event = {
 	id = btc_events.15
 	title = btc_events.15_t
@@ -15,7 +15,7 @@ province_event = {
 		}
 		is_prosperous = yes
 		NOT = { has_province_modifier = dev_increased_recently }
-		NOT = { development = 40 }
+		NOT = { development = 21 }
 		NOT = {
 			OR = {
 				has_terrain = glacier

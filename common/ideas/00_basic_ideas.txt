@@ -928,32 +928,27 @@ exploration_ideas = {
 		}
 	}
 
-	overseas_exploration = {
+	quest_for_the_new_world	= {
 		range = 0.5
 	}
-
 	colonial_ventures = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
-
+	overseas_exploration = {
+		naval_attrition = -0.15
+		transport_attrition = -0.15
+	}
 	land_of_opportunity = {
 		global_colonial_growth = 10
 	}
-
-	experienced_sailors	= {
-		naval_attrition = -0.1
-		transport_attrition = -0.1
-	}
-
-	free_colonies = {
-		colonist_placement_chance = 0.1
-	}
-
 	factories = {
 		trade_company_governing_cost = -0.1
 		trade_company_investment_cost = -0.1
 	}
-	
+	free_colonies = {
+		colonist_placement_chance = 0.1
+	}
 	global_empire = {
 		naval_forcelimit_modifier = 0.25
 		min_autonomy_in_territories = -0.1

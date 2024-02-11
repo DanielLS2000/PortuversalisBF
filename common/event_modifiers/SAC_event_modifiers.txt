@@ -1,0 +1,6 @@
+##### Province Modifier #####
+
+african_disease_modifier = {
+	local_colonial_growth = -200
+	picture = "malaria_icon"
+}

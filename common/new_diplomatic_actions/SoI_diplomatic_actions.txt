@@ -1585,7 +1585,7 @@ leave_sphere_action = {
 			NOT = {
 				has_opinion = {
 					who = FROM
-					value = 0
+					value = 190
 				}
 			}
 			liberty_desire = 100

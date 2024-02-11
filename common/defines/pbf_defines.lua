@@ -1,6 +1,6 @@
 -- Over Forcelimit costs even more
-NDefines.NCountry.LAND_FORCELIMIT_EXTRA_COST_FACTOR = 2.5
-NDefines.NCountry.NAVAL_FORCELIMIT_EXTRA_COST_FACTOR = 2.5
+NDefines.NCountry.LAND_FORCELIMIT_EXTRA_COST_FACTOR = 3
+NDefines.NCountry.NAVAL_FORCELIMIT_EXTRA_COST_FACTOR = 3
 
 -- Better Loans Between Players
 NDefines.NEconomy.MIN_DIPLO_LOAN_INTEREST = 2

@@ -11,9 +11,15 @@ country_event = {
 	trigger = {
 		NOT = { has_country_flag = quest_for_the_new_world }
 		NOT = { has_country_modifier = quest_for_the_new_world }
-		has_idea_group = exploration_ideas
 		OR = {
-            culture_group = iberian
+			has_idea_group = exploration_ideas	
+			has_idea = call_of_our_forefathers
+		}
+		OR = {
+			AND = {
+				culture_group = iberian
+				is_year = 1492
+			}
             dip_tech = 9
         }
 	}

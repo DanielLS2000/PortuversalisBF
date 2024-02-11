@@ -136,12 +136,10 @@ under_governing_capacity_modifier = {
 	ae_impact = 0.2
 	
 	global_tax_modifier = -0.2
-	development_cost = 0.1
 	build_cost = 0.15
 	yearly_corruption = 0.15
 
 	technology_cost = 0.05
-	global_institution_spread = -0.15
 	reform_progress_growth = -0.2
 
 	culture_conversion_cost = 0.5
@@ -155,12 +153,10 @@ reverse_under_governing_capacity_modifier = {
 	ae_impact = -0.2
 
 	global_tax_modifier = 0.2
-	development_cost = -0.1
 	build_cost = -0.15
 	yearly_corruption = -0.15
 
 	technology_cost = -0.05
-	global_institution_spread = 0.15
 	reform_progress_growth = 0.2
 
 	culture_conversion_cost = -0.5

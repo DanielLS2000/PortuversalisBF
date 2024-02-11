@@ -10,7 +10,7 @@ country_event = { #You guessed it, removes natives
 		ai = no	
 	}
 	
-	mean_time_to_happen = { 
+	mean_time_to_happen = {
 		days = 2
 	}
 	immediate = {
@@ -57,10 +57,56 @@ country_event = { #You guessed it, removes natives
 					remove_building = fort_15th
 				}
 			}
+			central_africa_region = {
+				cede_province = ---
+				every_owned_province = {
+					limit = { has_building = fort_15th }
+					remove_building = fort_15th
+				}
+			}
 		}
 	}
 	option = { #Keep
 		name = remove_natives_events.1.b
+		custom_tooltip = "The natives will remain for this campaign."
+	}
+}
+
+namespace = remove_natives_events
+country_event = { #You guessed it, removes natives
+	id = remove_natives_events.2
+	title = remove_natives_events.2.t
+	desc = remove_natives_events.2.d
+	picture = NATIVES_eventPicture
+	
+	trigger = {
+		NOT = { has_global_flag = africans_removed_flag }
+		is_year = 1632
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		set_global_flag = africans_removed_flag
+	}
+	fire_only_once = yes
+	option = { #Remove
+		name = remove_natives_events.2.a		
+		custom_tooltip = "The nations of the sahel will be removed"
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			sahel_region = {
+				cede_province = ---
+				every_owned_province = {
+					limit = { has_building = fort_15th }
+					remove_building = fort_15th
+				}
+			}
+		}
+	}
+	option = { #Keep
+		name = remove_natives_events.2.b
 		custom_tooltip = "The natives will remain for this campaign."
 	}
 }

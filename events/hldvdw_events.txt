@@ -7,10 +7,32 @@ country_event = {
 	picture = DECLARATION_INDEPENDENCE_eventPicture
 	
 	trigger = {
-		ai = yes
 		is_subject = yes
-		liberty_desire = 70
-		NOT = { truce_with = overlord }
+		OR = {
+			is_colonial_nation = no
+			AND = {
+				is_colonial_nation = yes
+				OR = {
+					is_year = 1776
+					ROOT = {
+						overlord = {
+							is_revolutionary = yes
+						}
+					}
+				}
+			}
+		}
+		OR = {
+			liberty_desire = 70
+			ROOT = {
+				overlord = {
+					is_revolutionary = yes
+				}
+			}
+		}
+		overlord = {
+			NOT = { truce_with = ROOT }
+		}
 	}
 
 	mean_time_to_happen = {
@@ -29,15 +51,6 @@ country_event = {
 		modifier = {
 			factor = 0.6
 			liberty_desire = 99
-		}
-
-		modifier = { # Extra fast for player supported countries
-			factor = 0.5
-			liberty_desire = 90
-			any_country = {
-				is_supporting_independence_of = ROOT
-				ai = no
-			}
 		}
 
 		modifier = { # less likely to take effect for tributaries, as they're semi-independant

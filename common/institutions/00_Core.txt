@@ -812,7 +812,7 @@ new_world_i = {
 		}
 		is_in_capital_area = yes
 		owner = { 
-			has_any_exploration_idea = yes 
+			# has_any_exploration_idea = yes 
 			#at least have one subject colony
 			any_subject_country = {
 				OR = {
