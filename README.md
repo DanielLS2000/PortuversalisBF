@@ -68,6 +68,7 @@
 - Trade Goods Expanded (Total)
 - Great Monuments Expanded (Total)
 - Automatic Colonial Cultural Conversion (Total)
+- Gurkan Alliance System
 
 ## Todo
 - Incorporar partes do Better Renaissance Cultures
@@ -78,7 +79,5 @@
 - - Carthage
 - - Norway-Sweden
 - Proibir Gifts e Subisidios durante guerras (Talvez não, sei lá)
-- Impedir de declarar guerra caso esteja em uma (Dessa vez no proprio diplomatic action)
 - Revolucionario ganha 200 de AE com todos os países do mesmo continente
-- Alterar os bonus de prosperidade: Goods Produced -> production_efficiency
 - Add -50/-100/-150 de colonial growth em algumas regiões para atrasar a colonização

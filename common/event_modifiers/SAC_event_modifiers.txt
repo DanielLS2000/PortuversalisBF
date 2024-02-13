@@ -1,6 +1,19 @@
 ##### Province Modifier #####
+##### Colonization Malus ####
 
 african_disease_modifier = {
 	local_colonial_growth = -200
 	picture = "malaria_icon"
+}
+
+slow_colonization_modifier = {
+	local_colonial_growth = -50
+}
+
+slower_colonization_modifier = {
+	local_colonial_growth = -75
+}
+
+ultra_slower_colonization_modifier = {
+	local_colonial_growth = -150
 }

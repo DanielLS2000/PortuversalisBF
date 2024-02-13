@@ -38,6 +38,63 @@ country_event = {
 				duration = -1
 			}
 		}
+		every_province = {
+			limit = {
+				OR = {
+					area = sakalava_area
+					area = madagascar_highlands_area
+					area = betsimasaraka_area
+					area = southern_madagascar
+				}
+			}
+			add_permanent_province_modifier = {
+				name = african_disease_modifier
+				duration = -1
+			}
+		}
+		every_province = {
+			limit = {
+				OR = {
+					region = california_region
+				}
+			}
+			add_permanent_province_modifier = {
+				name = slow_colonization_modifier
+				duration = -1
+			}
+		}
+		every_province = {
+			limit = {
+				OR = {
+					region = great_plains_region
+					region = hudson_bay_region
+				}
+				NOT = { area = james_bay_area }
+				NOT = { area = hudson_bay_area }
+				NOT = { area = inner_ontario_area }
+			}
+			add_permanent_province_modifier = {
+				name = slower_colonization_modifier
+				duration = -1
+			}
+		}
+		every_province = {
+			limit = {
+				OR = {
+					continent = oceania
+					region = cascadia_region
+					area = bahia_blanca_area
+					area = nehuenken_area
+					area = southern_chile_area
+					area = patagonian_andes
+					area = patagonia_area
+				}
+			}
+			add_permanent_province_modifier = {
+				name = ultra_slower_colonization_modifier
+				duration = -1
+			}
+		}
 	}
 
 	option = {

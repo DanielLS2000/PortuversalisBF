@@ -1,6 +1,13 @@
 ﻿l_english:
  african_disease_modifier:0 "Malaria"
  desc_african_disease_modifier:0 "Tropical diseases such as Malaria make foreign expeditions into the heart of Africa a deadly endeavour."
+ 
+ slow_colonization_modifier:0 "Harsh Climate and Terrain"
+ desc_slow_colonization_modifier:0 "The Enviroment here is quite different from our homeland and the terrain does not help with it, settlers will have a little trouble."
+ slower_colonization_modifier:0 "Vast Lands"
+ desc_slower_colonization_modifier:0 "Theses lands are vast and sparsely populated even by natives, settling this region will require more effort than usual."
+ ultra_slower_colonization_modifier:0 "No one lives here"
+ desc_ultra_slower_colonization_modifier:0 "This region is extremely isolated from population centers and too harsh for regular settlers."
 
  SAC_malaria.2.t:0 "Malaria Infections"
  SAC_malaria.2.d:0 "Rampart malaria infections has driven us from our recently conquered land!"
