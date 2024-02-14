@@ -8,9 +8,10 @@
 - Recrutar mercs te dá metade da companhia como fl extra até 250
 - Requesitos de Hegemonia Militar/Naval pela metade
 - Aumentado o warscore ganho em batalhas em 3x, maximo de warscore ganho em batalha agora é 50%
-- Custo extra ao ficar acima do forcelimit aumentado de 2.0 para 2.5
+- Custo extra ao ficar acima do forcelimit aumentado de 2.0 para 3.0
 ### Administração
 - Governing capacity recebe um nerf percentual pra cada era do jogo de forma crescente(0/10%/15%/25%)
+- A partir da era da reforma paises asiaticos recebem um buff de 10% de gov cap para permitir imperios maiores
 - Custo de governo das provincias em geral aumentada, em compensação centralizar estado reduz mais o custo de governo
 - Você recebe buffs gradualmente menores partindo de 0% para 50% de gov cap usado
 - Você recebe nerfs gradualmente maiores partindo de 50% para 100% de gov cap usado
@@ -20,6 +21,7 @@
 - Emprestimos entre paises agora possuem interesse minimo de 2%, duração minima de 1 ano e maxima de 15
 - Trade Goods Expanded totalmente integrado
 ### Diplomacia
+- Sistema de Aliança do Gurkan Integrado, players possuem limite de aliados que varia com seu dev
 - Não é possivel declarar mais de uma guerra ofensiva ao mesmo tempo
 - Não é possivel se aliar com países com os quais você quebrou aliança recentemente
 - Mecânica de Esferas de Influencia similar ao Victoria II
@@ -29,7 +31,10 @@
     - O Ano é 1776 ou mais
     - Seu overlord é revolucionario
 ### Instituições
-- Instituições se espalham bem mais devagar que no base game e as 2 ultimas instituições(Iluminismo e Industrialização) são exclusivas para europeus
+- Instituições se espalham bem mais devagar que no base game e as 2 ultimas instituições(Iluminismo e Industrialização) são exclusivas para europeus (Western e Eastern)
+### Exploração e Colonização
+- Europeus só conseguirão explorar o Novo Mundo quando o evento de colombo descobrir as americas
+- O evento de Colombo agora ocorre dinamicamente para todo país que tiver concluido as ideias de exploração a partir de 1476, com chances maiores de acontecer na Iberia
 ### Novos Formaveis
 - Aragon-Italy
 - North/South German Confederation
@@ -42,10 +47,10 @@
 - Illyria
 - Zapadoslavia
 - Carolingian Empire
-### Conteudo Interessante
+### Conteudo Extra
 - Evento que remove todos os nativos com habilidade de migrar no Novo Mundo
 - Culturas mudam dinamicamente, em nações coloniais certas provincias mudam tanto a cultura quanto a religião
-- TGE e GME totalmente integrados!
+- GME totalmente integrado!
 
 ## Mods Incorporados (Total/Parcialmente)
 - Responsible Blobbing (Mudanças)
@@ -80,4 +85,3 @@
 - - Norway-Sweden
 - Proibir Gifts e Subisidios durante guerras (Talvez não, sei lá)
 - Revolucionario ganha 200 de AE com todos os países do mesmo continente
-- Add -50/-100/-150 de colonial growth em algumas regiões para atrasar a colonização

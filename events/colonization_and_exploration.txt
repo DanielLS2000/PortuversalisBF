@@ -16,12 +16,14 @@ country_event = {
 			has_idea = call_of_our_forefathers
 		}
 		OR = {
-			AND = {
-				culture_group = iberian
-				is_year = 1492
+			dip_tech = 9
+			has_country_flag = new_world_found
+			ROOT = {
+				any_rival_country = {
+					has_country_flag = new_world_found
+				}
 			}
-            dip_tech = 9
-        }
+		}
 	}
 
 	option = {
@@ -358,6 +360,92 @@ country_event = {
 	}
 }
 
+# Christopher Columbus
+country_event = {
+	id = colonial_events.2
+	title = "colonial_events.2.t"
+	desc = "colonial_events.2.d"
+	picture = SHIP_SAILING_eventPicture
+	
+	trigger = {
+		NOT = { has_global_flag = columbus_happened }
+		NOT = { has_country_flag = turned_down_columbus }
+		full_idea_group = exploration_ideas
+		is_year = 1476
+		OR = {
+			NOT = {
+				north_america = {
+					has_discovered = ROOT
+				}
+			}
+			NOT = {
+				south_america = {
+					has_discovered = ROOT
+				}
+			}
+			NOT = {
+				any_known_country = {
+					north_america = {
+						has_discovered = PREV
+					}
+				}
+			}
+			NOT = {
+				any_known_country = {
+					south_america = {
+						has_discovered = PREV
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.2
+			is_year = 1485
+		}
+		modifier = {
+			factor = 0.5
+			AND = {
+				capital_scope = {
+					region = iberia_region
+				}
+				is_year = 1485
+			}
+		}
+	}
+
+	option = {		# Reject his proposal
+		name = "colonial_events.2a"
+		ai_chance = { factor = 10 }
+		set_country_flag = turned_down_columbus
+		random_known_country = {
+			limit = {
+				NOT = { has_country_flag = turned_down_columbus }
+				religion = catholic
+				has_idea = quest_for_the_new_world
+			}
+			country_event = { id = colonial_events.2 }
+		}
+	}
+	option = {		# Hire Columbus
+		name = "colonial_events.2b"
+		ai_chance = { factor = 90 }
+		add_years_of_income = -0.25
+		set_global_flag = columbus_happened
+		hidden_effect = {
+			ROOT = {
+				country_event = {
+					id = colonial_events.17
+					days = 90
+				}
+			}
+		}
+	}
+}
+
 # Colombus Voyage
 # Land Sighted!
 country_event = {
@@ -372,7 +460,12 @@ country_event = {
 		name = colonial_events.17a
 
 		trigger = {
-			tag = CAS
+			NOT = { tag = POR }
+			ROOT = {
+				capital_scope = {
+					region = iberia_region
+				}
+			}
 		}
 
 		add_prestige = 10
@@ -399,9 +492,10 @@ country_event = {
 			province = 2659
 		}
 		add_country_modifier = {
-			name = discovered_caribbean
+			name = colonial_enthusiasm
 			duration = 5475
 		}
+		set_country_flag = new_world_found
 	}
 
 	option = {
@@ -413,7 +507,7 @@ country_event = {
 
 		add_prestige = 10
 		define_explorer = {
-			name = "Cristóvão Colombo"
+			name = "Cristovao Colombo"
 			fire = 2
 			shock = 2
 			manuever = 6
@@ -421,18 +515,279 @@ country_event = {
 			trait = great_explorer_personality
 		}
 		hidden_effect = {
+			discover_province = 1584
+			discover_province = 1531
+			discover_province = 1532
+			discover_province = 1598
+			discover_province = 1600
+			discover_province = 1585
+			discover_province = 1586
+			discover_province = 1466
+			discover_province = 1596
+		}
+		create_colony_mission_reward = {
+			province = 757
+		}
+		add_country_modifier = {
+			name = colonial_enthusiasm
+			duration = 5475
+		}
+		set_country_flag = new_world_found
+	}
+	option = {
+		name = colonial_events.17c
+
+		trigger = {
+			ROOT = {
+				capital_scope = {
+					region = france_region
+				}
+			}
+		}
+
+		add_prestige = 10
+		define_explorer = {
+			name = "Christophe Colomb"
+			fire = 2
+			shock = 2
+			manuever = 6
+			siege = 0
+			trait = great_explorer_personality
+		}
+		hidden_effect = {
+			discover_province = 1567
 			discover_province = 1580
 			discover_province = 1583
 			discover_province = 1575
 			discover_province = 1574
 			discover_province = 1504
-			discover_province = 1503
-			discover_province = 1524
-			discover_province = 1525			
+			discover_province = 1502
+			discover_province = 1571
+			discover_province = 1572
+			discover_province = 1582
+			discover_province = 1501		
+		}
+		create_colony_mission_reward = {
+			province = 932
 		}
 		add_country_modifier = {
-			name = discovered_caribbean
+			name = colonial_enthusiasm
 			duration = 5475
 		}
+		set_country_flag = new_world_found
+	}
+
+	option = {
+		name = colonial_events.17d
+
+		trigger = {
+			ROOT = {
+				capital_scope = {
+					region = british_isles_region
+				}
+			}
+		}
+
+		add_prestige = 10
+		define_explorer = {
+			name = "Christopher Columbus"
+			fire = 2
+			shock = 2
+			manuever = 6
+			siege = 0
+			trait = great_explorer_personality
+		}
+		hidden_effect = {
+			discover_province = 1479
+			discover_province = 1498
+			discover_province = 1497
+			discover_province = 1565
+			discover_province = 1569
+			discover_province = 1494
+			discover_province = 1573
+			discover_province = 1570
+			discover_province = 1499
+			discover_province = 1568
+			discover_province = 1564		
+		}
+		create_colony_mission_reward = {
+			province = 968
+		}
+		add_country_modifier = {
+			name = colonial_enthusiasm
+			duration = 5475
+		}
+		set_country_flag = new_world_found
+	}
+
+	option = {
+		name = colonial_events.17e
+
+		trigger = {
+			ROOT = {
+				capital_scope = {
+					region = low_countries_region
+				}
+			}
+		}
+
+		add_prestige = 10
+		define_explorer = {
+			name = "Christoffel Columbus"
+			fire = 2
+			shock = 2
+			manuever = 6
+			siege = 0
+			trait = great_explorer_personality
+		}
+		hidden_effect = {
+			discover_province = 1564
+			discover_province = 1565
+			discover_province = 1569
+			discover_province = 1494
+			discover_province = 1573
+			discover_province = 1570
+			discover_province = 1500
+			discover_province = 1499
+			discover_province = 1492
+			discover_province = 1495	
+			discover_province = 1582
+			discover_province = 1568
+		}
+		create_colony_mission_reward = {
+			province = 965
+		}
+		add_country_modifier = {
+			name = colonial_enthusiasm
+			duration = 5475
+		}
+		set_country_flag = new_world_found
+	}
+
+	option = {
+		name = colonial_events.17f
+
+		trigger = {
+			ROOT = {
+				capital_scope = {
+					region = scandinavia_region
+				}
+			}
+		}
+
+		add_prestige = 10
+		define_explorer = {
+			name = "Christofer Columbus"
+			fire = 2
+			shock = 2
+			manuever = 6
+			siege = 0
+			trait = great_explorer_personality
+		}
+		hidden_effect = {
+			discover_province = 1610
+			discover_province = 1497
+			discover_province = 1496
+			discover_province = 1495
+			discover_province = 1493
+			discover_province = 1482
+			discover_province = 1924
+			discover_province = 1498
+		}
+		create_colony_mission_reward = {
+			province = 980
+		}
+		add_country_modifier = {
+			name = colonial_enthusiasm
+			duration = 5475
+		}
+		set_country_flag = new_world_found
+	}
+	option = {
+		name = colonial_events.17g
+
+		trigger = {
+			ROOT = {
+				capital_scope = {
+					region = italy_region
+				}
+			}
+		}
+
+		add_prestige = 10
+		define_explorer = {
+			name = "Cristoforo Colombo"
+			fire = 2
+			shock = 2
+			manuever = 6
+			siege = 0
+			trait = great_explorer_personality
+		}
+		hidden_effect = {
+			discover_province = 1584
+			discover_province = 1531
+			discover_province = 1532
+			discover_province = 1598
+			discover_province = 1600
+			discover_province = 1585
+			discover_province = 1586
+			discover_province = 1466
+			discover_province = 1596			
+		}
+		create_colony_mission_reward = {
+			province = 757
+		}
+		add_country_modifier = {
+			name = colonial_enthusiasm
+			duration = 5475
+		}
+		set_country_flag = new_world_found
+	}
+
+	option = {
+		name = colonial_events.17h
+
+		trigger = {
+			ROOT = {
+				capital_scope = {
+					OR = {
+						region = north_german_region
+						region = south_german_region
+					}
+				}
+			}
+		}
+
+		add_prestige = 10
+		define_explorer = {
+			name = "Christoph Kolumbus"
+			fire = 2
+			shock = 2
+			manuever = 6
+			siege = 0
+			trait = great_explorer_personality
+		}
+		hidden_effect = {
+			discover_province = 1564
+			discover_province = 1565
+			discover_province = 1569
+			discover_province = 1494
+			discover_province = 1573
+			discover_province = 1570
+			discover_province = 1500
+			discover_province = 1499
+			discover_province = 1492
+			discover_province = 1495
+			discover_province = 1582
+			discover_province = 1568
+		}
+		create_colony_mission_reward = {
+			province = 965
+		}
+		add_country_modifier = {
+			name = colonial_enthusiasm
+			duration = 5475
+		}
+		set_country_flag = new_world_found
 	}
 }

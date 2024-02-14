@@ -38,3 +38,21 @@
  # Decisions
  colonial_pool_title:0 "Settler Pool"
  colonial_pool_desc:0 "The settler pool gives bonuses or maluses to your colonisation efforts depending on the number of settlers you have. For more information, click the decision and an event will pop up."
+
+ # Colombo
+ colonial_events.2.t:0 "Christopher Columbus Petition"
+ colonial_events.2.d:0 "Explorer Christopher Columbus has made several attempts asking monarchs over Europe to finance an expedition to try and find a western route to the Orient. After being rejected the second time, Columbus turned his efforts towards the [Root.GetAdjective] Crown. Backed up by Italian investors, Columbus hopes to convince King [Root.Monarch.GetName] to agree to the expedition."
+ colonial_events.2a:0 "Reject his proposal"
+ colonial_events.2b:0 "Finance his journey"
+
+ # New world discovered
+ colonial_events.17_t:0 "Land Sighted!"
+ colonial_events.17_d:0 "After 29 days out of sight of land, Columbus' crew spotted immense flocks of birds, some of which his sailors trapped and determined to be "field" birds. Columbus changed course to follow their flight. Columbus changed the fleet's course to due west, and sailed through the night, believing land was soon to be found. In the evening, Columbus thought he saw a light like a little wax candle rising and falling. Four hours later, land was sighted by a sailor named Rodrigo de Triana.\n\nColumbus called the people he encountered "indians" in the belief that he had reached the East Indies."
+ colonial_events.17a:0 "Is this India though?"
+ colonial_events.17b:0 "Is this India though?"
+ colonial_events.17c:0 "Is this India though?"
+ colonial_events.17d:0 "Is this India though?"
+ colonial_events.17e:0 "Is this India though?"
+ colonial_events.17f:0 "Is this India though?"
+ colonial_events.17g:0 "Is this India though?"
+ colonial_events.17h:0 "Is this India though?"

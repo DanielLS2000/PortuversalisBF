@@ -133,3 +133,40 @@ province_event = {
 		cede_province = previous_owner
 	}
 }
+
+country_event = {
+	id = SAC_malaria.3
+	title = "SAC_malaria.3.t"
+	desc = "SAC_malaria.3.d"
+	
+	hidden = no
+	
+	trigger = {
+		any_subject_country = {
+			OR = {
+				technology_group = sub_saharan
+				technology_group = central_african
+				technology_group = east_african
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 30 }
+	
+	immediate = {}
+	
+	option = {
+		name="SAC_malaria.3.a"
+		ai_chance={factor = 100}
+		every_subject_country = {
+			limit = {
+				OR = {
+					technology_group = sub_saharan
+					technology_group = central_african
+					technology_group = east_african
+				}
+			}
+			grant_independence = yes
+		}
+	}
+}

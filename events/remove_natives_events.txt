@@ -73,7 +73,7 @@ country_event = { #You guessed it, removes natives
 }
 
 namespace = remove_natives_events
-country_event = { #You guessed it, removes natives
+country_event = { #You guessed it, removes africans
 	id = remove_natives_events.2
 	title = remove_natives_events.2.t
 	desc = remove_natives_events.2.d
@@ -107,6 +107,6 @@ country_event = { #You guessed it, removes natives
 	}
 	option = { #Keep
 		name = remove_natives_events.2.b
-		custom_tooltip = "The natives will remain for this campaign."
+		custom_tooltip = "The africans will remain for this campaign."
 	}
 }
