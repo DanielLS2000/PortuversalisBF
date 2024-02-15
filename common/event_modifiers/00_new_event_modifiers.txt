@@ -1,0 +1,284 @@
+##################################################################################################
+# scriptable and usable for event-system below.
+##################################################################################################
+
+###PATRONAGE IDEAS###
+national_celebration = {
+	monthly_splendor = 1
+	stability_cost_modifier = -0.1
+	global_unrest = -1
+}
+
+inspiring_artwork_legitimacy = {
+	legitimacy = 0.5
+	devotion = 0.5
+	horde_unity = 0.5
+	republican_tradition = 0.2
+	meritocracy = 0.2
+}
+
+inspiring_artwork_institution = {
+	global_institution_spread = 0.1
+}
+
+government_transparency = {
+	yearly_corruption = -0.1
+	governing_capacity_modifier = -0.05
+	spy_offence = -0.5
+	global_spy_defence = -0.5
+}
+
+government_transparency_web_weaver = {
+	yearly_corruption = -0.05
+	spy_offence = -0.25
+	global_spy_defence = -0.25
+}
+
+ruler_visited_area = {
+	local_unrest = -2
+	local_state_maintenance_modifier = -0.25
+}
+
+refused_state_visit = {
+	country_admin_power = 1
+}
+
+volunteering_advisors = {
+	advisor_pool = 1
+	same_culture_advisor_cost = -0.25
+}
+
+nation_accepting_more_cultures = {
+	promote_culture_cost = -0.5
+	global_tax_modifier = 0.1
+}
+
+ruler_ability_under_question = {
+	legitimacy = -0.5
+	devotion = -0.5
+	horde_unity = -0.5
+	republican_tradition = -0.2
+	meritocracy = -0.2
+	same_culture_advisor_cost = 0.25
+}
+
+stolen_artefacts_effects = {
+	global_institution_spread = -0.1
+	monthly_splendor = -1
+	prestige = -1
+}
+
+ruler_worshipped_by_all = {
+	all_power_cost = -0.025
+}
+
+rejection_of_new_cultures = {
+	promote_culture_cost = 0.5
+	years_of_nationalism = 5
+	core_creation = 0.1
+}
+
+appeasing_the_populace = {
+	all_power_cost = 0.025
+}
+
+great_work_produced = {
+	tax_income = 6
+	local_institution_spread = 0.1
+}
+
+embraced_architectural_development = {
+	build_time = -0.2
+	build_cost = -0.2
+}
+
+###SOVEREIGNTY IDEAS###
+spirit_of_the_nation_war = {
+	land_morale = 0.2
+	free_leader_pool = 1
+}
+
+spirit_of_the_nation_diplo = {
+	diplomatic_reputation = 3
+	diplomatic_upkeep = 1
+}
+
+spirit_of_the_nation_economy = {
+	war_taxes_cost_modifier = -1.0
+	production_efficiency = 0.15
+}
+
+spirit_of_the_nation_tech = {
+	mil_tech_cost_modifier = -0.2
+	army_tradition_decay = -0.01
+	navy_tradition_decay = -0.01
+}
+
+spirit_of_the_nation_resistance = {
+	enemy_core_creation = 0.5
+	war_exhaustion = -0.1
+	defensiveness = 0.15
+}
+
+fifty_year_plan_religion = {
+	global_missionary_strength = 0.005
+}
+
+fifty_year_plan_culture = {
+	culture_conversion_cost = -0.1
+}
+
+fifty_year_plan_governance = {
+	state_governing_cost = -0.1
+}
+
+fifty_year_plan_tolerance = {
+	years_of_nationalism = -5
+}
+
+rewrote_history_complete = {
+	max_absolutism = 10
+	core_decay_on_your_own = -0.5
+	claim_duration = 0.5
+}
+
+rewrote_history_minor = {
+	max_absolutism = 5
+	core_decay_on_your_own = -0.25
+	claim_duration = 0.25
+}
+
+new_expansion_focus = {
+	core_creation = -0.1
+	unjustified_demands = -0.1
+	ae_impact = 0.1
+}
+
+new_administration_focus = {
+	state_maintenance_modifier = -0.2
+	development_cost = -0.1
+	diplomatic_reputation = -2
+}
+
+protection_of_diplomacy = {
+	diplomatic_reputation = 1
+	possible_condottieri = 0.25
+}
+
+protection_of_trade = {
+	global_ship_trade_power = 0.1
+	mercantilism_cost = -0.2
+}
+
+protection_of_borders = {
+	fort_maintenance_modifier = -0.1
+	garrison_size = 0.15
+}
+
+granting_autonomy_to_subjects = {
+	diplomatic_annexation_cost = 0.25
+	vassal_income = -0.25
+}
+
+oppressing_subjects = {
+	reduced_liberty_desire = -10
+}
+
+self_determination_embraced = {
+	liberty_desire = 10
+}
+
+failed_government_diplomacy = {
+	max_absolutism = -10
+}
+
+leaky_boats_tp = {
+	global_ship_trade_power = -0.2
+}
+
+###LOGISTICS IDEAS###
+network_improvements_military = {
+	movement_speed = 0.1
+}
+
+network_improvements_economy = {
+	global_trade_goods_size_modifier = 0.05
+}
+
+relief_supplies_given = {
+	local_monthly_devastation = -0.25
+}
+
+relief_supplies_refused = {
+	local_unrest = 5
+}
+
+thieves_in_the_military = {
+	loot_amount = 0.1
+}
+
+expert_artillery_damage = {
+	backrow_artillery_damage = 0.1
+}
+
+expert_artillery_forts = {
+	artillery_bonus_vs_fort = 1
+}
+
+expert_artillery_forts_and_damage = {
+	artillery_bonus_vs_fort = 1
+	backrow_artillery_damage = 0.1
+}
+
+logistics_expert = {
+	country_military_power = 1
+}
+
+purebred_horses_bonus = {
+	cav_to_inf_ratio = 0.1
+	cavalry_flanking = 0.25
+}
+
+supply_line_benefits_recruits = {
+	reinforce_cost_modifier = -0.1
+	reinforce_speed = 0.2
+}
+
+supply_line_benefits_attrition = {
+	land_attrition = -0.25
+}
+
+supply_line_benefits_reserves = {
+	reserves_organisation = 0.2
+}
+
+productive_year_logistics = {
+	production_efficiency = 0.5
+}
+
+battlefield_heroics = {
+	war_exhaustion = -0.05
+	manpower_recovery_speed = 0.2
+	global_regiment_recruit_speed = -0.1
+}
+
+poorly_trained_soldiers = {
+	movement_speed = -0.1
+}
+
+refused_cavalry_training_academy = {
+	cav_to_inf_ratio = -0.3
+}
+
+lack_of_army_generals = {
+	general_cost = 0.5
+}
+
+logistics_disaster_military = {
+	reinforce_cost_modifier = 0.25
+	reserves_organisation = -0.1
+}
+
+logistics_disaster_economy = {
+	global_trade_goods_size_modifier = -0.1
+}

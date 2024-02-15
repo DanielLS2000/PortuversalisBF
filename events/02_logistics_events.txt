@@ -1,0 +1,705 @@
+namespace = new_idea_groups_mod #series 300
+
+#######################################
+# Logistics Ideas | 8g 5b
+#######################################
+
+# Network improvements
+country_event = {
+	id = new_idea_groups_mod.300
+	title = new_idea_groups_mod.300.t
+	desc = new_idea_groups_mod.300.d
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = logistics_ideas
+		NOT = { has_country_modifier = network_improvements_military }
+		NOT = { has_country_modifier = network_improvements_economy }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.300.a #Prioritise Military use
+		add_country_modifier = {
+			name = network_improvements_military
+			duration = 1650
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				is_at_war = yes
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.300.b #Prioritise Economic use
+		add_country_modifier = {
+			name = network_improvements_economy
+			duration = 1650
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				num_of_loans = 1
+			}
+		}
+	}
+}
+
+# Relief supplies
+country_event = {
+	id = new_idea_groups_mod.301
+	title = new_idea_groups_mod.301.t
+	desc = new_idea_groups_mod.301.d
+	picture = FAMINE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = logistics_ideas
+		any_owned_province = {
+			NOT = { has_province_modifier = relief_supplies_given }
+			NOT = { has_province_modifier = relief_supplies_refused }
+			devastation = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_area = {
+				limit = {
+					NOT = { has_province_modifier = relief_supplies_given }
+					NOT = { has_province_modifier = relief_supplies_refused }
+					devastation = 1
+				}
+				save_global_event_target_as = devastated_area
+			}
+		}
+	}
+
+	option = {
+		name = new_idea_groups_mod.301.a #Send aid
+		add_years_of_income = -0.2
+		event_target:devastated_area = {
+			add_province_modifier = {
+				name = relief_supplies_given
+				duration = 1825
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				NOT = { years_of_income = 0.2 }
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.301.b #Don’t send aid
+		event_target:devastated_area = {
+			add_province_modifier = {
+				name = relief_supplies_refused
+				duration = 1825
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# Logistics expert general/mil power
+country_event = {
+	id = new_idea_groups_mod.302
+	title = new_idea_groups_mod.302.t
+	desc = new_idea_groups_mod.302.d
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = logistics_ideas
+		NOT = { has_country_modifier = logistics_expert }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.302.a #Put him on the battlefield
+		custom_tooltip = logistics_expert_tooltip
+		hidden_effect = {
+			random_list = {
+				1 = { define_general = { shock = 2 fire = 2 manuever = 6 siege = 4 } }
+				1 = { define_general = { shock = 2 fire = 2 manuever = 6 siege = 3 } }
+				2 = { define_general = { shock = 2 fire = 2 manuever = 6 siege = 2 } }
+				3 = { define_general = { shock = 2 fire = 2 manuever = 6 siege = 1 } }
+				4 = { define_general = { shock = 2 fire = 2 manuever = 6 siege = 0 } }
+
+				2 = { define_general = { shock = 2 fire = 1 manuever = 6 siege = 4 } }
+				3 = { define_general = { shock = 2 fire = 1 manuever = 6 siege = 3 } }
+				4 = { define_general = { shock = 2 fire = 1 manuever = 6 siege = 2 } }
+				5 = { define_general = { shock = 2 fire = 1 manuever = 6 siege = 1 } }
+				7 = { define_general = { shock = 2 fire = 1 manuever = 6 siege = 0 } }
+
+				2 = { define_general = { shock = 1 fire = 2 manuever = 6 siege = 4 } }
+				3 = { define_general = { shock = 1 fire = 2 manuever = 6 siege = 3 } }
+				4 = { define_general = { shock = 1 fire = 2 manuever = 6 siege = 2 } }
+				5 = { define_general = { shock = 1 fire = 2 manuever = 6 siege = 1 } }
+				7 = { define_general = { shock = 1 fire = 2 manuever = 6 siege = 0 } }
+
+				4 = { define_general = { shock = 1 fire = 1 manuever = 6 siege = 4 } }
+				5 = { define_general = { shock = 1 fire = 1 manuever = 6 siege = 3 } }
+				7 = { define_general = { shock = 1 fire = 1 manuever = 6 siege = 2 } }
+				8 = { define_general = { shock = 1 fire = 1 manuever = 6 siege = 1 } }
+				11 = { define_general = { shock = 1 fire = 1 manuever = 6 siege = 0 } }
+	
+				7 = { define_general = { shock = 1 fire = 0 manuever = 6 siege = 4 } }
+				8 = { define_general = { shock = 1 fire = 0 manuever = 6 siege = 3 } }
+				11 = { define_general = { shock = 1 fire = 0 manuever = 6 siege = 2 } }
+				13 = { define_general = { shock = 1 fire = 0 manuever = 6 siege = 1 } }
+				17 = { define_general = { shock = 1 fire = 0 manuever = 6 siege = 0 } }
+
+				7 = { define_general = { shock = 0 fire = 1 manuever = 6 siege = 4 } }
+				8 = { define_general = { shock = 0 fire = 1 manuever = 6 siege = 3 } }
+				11 = { define_general = { shock = 0 fire = 1 manuever = 6 siege = 2 } }
+				13 = { define_general = { shock = 0 fire = 1 manuever = 6 siege = 1 } }
+				17 = { define_general = { shock = 0 fire = 1 manuever = 6 siege = 0 } }
+
+				11 = { define_general = { shock = 0 fire = 0 manuever = 6 siege = 4 } }
+				13 = { define_general = { shock = 0 fire = 0 manuever = 6 siege = 3 } }
+				17 = { define_general = { shock = 0 fire = 0 manuever = 6 siege = 2 } }
+				23 = { define_general = { shock = 0 fire = 0 manuever = 6 siege = 1 } }
+				31 = { define_general = { shock = 0 fire = 0 manuever = 6 siege = 0 } }
+			}
+
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				is_at_war = yes
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.302.b #I need them in my court
+		add_country_modifier = {
+			name = logistics_expert
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { mil_power = 100 }
+			}
+			modifier = {
+				factor = 0.1
+				mil_power = 900
+			}
+		}
+	}
+}
+
+# Band of thieves joins the army
+country_event = {
+	id = new_idea_groups_mod.303
+	title = new_idea_groups_mod.303.t
+	desc = new_idea_groups_mod.303.d
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = logistics_ideas
+		NOT = { has_country_modifier = thieves_in_the_military }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.303.a #Their ‘skills’ will come in handy
+		add_country_modifier = {
+			name = thieves_in_the_military
+			duration = 3650
+		}
+	}
+}
+
+# Artillery improvements
+country_event = {
+	id = new_idea_groups_mod.304
+	title = new_idea_groups_mod.304.t
+	desc = new_idea_groups_mod.304.d
+	picture = SEIGE_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = logistics_ideas
+		NOT = { has_country_modifier = expert_artillery_damage }
+		NOT = { has_country_modifier = expert_artillery_forts }
+		NOT = { has_country_modifier = expert_artillery_forts_and_damage }
+		artillery_fraction = 0.01
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.304.a #Use them in battle.
+		add_country_modifier = {
+			name = expert_artillery_damage
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.304.b #Save them for the sieges.
+		add_country_modifier = {
+			name = expert_artillery_forts
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.304.c #Why not both?
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tactical_genius_personality
+		}
+		add_country_modifier = {
+			name = expert_artillery_forts_and_damage
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Purebred horses
+country_event = {
+	id = new_idea_groups_mod.305
+	title = new_idea_groups_mod.305.t
+	desc = new_idea_groups_mod.305.d
+	picture = FARMING_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = logistics_ideas
+		NOT = { has_country_modifier = purebred_horses_bonus }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.305.a #This is a good investment.
+		add_mil_power = -50
+		add_country_modifier = {
+			name = purebred_horses_bonus
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { cavalry_fraction = 0.01 }
+			}
+			modifier = {
+				factor = 2
+				mil_power = 900
+			}
+			modifier = {
+				factor = 2
+				mil_power = 600
+			}
+			modifier = {
+				factor = 2
+				government = steppe_nomads
+			}
+			modifier = {
+				factor = 2
+				cavalry_fraction = 0.2
+			}
+			modifier = {
+				factor = 2
+				cavalry_fraction = 0.4
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.305.b #This is a bad investment.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { mil_power = 100 }
+			}
+		}
+	}
+}
+
+# Supply lines bring benefits
+country_event = {
+	id = new_idea_groups_mod.306
+	title = new_idea_groups_mod.306.t
+	desc = new_idea_groups_mod.306.d
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = logistics_ideas
+		NOT = { has_country_modifier = supply_line_benefits_recruits }
+		NOT = { has_country_modifier = supply_line_benefits_attrition }
+		NOT = { has_country_modifier = supply_line_benefits_reserves }
+		is_at_war = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.306.a #We can deliver fresh men to the frontline with ease.
+		add_country_modifier = {
+			name = supply_line_benefits_recruits
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.306.b #This should reduce attrition rates.
+		add_country_modifier = {
+			name = supply_line_benefits_attrition
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.306.c #Let our reserves travel home occasionally.
+		add_country_modifier = {
+			name = supply_line_benefits_reserves
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.306.e #That sounds exploitable
+		highlight = yes
+		trigger = {
+			ruler_has_personality = industrious_personality
+		}
+		add_years_of_income = 0.5
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				NOT = { years_of_income = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				num_of_loans = 1
+			}
+		}
+	}
+}
+
+# Productive year
+country_event = {
+	id = new_idea_groups_mod.307
+	title = new_idea_groups_mod.307.t
+	desc = new_idea_groups_mod.307.d
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = logistics_ideas
+		NOT = { has_country_modifier = productive_year_logistics }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.307.a #Awesome.
+		add_country_modifier = {
+			name = productive_year_logistics
+			duration = 365
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.307.b #Cash in now
+		add_years_of_income = 0.167
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# Battlefield heroics
+country_event = {
+	id = new_idea_groups_mod.308
+	title = new_idea_groups_mod.308.t
+	desc = new_idea_groups_mod.308.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = logistics_ideas
+		NOT = { has_country_modifier = battlefield_heroics }
+		war_exhaustion = 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.308.a #These stories will live forever.
+		add_country_modifier = {
+			name = battlefield_heroics
+			duration = 730
+		}
+	}
+}
+
+# Poor Training
+country_event = {
+	id = new_idea_groups_mod.309
+	title = new_idea_groups_mod.309.t
+	desc = new_idea_groups_mod.309.d
+	picture = LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = logistics_ideas
+		NOT = { has_country_modifier = poorly_trained_soldiers }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.309.a #We will need to fix this.
+		add_country_modifier = {
+			name = poorly_trained_soldiers
+			duration = 1825
+		}
+	}
+}
+
+# Cavalry Training Academy
+country_event = {
+	id = new_idea_groups_mod.310
+	title = new_idea_groups_mod.310.t
+	desc = new_idea_groups_mod.310.d
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = logistics_ideas
+		NOT = { has_country_modifier = refused_cavalry_training_academy }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.310.a #Don’t build the academy
+		add_country_modifier = {
+			name = refused_cavalry_training_academy
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				cavalry_fraction = 0.5
+			}
+			modifier = {
+				factor = 0.5
+				cavalry_fraction = 0.3
+			}
+		}
+	}
+
+	option = {
+		name = new_idea_groups_mod.310.b #Build the academy
+		add_years_of_income = -0.33
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				NOT = { years_of_income = 0.33 }
+			}
+		}
+	}
+
+	option = {
+		name = new_idea_groups_mod.310.c #I will conduct the training myself.
+		highlight = yes
+		trigger = {
+			ruler_has_personality = martial_educator_personality
+		}
+		add_mil_power = -25
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				NOT = { mil_power = 50 }
+			}
+			modifier = {
+				factor = 2
+				mil_power = 900
+			}
+			modifier = {
+				factor = 2
+				mil_power = 700
+			}
+		}
+	}
+}
+
+# Lack of Generals
+country_event = {
+	id = new_idea_groups_mod.311
+	title = new_idea_groups_mod.311.t
+	desc = new_idea_groups_mod.311.d
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = logistics_ideas
+		NOT = { has_country_modifier = lack_of_army_generals }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.311.a #Perhaps we need some kind of incentive programme.
+		add_country_modifier = {
+			name = lack_of_army_generals
+			duration = 3650
+		}
+	}
+}
+
+# Logistical Disaster
+country_event = {
+	id = new_idea_groups_mod.312
+	title = new_idea_groups_mod.312.t
+	desc = new_idea_groups_mod.312.d
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = logistics_ideas
+		NOT = { has_country_modifier = logistics_disaster_military }
+		NOT = { has_country_modifier = logistics_disaster_economy }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.312.a #This will hurt the military
+		add_country_modifier = {
+			name = logistics_disaster_military
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				NOT = { army_size_percentage = 0.7 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { army_size_percentage = 0.5 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { army_size_percentage = 0.3 }
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.312.b #This will hurt the economy
+		add_country_modifier = {
+			name = logistics_disaster_economy
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				num_of_loans = 1
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.312.c #Clean up this mess
+		add_mil_power = -100
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0.5
+				NOT = { mil_power = 100 }
+			}
+			modifier = {
+				factor = 2
+				mil_power = 900
+			}
+			modifier = {
+				factor = 2
+				mil_power = 700
+			}
+		}
+	}
+}

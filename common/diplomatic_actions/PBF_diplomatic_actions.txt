@@ -1,84 +1,3 @@
-# One war at a time
-declarewar = {
-	condition = {
-		tooltip = AI_CANNOT_DECLARE_WHEN_STABILITY_LOSS
-		potential = {
-			ai = yes
-		}
-		allow = {
-			ai = yes
-			NOT = {
-				has_global_modifier_value = {
-					which = stability_cost_to_declare_war
-					value = 1
-				}
-			}
-		}
-	}
-	condition = {
-		tooltip = NO_OTHER_WAR
-		potential = {
-			is_at_war = yes
-		}
-		allow = {
-			NOT = {
-				is_in_war = {
-					attacker_leader = ROOT
-				}
-			}
-		}
-	}
-	condition = {
-		tooltip = CANNOT_DECLARE_WARS_OTHER_THAN_INDEPENDENCE_WARS
-		potential = {
-			has_country_modifier = revoked_war_rights
-			FROM = { NOT = { overlord_of = ROOT } }
-		}
-		allow = {
-			OR = {
-				NOT = { has_country_modifier = revoked_war_rights }
-				FROM = { overlord_of = ROOT }
-			}
-		}
-	}
-	condition = {
-		tooltip = CANNOT_DECLARE_WARS_TEUTONS_HRE
-		potential = {
-			ai = yes 
-			has_country_flag = teu_joined_the_hre
-			FROM = { is_part_of_hre = yes }
-		}
-		allow = { 
-			FROM = { is_part_of_hre = no }
-		}
-	}
-	effect = {
-		on_war_declaration_effect = yes
-		if = {
-			limit = { 
-				has_country_flag = nor_norwegian_independence_modifier
-				FROM = { tag = DAN }
-			}
-			add_country_modifier = {
-				name = nor_norwegian_independence_war_mod
-				duration = -1
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = teu_joined_the_hre
-				tag = TEU
-				is_part_of_hre = yes
-				FROM = { is_part_of_hre = yes }
-			}
-			clr_country_flag = teu_joined_the_hre
-			country_event = {
-				id = flavor_teu.33
-				days = 10
-			}
-		}
-	}
-}
 # Military Access avaliable only to neighbors
 milaccess = {
     condition = {
@@ -120,130 +39,23 @@ milaccess = {
 	}
 }
 
-allianceaction = {
+warsubsidy = {
 	condition = {
-		tooltip = PIRATE_DENIED_ALLIANCE
-		potential = {
-			has_government_attribute = cannot_ally_non_pirates
-		}
-		allow = {
-			OR = {
-				NOT = { has_government_attribute = cannot_ally_non_pirates }
-				FROM = { has_government_attribute = is_pirate_republic_reform }
-			}
-		}
-	}
-	condition = {
-		tooltip = FROM_PIRATE_DENIED_ALLIANCE
-		potential = {
-			FROM = {
-				has_government_attribute = cannot_ally_non_pirates
-			}
-			NOT = { has_government_attribute = is_pirate_republic_reform }
-		}
-		allow = {
-			OR = {
-				has_government_attribute = is_pirate_republic_reform
-				NOT = { FROM = { has_government_attribute = cannot_ally_non_pirates } }
-			}
-		}
-	}
-	condition = {
-		tooltip = REPUBLIC_DENIED_ALLIANCE
-		potential = {
-			has_government_attribute = cannot_ally_non_republics
-		}
-		allow = {
-			OR = {
-				NOT = { has_government_attribute = cannot_ally_non_republics }
-				FROM = { government = republic }
-			}
-		}
-	}
-	condition = {
-		tooltip = FROM_REPUBLIC_DENIED_ALLIANCE
-		potential = {
-			FROM = {
-				has_government_attribute = cannot_ally_non_republics
-			}
-			NOT = { government = republic }
-		}
-		allow = {
-			OR = {
-				government = republic
-				NOT = { FROM = { has_government_attribute = cannot_ally_non_republics } }
-			}
-		}
-	}
-	condition = {
-		tooltip = REV_REPUBLIC_DENIED_ALLIANCE
-		potential = {
-			has_government_attribute = cannot_ally_non_republics_or_non_rev
-		}
-		allow = {
-			OR = {
-				NOT = { has_government_attribute = cannot_ally_non_republics_or_non_rev }
-				FROM = { 
-					OR = {
-						government = republic 
-						is_revolutionary = yes
+        tooltip = NOT_FRIEND
+        potential = {
+			NOT = {
+				OR = {
+					FROM = {
+						alliance_with = ROOT
+					}
+					FROM = {
+						is_subject = yes
 					}
 				}
 			}
-		}
-	}
-	condition = {
-		tooltip = FROM_REV_REPUBLIC_DENIED_ALLIANCE
-		potential = {
-			FROM = {
-				has_government_attribute = cannot_ally_non_republics_or_non_rev
-			}
-			NOT = { government = republic }
-			is_revolutionary = no
-		}
-		allow = {
-			OR = {
-				government = republic 
-				is_revolutionary = yes
-				NOT = { FROM = { has_government_attribute = cannot_ally_non_republics_or_non_rev } }
-			}
-		}
-	}
-	condition = {
-		tooltip = CANNOT_MAKE_ALLIANCES
-		potential = {
-			has_government_attribute = cannot_form_alliances
-		}
-		allow = {
-			NOT = { has_government_attribute = cannot_form_alliances }
-		}
-	}
-	condition = {
-		tooltip = FROM_CANNOT_MAKE_ALLIANCES
-		potential = {
-			FROM = {
-				has_government_attribute = cannot_form_alliances
-			}
-		}
-		allow = {
-			NOT = { FROM = { has_government_attribute = cannot_form_alliances } }
-		}
-	}
-    condition = {
-        tooltip = CANNOT_ALLY_BROKEN_ALLIANCE
-        potential = {
-            FROM = {
-                has_opinion_modifier = {
-					who = ROOT
-					modifier = break_alliance
-				}
-            }
         }
         allow = {
             always = no
         }
     }
-	effect = {
-		change_asha_vahishta = { value = 2 }
-	}
 }

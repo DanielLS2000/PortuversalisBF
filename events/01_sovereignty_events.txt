@@ -1,0 +1,2340 @@
+namespace = new_idea_groups_mod #series 200
+
+#######################################
+# Sovereignty Ideas | 9g 5b
+#######################################
+
+# The spirit of our nation
+country_event = {
+	id = new_idea_groups_mod.200
+	title = new_idea_groups_mod.200.t
+	desc = new_idea_groups_mod.200.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+		NOT = { has_country_modifier = spirit_of_the_nation_war }
+		NOT = { has_country_modifier = spirit_of_the_nation_diplo }
+		NOT = { has_country_modifier = spirit_of_the_nation_economy }
+		NOT = { has_country_modifier = spirit_of_the_nation_tech }
+		NOT = { has_country_modifier = spirit_of_the_nation_resistance }
+		is_at_war = yes
+		NOT = { war_score = -20 }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.8
+			NOT = { war_score = -40 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { war_score = -60 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { war_score = -80 }
+		}
+		modifier = {
+			factor = 0.75
+			at_war_with_religious_enemy = yes
+		}
+		modifier = {
+			factor = 0.9
+			ROOT = {
+				is_in_war = {
+					duration = 1825
+				}
+			}
+		}
+		modifier = {
+			factor = 0.9
+			ROOT = {
+				is_in_war = {
+					duration = 3650
+				}
+			}
+		}
+		modifier = {
+			factor = 0.9
+			ROOT = {
+				is_in_war = {
+					duration = 7300
+				}
+			}
+		}
+		modifier = {
+			factor = 0.90
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.85
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.80
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.75
+			any_rival_country = {
+				is_in_war = {
+					attacker_leader = THIS
+					defender_leader = ROOT
+				}
+			}
+		}		
+	}
+
+	option = {
+		name = new_idea_groups_mod.200.a #The spirit of our nation is in war!
+		add_country_modifier = {
+			name = spirit_of_the_nation_war
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 1.5
+				NOT = { army_size_percentage = 0.5 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { army_size_percentage = 0.25 }
+			}
+			modifier = {
+				factor = 2
+				has_commanding_three_star = yes
+			}
+		}
+		
+	}
+	option = {
+		name = new_idea_groups_mod.200.b #The spirit of our nation is in diplomacy!
+		add_country_modifier = {
+			name = spirit_of_the_nation_diplo
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 3
+				NOT = { num_of_free_diplomatic_relations = 1 }
+			}
+			modifier = {
+				factor = 5
+				is_emperor = yes
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.200.c #The spirit of our nation is in the economy!
+		add_country_modifier = {
+			name = spirit_of_the_nation_economy
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				num_of_loans = 1
+			}
+			modifier = {
+				factor = 2
+				num_of_loans = 5
+			}
+			modifier = {
+				factor = 2
+				num_of_loans = 10
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { army_size_percentage = 0.5 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { army_size_percentage = 0.25 }
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.200.e #The spirit of our nation is in innovation!
+		add_country_modifier = {
+			name = spirit_of_the_nation_tech
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 5
+				any_rival_country = {
+					is_in_war = {
+						attacker_leader = THIS
+						defender_leader = ROOT
+					}
+					mil_tech = ROOT
+				}
+			}
+				 
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.200.f #The spirit of our nation is in the resistance!
+		add_country_modifier = {
+			name = spirit_of_the_nation_resistance
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 1.5
+				NOT = { war_score = -50 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { war_score = -75 }
+			}
+			modifier = {
+				factor = 10
+				NOT = { war_score = -99 }
+			}
+			modifier = {
+				factor = 1.5
+				war_exhaustion = 2
+			}
+			modifier = {
+				factor = 2
+				war_exhaustion = 5
+			}
+			modifier = {
+				factor = 2.5
+				war_exhaustion = 10
+			}
+		}
+	}
+}
+
+# Fifty Year Integration Plan
+country_event = {
+	id = new_idea_groups_mod.201
+	title = new_idea_groups_mod.201.t
+	desc = new_idea_groups_mod.201.d
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+		had_recent_war = 10
+		any_owned_province = {
+			nationalism = 10
+		}
+		NOT = { has_country_modifier = fifty_year_plan_religion }
+		NOT = { has_country_modifier = fifty_year_plan_culture }
+		NOT = { has_country_modifier = fifty_year_plan_governance }
+		NOT = { has_country_modifier = fifty_year_plan_tolerance }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.201.a #Religion is our top priority.
+		add_country_modifier = {
+			name = fifty_year_plan_religion
+			duration = 18250
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.75
+				NOT = { religious_unity = 0.9 }
+			}
+			modifier = {
+				factor = 1.75
+				NOT = { religious_unity = 0.7 }
+			}
+			modifier = {
+				factor = 1.75
+				NOT = { religious_unity = 0.5 }
+			}
+			modifier = {
+				factor = 1.75
+				NOT = { religious_unity = 0.3 }
+			}
+			modifier = {
+				factor = 1.75
+				NOT = { religious_unity = 0.1 }
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.201.b #Culture is our top priority.
+		add_country_modifier = {
+			name = fifty_year_plan_culture
+			duration = 18250
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				any_owned_province = {
+					NOT = { has_owner_accepted_culture = yes }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_unified_culture_group = yes
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.201.c #Governance is our top priority.
+		add_country_modifier = {
+			name = fifty_year_plan_governance
+			duration = 18250
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.75
+				average_autonomy_above_min = 10
+			}
+			modifier = {
+				factor = 1.75
+				average_autonomy_above_min = 20
+			}
+			modifier = {
+				factor = 1.75
+				average_autonomy_above_min = 30
+			}
+			modifier = {
+				factor = 1.75
+				average_autonomy_above_min = 40
+			}
+			modifier = {
+				factor = 1.75
+				average_autonomy_above_min = 50
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.201.e #Tolerance is our top priority.
+		add_country_modifier = {
+			name = fifty_year_plan_tolerance
+			duration = 18250
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				any_owned_province = {
+					nationalism = 20
+				}
+			}
+			modifier = {
+				factor = 2
+				any_owned_province = {
+					nationalism = 25
+				}
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.201.f #Let them be.
+		highlight = yes
+		trigger = {
+			ruler_has_personality = kind_hearted_personality
+		}
+		add_adm_power = 50
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				NOT = { adm_power = 100 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { adm_power = 300 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { adm_power = 500 }
+			}
+		}
+	}
+}
+
+# Rewrite the history books
+country_event = {
+	id = new_idea_groups_mod.202
+	title = new_idea_groups_mod.202.t
+	desc = new_idea_groups_mod.202.d
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+		NOT = { has_country_modifier = rewrote_history_complete }
+		NOT = { has_country_modifier = rewrote_history_minor }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.202.a #I want a full rewrite.
+		add_years_of_income = -0.5
+		add_country_modifier = {
+			name = rewrote_history_complete
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				years_of_income = 0.5
+			}
+			modifier = {
+				factor = 5
+				years_of_income = 0.75
+			}
+			modifier = {
+				factor = 10
+				years_of_income = 1.0
+			}
+			modifier = {
+				factor = 1.5
+				any_known_country = { core_claim = ROOT }
+			}
+			modifier = {
+				factor = 1.5
+				absolutism = 50
+			}
+			modifier = {
+				factor = 1.5
+				absolutism = 70
+			}
+			modifier = {
+				factor = 1.5
+				absolutism = 90
+			}
+
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.202.b #Make a few minor adjusts.
+		add_years_of_income = -0.2
+		add_country_modifier = {
+			name = rewrote_history_minor
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				years_of_income = 0.2
+			}
+			modifier = {
+				factor = 2
+				years_of_income = 0.4
+			}
+			modifier = {
+				factor = 0.5
+				years_of_income = 0.5
+			}
+			modifier = {
+				factor = 0.5
+				years_of_income = 0.75
+			}
+			modifier = {
+				factor = 0.5
+				years_of_income = 1.0
+			}
+			modifier = {
+				factor = 1.2
+				any_known_country = { core_claim = ROOT }
+			}
+			modifier = {
+				factor = 1.25
+				absolutism = 50
+			}
+			modifier = {
+				factor = 1.25
+				absolutism = 70
+			}
+			modifier = {
+				factor = 1.25
+				absolutism = 90
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.202.c #Leave history be
+		custom_tooltip = rewrote_history_refused_tooltip
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0.5
+				OR = {
+					current_age = age_of_absolutism
+					current_age = age_of_revolutions
+				}
+			}
+			modifier = {
+				factor = 0.5
+				years_of_income = 0.5
+			}
+			modifier = {
+				factor = 0.5
+				years_of_income = 0.75
+			}
+			modifier = {
+				factor = 0.5
+				years_of_income = 1.0
+			}
+			modifier = {
+				factor = 0
+				ruler_has_personality = obsessive_perfectionist_personality
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.202.e #Make it all about me!
+		highlight = yes
+		trigger = {
+			ruler_has_personality = obsessive_perfectionist_personality
+		}
+		add_prestige = 25
+
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 2
+				NOT = { prestige = 0 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { prestige = 35 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { prestige = 70 }
+			}
+		}
+	}
+}
+# Diplomatic Dilemma
+country_event = {
+	id = new_idea_groups_mod.203
+	title = new_idea_groups_mod.203.t
+	desc = new_idea_groups_mod.203.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+		NOT = { has_country_modifier = new_expansion_focus }
+		NOT = { has_country_modifier = new_administration_focus }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.203.a #We need to focus on immediate expansion.
+		add_country_modifier = {
+			name = new_expansion_focus
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				is_at_war = yes
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.203.b #We need to focus on administration.
+		add_country_modifier = {
+			name = new_administration_focus
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 2
+				government = imperial_city
+			}
+		}
+	}
+}
+
+# Gift from neighbor
+country_event = {
+	id = new_idea_groups_mod.204
+	title = new_idea_groups_mod.204.t
+	desc = new_idea_groups_mod.204.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+		any_neighbor_country = {
+			is_subject = no
+			NOT = { truce_with = ROOT }
+			has_opinion = {
+				who = ROOT
+				value = 50
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.204.a #Thanks.
+		add_years_of_income = 0.25
+		trigger = {
+			NOT = { ruler_has_personality = well_connected_personality }
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				ruler_has_personality = well_connected_personality
+			}
+		}
+	}
+
+	option = {
+		name = new_idea_groups_mod.204.b #Thanks.
+		add_years_of_income = 0.33
+		highlight = yes
+		trigger = {
+			ruler_has_personality = well_connected_personality
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Protection of Interests
+country_event = {
+	id = new_idea_groups_mod.205
+	title = new_idea_groups_mod.205.t
+	desc = new_idea_groups_mod.205.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+		NOT = { has_country_modifier = protection_of_diplomacy }
+		NOT = { has_country_modifier = protection_of_trade }
+		NOT = { has_country_modifier = protection_of_borders }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.205.a #Protection of allies is the most important.
+		add_country_modifier = {
+			name = protection_of_diplomacy
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0.3
+				is_subject = yes
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { diplomatic_reputation = 0 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { diplomatic_reputation = -2 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { diplomatic_reputation = -4 }
+			}
+			modifier = {
+				factor = 1.5
+				is_emperor = yes
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.205.b #Protection of trade is the most important.
+		trigger = {
+			num_of_ports = 1
+		}
+		add_country_modifier = {
+			name = protection_of_trade
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 0
+				NOT = { num_of_total_ports = 1 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { num_of_light_ship = 25 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { num_of_light_ship = 50 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { num_of_light_ship = 100 }
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.205.c #Protection of borders is the most important.
+		add_country_modifier = {
+			name = protection_of_borders
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 1.2
+				any_owned_province = {
+					fort_level = 2
+				}
+			}
+			modifier = {
+				factor = 1.2
+				any_owned_province = {
+					fort_level = 4
+				}
+			}
+			modifier = {
+				factor = 1.2
+				any_owned_province = {
+					fort_level = 6
+				}
+			}
+			modifier = {
+				factor = 1.2
+				any_owned_province = {
+					fort_level = 8
+				}
+			}
+			modifier = {
+				factor = 1.5
+				has_border_with_religious_enemy = yes
+			}
+			modifier = {
+				factor = 2
+				is_at_war = yes
+			}
+		}
+	}
+}
+
+# Streamlined Governance
+country_event = {
+	id = new_idea_groups_mod.206
+	title = new_idea_groups_mod.206.t
+	desc = new_idea_groups_mod.206.d
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = new_idea_groups_mod.206.a #This will help further our goals.
+		add_adm_power = 20
+		add_dip_power = 20
+		add_mil_power = 20
+	}
+}
+
+# Global threat
+country_event = {
+	id = new_idea_groups_mod.207
+	title = new_idea_groups_mod.207.t
+	desc = new_idea_groups_mod.207.d
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+		any_known_country = {
+			num_of_cities = 5
+			reverse_has_opinion_modifier = {
+				who = ROOT
+				modifier = aggressive_expansion
+			}
+			NOT = {
+				reverse_has_opinion = {
+					who = ROOT
+					value = 0
+				}
+			}
+			NOT = { truce_with = ROOT }
+			NOT = { alliance_with = ROOT }
+			NOT = { 
+				border_distance = {
+					who = ROOT
+					distance = 100
+				}
+			}
+			NOT = { has_country_flag = is_global_threat_sovereignty_event }
+			NOT = { is_subject = yes }
+			NOT = { is_in_trade_league_with = ROOT }
+		}
+		NOT = { is_subject = yes }
+		NOT = { is_at_war = yes }
+		NOT = { is_in_coalition = yes }
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	immediate = {
+		every_known_country = {
+			limit = {
+				OR = {
+					NOT = { num_of_cities = 5 }
+					reverse_has_opinion_modifier = {
+						who = ROOT
+						modifier = aggressive_expansion
+						value = -25
+					}
+					NOT = {
+						reverse_has_opinion_modifier = {
+							who = ROOT
+							modifier = aggressive_expansion
+						}
+					}
+					reverse_has_opinion = {
+						who = ROOT
+						value = 0
+					}
+					truce_with = ROOT
+					alliance_with = ROOT
+					border_distance = {
+						who = ROOT
+						distance = 100
+					}
+					is_subject = yes
+				}
+			}
+			set_country_flag = is_NOT_global_threat_sovereignty_event
+		}
+		random_known_country = {
+			limit = { 
+				NOT = { has_country_flag = is_NOT_global_threat_sovereignty_event }
+			}
+			set_country_flag = is_global_threat_sovereignty_event
+			save_global_event_target_as = global_threat_country
+		}
+
+		every_known_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = event_target:global_threat_country
+					modifier = aggressive_expansion
+				}
+				NOT = {
+					has_opinion = {
+						who = event_target:global_threat_country
+						value = 0
+					}
+				}
+				NOT = { truce_with = event_target:global_threat_country }
+				NOT = { alliance_with = event_target:global_threat_country }
+				NOT = {
+					border_distance = {
+						who = event_target:global_threat_country
+						distance = 100
+					}
+				}
+				NOT = { is_subject = yes }
+				NOT = { is_at_war = yes }
+				NOT = { is_in_coalition = yes }
+				
+				
+			}
+			set_country_flag = is_global_threat_coalition_buddy	
+		}
+
+		
+	}
+
+	option = {
+		name = new_idea_groups_mod.207.a #There can only be WAR!
+		custom_tooltip = global_threat_ask_for_coalition
+		hidden_effect = {
+			form_coalition_against = event_target:global_threat_country
+		}
+
+		add_opinion = {
+			who = event_target:global_threat_country
+			modifier = global_threat_coalition_joined
+		}
+
+		every_known_country = {
+			limit = { has_country_flag = is_global_threat_coalition_buddy }
+			country_event = {
+				id = new_idea_groups_mod.208
+				days = 1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = global_threat_joined_coalition_event
+			#add 50 AE the old fashioned way
+			#0
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			#10
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			#20
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			#30
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			#40
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			#50
+		}
+
+		ai_chance = {
+			factor = 80
+		}		
+	}
+
+	option = {
+		name = new_idea_groups_mod.207.b #… or peace.
+
+		custom_tooltip = global_threat_ask_for_peace
+
+		random_known_country = {
+			limit = { has_country_flag = is_global_threat_sovereignty_event }
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = peaceful_resolution_to_conflict
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = peaceful_resolution_to_conflict
+			}
+			clr_country_flag = is_global_threat_sovereignty_event
+		}
+
+		every_known_country = {
+			limit = { has_country_flag = is_global_threat_coalition_buddy }
+			clr_country_flag = is_global_threat_coalition_buddy
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				is_rival = event_target:global_threat_country
+			}
+		}		
+	}
+
+	after = {
+		country_event = {
+			id = new_idea_groups_mod.209
+			days = 1825
+		}
+
+		every_known_country = {
+			limit = { has_country_flag = is_NOT_global_threat_sovereignty_event }
+			clr_country_flag = is_NOT_global_threat_sovereignty_event
+		}
+		every_known_country = {
+			limit = { has_country_flag = is_global_threat_sovereignty_event }
+			clr_country_flag = is_global_threat_sovereignty_event
+		}
+	}
+}
+
+# Global threat - subevent
+country_event = {
+	id = new_idea_groups_mod.208
+	title = new_idea_groups_mod.208.t
+	desc = new_idea_groups_mod.208.d
+	picture = LAND_MILITARY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = is_global_threat_coalition_buddy
+	}
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	#immediate = { clr_country_flag = is_global_threat_coalition_buddy }
+
+	option = {
+		name = new_idea_groups_mod.208.a #We must join the grand coalition and fight for our sovereignty.
+		custom_tooltip = global_threat_accept_coalition
+
+		set_country_flag = global_threat_joined_coalition_event
+
+		reverse_add_opinion = {
+			who = FROM
+			modifier = global_threat_coalition_accepted
+		}
+		add_opinion = {
+			who = FROM
+			modifier = global_threat_coalition_accepted
+		}
+		form_coalition_against = event_target:global_threat_country
+
+		add_opinion = {
+			who = event_target:global_threat_country
+			modifier = global_threat_coalition_joined
+		}
+
+		hidden_effect = {
+			
+			add_trust = {
+				who = event_target:global_threat_country
+				value = -50
+				mutual = yes
+			}
+
+			
+
+			#Add 50 AE to keep AI in coalition: While loop would not work :(
+			#0
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			#10
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			#20
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			#30
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			#40
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			add_opinion = {
+				who = event_target:global_threat_country
+				modifier = aggressive_expansion
+			}
+			#50
+		}
+
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 2
+				historical_rival_with = event_target:global_threat_country
+			}
+			modifier = {
+				factor = 0.75
+				historical_rival_with = FROM
+			}
+			modifier = {
+				factor = 0.5
+				is_rival = FROM
+			}
+			modifier = {
+				factor = 1.5
+				alliance_with = FROM
+			}
+			modifier = {
+				factor = 2
+				core_claim = event_target:global_threat_country
+			}
+			modifier = {
+				factor = 0.75
+				reverse_has_opinion_modifier = {
+					who = event_target:global_threat_country
+					modifier = aggressive_expansion
+					value = -50
+				}
+			}
+			modifier = {
+				factor = 0.5
+				reverse_has_opinion_modifier = {
+					who = event_target:global_threat_country
+					modifier = aggressive_expansion
+					value = -25
+				}
+			}
+			modifier = {
+				factor = 0.25
+				reverse_has_opinion_modifier = {
+					who = event_target:global_threat_country
+					modifier = aggressive_expansion
+					value = -10
+				}
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { manpower_percentage = 0.1 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { manpower_percentage = 0.5 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { manpower_percentage = 0.9 }
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.208.b #We will not take part in this.
+		custom_tooltip = global_threat_ask_for_peace
+
+		reverse_add_opinion = {
+			who = FROM
+			modifier = global_threat_coalition_declined
+		}
+		random_known_country = {
+			limit = { has_country_flag = is_global_threat_sovereignty_event }
+		
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = peaceful_resolution_to_conflict
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = peaceful_resolution_to_conflict
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				historical_friend_with = event_target:global_threat_country
+			}
+			modifier = {
+				factor = 0.1
+				is_rival = event_target:global_threat_country
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					reverse_has_opinion = {
+						who = FROM
+						value = 0
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					reverse_has_opinion = {
+						who = FROM
+						value = -50
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					reverse_has_opinion = {
+						who = FROM
+						value = -100
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					reverse_has_opinion = {
+						who = FROM
+						value = -150
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					reverse_has_opinion = {
+						who = FROM
+						value = -199
+					}
+				}
+			}
+		}
+	}
+}
+
+# Global threat - subevent 2
+country_event = {
+	id = new_idea_groups_mod.209
+	title = new_idea_groups_mod.209.t
+	desc = new_idea_groups_mod.209.d
+	picture = LAND_MILITARY_eventPicture
+	
+	trigger = {
+		any_known_country = {
+			has_country_flag = is_global_threat_sovereignty_event
+		}
+		any_known_country = { has_country_flag = global_threat_joined_coalition_event }
+	}
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.209.a #We have prevailed?
+		custom_tooltip = global_threat_end_coalition
+		hidden_effect = {
+			every_known_country = {
+				limit = { has_country_flag = is_global_threat_sovereingty_event }
+				clr_country_flag = is_global_threat_sovereingty_event	
+			}
+
+			every_known_country = {
+				limit = { has_country_flag = global_threat_joined_coalition_event }
+			
+				add_trust = {
+					who = event_target:global_threat_country
+					value = 50
+					mutual = yes
+				}
+				remove_opinion = {
+					who = event_target:global_threat_country
+					modifier = global_threat_coalition_joined
+				}
+				remove_opinion = {
+					who = event_target:global_threat_country
+					modifier = aggressive_expansion
+				}
+				clr_country_flag = global_threat_joined_coalition_event
+			}
+		}
+	}
+}
+
+# Subject talks of self-determination
+country_event = {
+	id = new_idea_groups_mod.210
+	title = new_idea_groups_mod.210.t
+	desc = new_idea_groups_mod.210.d
+	picture = STREET_SPEECH_eventPicture
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+		num_of_subjects = 1
+		any_subject_country = {
+			is_vassal = yes
+		}
+		NOT = { has_country_modifier = granting_autonomy_to_subjects }
+		NOT = { has_country_modifier = oppressing_subjects }
+	}
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.210.a #Embrace their ideas
+		add_country_modifier = {
+			name = granting_autonomy_to_subjects
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+
+	option = {
+		name = new_idea_groups_mod.210.b #Clamp down on this dissidence!
+		add_country_modifier = {
+			name = oppressing_subjects
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0.3
+				any_subject_country = {
+					liberty_desire = 50
+				}
+			}
+			modifier = {
+				factor = 0.75
+				num_of_subjects = 2
+			}
+			modifier = {
+				factor = 0.75
+				num_of_subjects = 3
+			}
+			modifier = {
+				factor = 5
+				all_subject_country = {
+					NOT = { liberty_desire = 10 }
+				}
+			}
+			modifier = {
+				factor = 2
+				all_subject_country = {
+					NOT = { liberty_desire = 30 }
+				}
+			}
+		}
+	}
+}
+
+# Self-determination
+country_event = {
+	id = new_idea_groups_mod.211
+	title = new_idea_groups_mod.211.t
+	desc = new_idea_groups_mod.211.d
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+		is_subject = yes
+		NOT = { has_country_modifier = self_determination_embraced }
+	}
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.211.a #We wish to choose our own path.
+		add_country_modifier = {
+			name = self_determination_embraced
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.2
+				NOT = { liberty_desire = 0 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { liberty_desire = 10 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { liberty_desire = 40 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { liberty_desire = 60 }
+			}
+		}
+	}
+
+	option = {
+		name = new_idea_groups_mod.211.b #Now is not the time.
+		add_years_of_income = 0.33
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.2
+				num_of_loans = 1
+			}
+			modifier = {
+				factor = 1.2
+				num_of_loans = 3
+			}
+			modifier = {
+				factor = 1.2
+				num_of_loans = 5
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { years_of_income = 0.1 }
+			}
+		}
+	}
+}
+
+# Not protecting our sovereignty enough
+country_event = {
+	id = new_idea_groups_mod.212
+	title = new_idea_groups_mod.212.t
+	desc = new_idea_groups_mod.212.d
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+		NOT = { has_country_modifier = failed_government_diplomacy }
+		OR = {
+			current_age = age_of_absolutism
+			current_age = age_of_revolutions
+		}
+	}
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.212.a #Fools
+		add_country_modifier = {
+			name = failed_government_diplomacy
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.2
+				absolutism = 80
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { absolutism = 50 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { absolutism = 30 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { absolutism = 10 }
+			}
+		}
+	}
+
+	option = {
+		name = new_idea_groups_mod.212.b #Everything is fine.
+		add_dip_power = -100
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				dip_power = 900
+			}
+			modifier = {
+				factor = 1.2
+				dip_power = 600
+			}
+			modifier = {
+				factor = 0.2
+				NOT = { dip_power = 100 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { ruler_has_personality = charismatic_negotiator_personality }
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.212.c #I can save us from embarrassment.
+		highlight = yes
+		trigger = { ruler_has_personality = charismatic_negotiator_personality }
+		add_dip_power = -50
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				dip_power = 900
+			}
+			modifier = {
+				factor = 1.2
+				dip_power = 600
+			}
+			modifier = {
+				factor = 0.2
+				NOT = { dip_power = 100 }
+			}
+		}
+	}
+}
+
+# Leaky ships
+country_event = {
+	id = new_idea_groups_mod.213
+	title = new_idea_groups_mod.213.t
+	desc = new_idea_groups_mod.213.d
+	picture = SHIP_SAILING_eventPicture
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+		NOT = { has_country_modifier = leaky_boats_tp }
+		num_of_ports = 1
+		num_of_light_ship = 1
+	}
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.213.a #Not our problem.
+		add_country_modifier = {
+			name = leaky_boats_tp
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				is_in_trade_league = yes
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { trade_income_percentage = 0.1 }
+			}
+			modifier = {
+				factor = 1.2
+				NOT = { trade_income_percentage = 0.3 }
+			}
+			modifier = {
+				factor = 0.5
+				trade_income_percentage = 0.6
+			}
+			modifier = {
+				factor = 1.2
+				NOT = { num_of_light_ship = 10 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { num_of_light_ship = 5 }
+			}
+		}
+	}
+
+	option = {
+		name = new_idea_groups_mod.213.b #Get them fixed!
+		if = {
+			limit = { num_of_light_ship = 200 }
+			add_years_of_income = -1.0
+		}
+		else_if = {
+			limit = { num_of_light_ship = 150 }
+			add_years_of_income = -0.95
+		}
+		else_if = {
+			limit = { num_of_light_ship = 125 }
+			add_years_of_income = -0.90
+		}
+		else_if = {
+			limit = { num_of_light_ship = 100 }
+			add_years_of_income = -0.85
+		}
+		else_if = {
+			limit = { num_of_light_ship = 90 }
+			add_years_of_income = -0.8
+		}
+		else_if = {
+			limit = { num_of_light_ship = 80 }
+			add_years_of_income = -0.75
+		}
+		else_if = {
+			limit = { num_of_light_ship = 70 }
+			add_years_of_income = -0.7
+		}
+		else_if = {
+			limit = { num_of_light_ship = 60 }
+			add_years_of_income = -0.65
+		}
+		else_if = {
+			limit = { num_of_light_ship = 50 }
+			add_years_of_income = -0.6
+		}
+		else_if = {
+			limit = { num_of_light_ship = 45 }
+			add_years_of_income = -0.55
+		}
+		else_if = {
+			limit = { num_of_light_ship = 40 }
+			add_years_of_income = -0.5
+		}
+		else_if = {
+			limit = { num_of_light_ship = 35 }
+			add_years_of_income = -0.45
+		}
+		else_if = {
+			limit = { num_of_light_ship = 30 }
+			add_years_of_income = -0.40
+		}
+		else_if = {
+			limit = { num_of_light_ship = 25 }
+			add_years_of_income = -0.35
+		}
+		else_if = {
+			limit = { num_of_light_ship = 20 }
+			add_years_of_income = -0.3
+		}
+		else_if = {
+			limit = { num_of_light_ship = 15 }
+			add_years_of_income = -0.25
+		}
+		else_if = {
+			limit = { num_of_light_ship = 10 }
+			add_years_of_income = -0.20
+		}
+		else_if = {
+			limit = { num_of_light_ship = 5 }
+			add_years_of_income = -0.15
+		}
+		else_if = {
+			limit = { num_of_light_ship = 0 }
+			add_years_of_income = -0.1
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.4
+				num_of_loans = 1
+			}
+			modifier = {
+				factor = 0.5
+				num_of_loans = 3
+			}
+			modifier = {
+				factor = 0.5
+				num_of_loans = 5
+			}
+			modifier = {
+				factor = 1.2
+				years_of_income = 0.25
+			}
+			modifier = {
+				factor = 1.2
+				years_of_income = 0.5
+			}
+			modifier = {
+				factor = 1.2
+				years_of_income = 0.75
+			}
+			modifier = {
+				factor = 1.5
+				years_of_income = 1.0
+			}
+			modifier = {
+				factor = 2
+				years_of_income = 1.5
+			}
+		}
+	}
+}
+
+# People offended by an insult
+country_event = {
+	id = new_idea_groups_mod.214
+	title = new_idea_groups_mod.214.t
+	desc = new_idea_groups_mod.214.d
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+		is_at_war = no
+		any_known_country = {
+			NOT = { is_subject = yes }
+			NOT = { alliance_with = ROOT }
+			NOT = { truce_with = ROOT }
+			NOT = { is_in_trade_league_with = ROOT }
+			OR = {
+				NOT = { border_distance = { who = ROOT distance = 50 }}
+				is_rival = ROOT
+				AND = {
+					NOT = { border_distance = { who = ROOT distance = 100 }}
+					NOT = { has_opinion = { who = ROOT value = 0 }}
+				}
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		random_known_country = {
+			limit = {
+				NOT = { is_subject = yes }
+				NOT = { alliance_with = ROOT }
+				NOT = { truce_with = ROOT }
+				NOT = { is_in_trade_league_with = ROOT }
+				OR = {
+					NOT = { border_distance = { who = ROOT distance = 50 }}
+					is_rival = ROOT
+					AND = {
+						NOT = { border_distance = { who = ROOT distance = 100 }}
+						NOT = { has_opinion = { who = ROOT value = 0 }}
+					}
+				}
+			}
+			save_global_event_target_as = country_rude_insult	
+		}
+	}
+
+	option = {
+		name = new_idea_groups_mod.214.a #We will get over it.
+		add_stability = -1
+		add_opinion = {
+			who = event_target:country_rude_insult
+			modifier = insulted
+		}
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 10
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 0.75
+				}
+			}
+			modifier = {
+				factor = 10
+				NOT = { stability = -2 }
+			}
+			modifier = {
+				factor = 1.2
+				stability = 1
+			}
+			modifier = {
+				factor = 1.2
+				stability = 2
+			}
+			modifier = {
+				factor = 1.5
+				stability = 3
+			}
+			modifier = {
+				factor = 1.5
+				event_target:country_rude_insult = { is_great_power = yes }
+			}
+			modifier = {
+				factor = 0.2
+				event_target:country_rude_insult = { NOT = { num_of_allies = 1 } }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:country_rude_insult = { total_development = 250 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:country_rude_insult = { total_development = 500 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:country_rude_insult = { total_development = 1000 }
+			}
+	
+		}
+	}
+
+	
+
+	option = {
+		name = new_idea_groups_mod.214.b #Teach them to respect us.
+		declare_war_with_cb = {
+			who = event_target:country_rude_insult
+			casus_belli = cb_insult
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.2
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 1.5
+				}
+			}
+			modifier = {
+				factor = 1.2
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 2
+				}
+			}
+			modifier = {
+				factor = 1.5
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 2.5
+				}
+			}
+			
+		}
+		
+	}
+
+	option = {
+		name = new_idea_groups_mod.214.c #Redeem ourselves
+		declare_war_with_cb = {
+			who = event_target:country_rude_insult
+			casus_belli = cb_humiliate		
+		}
+		add_dip_power = -75
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 1.2
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 1.4
+				}
+			}
+			modifier = {
+				factor = 1.2
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 1.8
+				}
+			}
+			modifier = {
+				factor = 1.5
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 2.2
+				}
+			}
+			modifier = {
+				factor = 0.15
+				NOT = { dip_power = 100 }
+			}
+			modifier = {
+				factor = 1.5
+				dip_power = 600
+			}
+			modifier = {
+				factor = 1.5
+				dip_power = 900
+			}
+		}
+	}
+
+	option = {
+		name = new_idea_groups_mod.214.e #Incorporate them
+		highlight = yes
+		trigger = {
+			event_target:country_rude_insult = {
+				NOT = { total_development = 200 }
+				NOT = { total_development = ROOT }
+			}
+			ruler_has_personality = conqueror_personality
+		}
+		declare_war_with_cb = {
+			who = event_target:country_rude_insult
+			casus_belli = cb_vassalize_mission
+		}
+		add_dip_power = -150
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.2
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 1.3
+				}
+			}
+			modifier = {
+				factor = 1.2
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 1.6
+				}
+			}
+			modifier = {
+				factor = 1.5
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 1.9
+				}
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { dip_power = 200 }
+			}
+			modifier = {
+				factor = 1.5
+				dip_power = 600
+			}
+			modifier = {
+				factor = 1.5
+				dip_power = 900
+			}
+			modifier = {
+				factor = 2
+				event_target:country_rude_insult = { NOT = { num_of_allies = 1 } }
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 1.0
+				}
+			}
+			modifier = {
+				factor = 5
+				event_target:country_rude_insult = { NOT = { num_of_allies = 1 } }
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 1.5
+				}
+			}
+			modifier = {
+				factor = 2
+				event_target:country_rude_insult = { NOT = { num_of_allies = 2 } }
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 2
+				}
+			}
+			modifier = {
+				factor = 5
+				event_target:country_rude_insult = { NOT = { num_of_allies = 2 } }
+				military_strength = {
+					who = event_target:country_rude_insult
+					value = 3
+				}
+			}
+		}
+	}
+
+	
+}
+
+# Other nations view us as arrogant
+country_event = {
+	id = new_idea_groups_mod.215
+	title = new_idea_groups_mod.215.t
+	desc = new_idea_groups_mod.215.d
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		has_idea_group = sovereignty_ideas
+	}
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.215.a #Aren’t we just the greatest?
+		every_neighbor_country = {
+			add_opinion = {
+				who = ROOT
+				modifier = arrogant_country
+			}
+		}
+	}
+}

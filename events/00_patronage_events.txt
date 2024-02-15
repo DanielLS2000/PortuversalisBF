@@ -1,0 +1,1451 @@
+namespace = new_idea_groups_mod #series 100
+
+#######################################
+# Patronage Ideas | 9g 5b
+#######################################
+
+# Celebrate the life of our ruler
+country_event = {
+	id = new_idea_groups_mod.100
+	title = new_idea_groups_mod.100.t
+	desc = new_idea_groups_mod.100.d
+	picture = IMPORTANT_STATUE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		ruler_age = 60
+		NOT = { has_country_modifier = national_celebration }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.100.a #Comission a painting
+		add_prestige = 10
+		add_years_of_income = 0.25
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.2
+				NOT = { years_of_income = 0.25 }
+			}
+			modifier = {
+				factor = 1.2
+				NOT = { prestige = 0 }
+			}
+			modifier = {
+				factor = 0.5
+				years_of_income = 1
+			}
+			modifier = {
+				factor = 0.5
+				prestige = 90
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.100.b #Build a university in their honor
+		random_owned_province = {
+			limit = {
+				NOT = { has_building = university }
+			}
+			add_building = university
+			add_base_tax = 1
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.2
+				NOT = { total_development = 10 }
+			}
+			modifier = {
+				factor = 1.2
+				NOT = { total_development = 25 }
+			}
+			modifier = {
+				factor = 1.2
+				NOT = { total_development = 50 }
+			}
+			modifier = {
+				factor = 1.2
+				NOT = { total_development = 100 }
+			}
+			modifier = {
+				factor = 1.2
+				NOT = { total_development = 200 }
+			}
+			modifier = {
+				factor = 0.8
+				has_institution = enlightenment
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.100.e #Invite our neighbours on a state visit
+		every_neighbor_country = {
+			add_opinion = {
+				who = ROOT
+				modifier = included_in_celebrations
+			}
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.2
+				any_neighbor_country = {
+					NOT = {
+						has_opinion = {
+							who = ROOT
+							value = 0
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				any_neighbor_country = {
+					is_threat = ROOT
+				}
+			}
+			modifier = {
+				factor = 0.9
+				num_of_allies = 1
+			}
+			modifier = {
+				factor = 0.9
+				num_of_allies = 2
+			}
+
+			modifier = {
+				factor = 0.9
+				num_of_allies = 3
+			}
+
+			modifier = {
+				factor = 0.9
+				num_of_allies = 4
+			}
+
+			modifier = {
+				factor = 0.9
+				num_of_allies = 5
+			}
+			modifier = {
+				factor = 0.95
+				num_of_subjects = 1
+			}
+			modifier = {
+				factor = 0.95
+				num_of_subjects = 2
+			}
+
+			modifier = {
+				factor = 0.95
+				num_of_subjects = 3
+			}
+
+			modifier = {
+				factor = 0.95
+				num_of_subjects = 4
+			}
+
+			modifier = {
+				factor = 0.95
+				num_of_subjects = 5
+			}
+
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.100.c #host a national festival
+		add_country_modifier = {
+			name = national_celebration
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0.2
+				NOT = { average_effective_unrest = 0 }
+			}
+			modifier = {
+				factor = 1.2
+				average_effective_unrest = 2
+			}
+			modifier = {
+				factor = 1.2
+				average_effective_unrest = 4
+			}
+			modifier = {
+				factor = 1.2
+				average_effective_unrest = 6
+			}
+			modifier = {
+				factor = 0.2
+				splendor = 800
+			}
+			modifier = {
+				factor = 1.1
+				NOT = { splendor = 100 }
+			}
+			modifier = {
+				factor = 1.1
+				NOT = { splendor = 200 }
+			}
+			modifier = {
+				factor = 1.1
+				NOT = { splendor = 300 }
+			}
+			modifier = {
+				factor = 1.2
+				NOT = { current_institution_growth = 0.5 }
+			}
+			modifier = {
+				factor = 1.5
+				any_neighbor_country = {
+					institution_difference = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+# People accepting of new cultures
+country_event = {
+	id = new_idea_groups_mod.101
+	title = new_idea_groups_mod.101.t
+	desc = new_idea_groups_mod.101.d
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		NOT = { has_country_modifier = nation_accepting_more_cultures }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.101.a #Great
+		add_country_modifier = {
+			name = nation_accepting_more_cultures
+			duration = 1825
+		}
+	}
+}
+
+# An inspirational artwork
+country_event = {
+	id = new_idea_groups_mod.102
+	title = new_idea_groups_mod.102.t
+	desc = new_idea_groups_mod.102.d
+	picture = PAINTER_ARTIST_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		NOT = { has_country_modifier = inspiring_artwork_legitimacy }
+		NOT = { has_country_modifier = inspiring_artwork_institution }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.102.a #We shall hang it in the home of <MONARCH>
+		add_country_modifier = {
+			name = inspiring_artwork_legitimacy
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 99
+			modifier = {
+				factor = 0.8
+				legitimacy_equivalent = 90
+			}
+			modifier = {
+				factor = 0.8
+				legitimacy_equivalent = 70
+			}
+			modifier = {
+				factor = 0.8
+				legitimacy_equivalent = 50
+			}
+			modifier = {
+				factor = 5
+				has_disaster = civil_war
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.102.b #That thing belongs in a museum!
+		add_country_modifier = {
+			name = inspiring_artwork_institution
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				any_neighbor_country = {
+					institution_difference = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				NOT = { current_institution_growth = 0.5 }
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.102.c #Sell it.
+		highlight = yes
+		trigger = { ruler_has_personality = embezzler_personality }
+		add_years_of_income = 0.25
+		ai_chance = {
+			factor = 99
+			modifier = {
+				factor = 0.8
+				years_of_income = 0.5
+			}
+			modifier = {
+				factor = 0.8
+				years_of_income = 0.75
+			}
+			modifier = {
+				factor = 0.8
+				years_of_income = 1.0
+			}
+		}
+	}
+}
+
+# Volunteers want to serve
+country_event = {
+	id = new_idea_groups_mod.103
+	title = new_idea_groups_mod.103.t
+	desc = new_idea_groups_mod.103.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		NOT = { has_country_modifier = volunteering_advisors }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.103.a #Excellent.
+		add_country_modifier = {
+			name = volunteering_advisors
+			duration = 1825
+		}
+	}
+}
+
+# Government transparency
+country_event = {
+	id = new_idea_groups_mod.104
+	title = new_idea_groups_mod.104.t
+	desc = new_idea_groups_mod.104.d
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		NOT = { has_country_modifier = government_transparency }
+		NOT = { has_country_modifier = government_transparency_web_weaver }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.104.a #We will be more transparent about what we do.
+		add_country_modifier = {
+			name = government_transparency
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 1.33
+				yearly_corruption_increase = 0.001
+			}
+			modifier = {
+				factor = 1.33
+				yearly_corruption_increase = 0.1
+			}
+			modifier = {
+				factor = 1.33
+				yearly_corruption_increase = 0.2
+			}
+			modifier = {
+				factor = 3
+				corruption = 5
+			}
+			modifier = {
+				factor = 5
+				corruption = 10
+			}
+			modifier = {
+				factor = 0
+				ruler_has_personality = intricate_web_weaver_personality
+			}
+		}	
+	}
+	option = {
+		name = new_idea_groups_mod.104.b #No! We cannot risk giving away our secrets.
+		add_stability = -1
+		ai_chance = {
+			factor = 67
+			modifier = {
+				factor = 10
+				NOT = { stability = -2 }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { stability = -1 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { stability = 0 }
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.104.c #They should expect nothing.
+		highlight = yes
+		trigger = { ruler_has_personality = secretive_personality }
+		add_adm_power = -50
+		ai_chance = {
+			factor = 67
+			modifier = {
+				factor = 2
+				NOT = { stability = -2 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { stability = -1 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { stability = 0 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { adm_power = 100 }
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.104.e #Spin the truth
+		highlight = yes
+		trigger = { ruler_has_personality = intricate_web_weaver_personality }
+		add_country_modifier = {
+			name = government_transparency_web_weaver
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 67
+			modifier = {
+				factor = 1.33
+				yearly_corruption_increase = 0.001
+			}
+			modifier = {
+				factor = 1.33
+				yearly_corruption_increase = 0.1
+			}
+			modifier = {
+				factor = 1.33
+				yearly_corruption_increase = 0.2
+			}
+			modifier = {
+				factor = 3
+				corruption = 5
+			}
+			modifier = {
+				factor = 5
+				corruption = 10
+			}
+		}
+	}
+}
+
+# Invited to <area> 
+country_event = {
+	id = new_idea_groups_mod.105
+	title = new_idea_groups_mod.105.t
+	desc = new_idea_groups_mod.105.d
+	picture = STREET_SPEECH_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		any_owned_province = {
+			is_state = yes
+			NOT = { has_province_modifier = ruler_visited_area }
+		}			
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.105.a #Make the trip.
+		random_owned_area = {
+			limit = {
+				is_state = yes
+				NOT = { has_province_modifier = ruler_visited_area }
+			}
+			add_province_modifier = {
+				name = ruler_visited_area
+				duration = 3650
+			}
+		}
+		ai_chance = {
+			factor = 75
+		modifier = {
+			factor = 1.2
+			average_effective_unrest = 2
+		}
+		modifier = {
+			factor = 1.2
+			average_effective_unrest = 4
+		}
+		modifier = {
+			factor = 1.2
+			average_effective_unrest = 6
+		}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.105.b #We have more import things to do
+		add_country_modifier = {
+			name = refused_state_visit
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1.5
+				NOT = { core_percentage = 1.0 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { core_percentage = 0.8 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { core_percentage = 0.6 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { core_percentage = 0.4 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { core_percentage = 0.2 }
+			}
+		}
+	}
+}
+
+# People losing faith in our ruler
+country_event = {
+	id = new_idea_groups_mod.106
+	title = new_idea_groups_mod.106.t
+	desc = new_idea_groups_mod.106.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		NOT = { has_country_modifier = ruler_ability_under_question }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.106.a #They will see the light.
+		add_country_modifier = {
+			name = ruler_ability_under_question
+			duration = 1825
+		}
+	}
+}
+
+# Priceless artefact stolen!
+country_event = {
+	id = new_idea_groups_mod.107
+	title = new_idea_groups_mod.107.t
+	desc = new_idea_groups_mod.107.d
+	picture = ARTWORK_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		NOT = { has_country_modifier = stolen_artefacts_effects }
+		any_neighbor_country = { NOT = { alliance_with = ROOT } }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		random_neighbor_country = {
+			limit = { NOT = { alliance_with = ROOT } }
+			save_global_event_target_as = plundered_artefacts_country
+		}
+	}
+
+	option = {
+		name = new_idea_groups_mod.107.a #Publicly pressure them to give the artefacts back.
+		event_target:plundered_artefacts_country = {
+			reverse_add_casus_belli = {
+				target = ROOT
+				type = cb_insult
+				months = 120
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = stolen_artefacts_diplomatic
+			}
+		}
+		add_country_modifier = {
+			name = stolen_artefacts_effects
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				NOT = { prestige = 0 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { prestige = -50 }
+			}
+			modifier = {
+				factor = 1.5
+				splendor = 800
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { current_institution_growth = 0.8 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { current_institution_growth = 0.5 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { current_institution_growth = 0.2 }
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.107.b #Quietly buy them back
+		event_target:plundered_artefacts_country = {
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = stolen_artefacts_diplomatic
+			}
+		}
+		add_years_of_income = -0.5
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.8
+				NOT = { years_of_income = 0.5 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { years_of_income = 0.3 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { years_of_income = 0.1 }
+			}
+		}
+	}
+}
+
+# Nationalists reject new cultures
+country_event = {
+	id = new_idea_groups_mod.108
+	title = new_idea_groups_mod.108.t
+	desc = new_idea_groups_mod.108.d
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		NOT = { has_country_modifier = rejection_of_new_cultures }
+		NOT = { has_country_modifier = appeasing_the_populace }
+		any_owned_province = {
+			is_state = yes
+			has_owner_accepted_culture = no
+		}
+		has_advisor = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.108.a #Turn a blind eye.
+		add_country_modifier = {
+			name = rejection_of_new_cultures
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				num_accepted_cultures = 5
+			}
+			modifier = {
+				factor = 2
+				num_accepted_cultures = 8
+			}
+			modifier = {
+				factor = 0.8
+				any_owned_province = {
+					nationalism = 1
+				}
+			}
+			modifier = {
+				factor = 0.8
+				any_owned_province = {
+					nationalism = 10
+				}
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { core_percentage = 1.0 }
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { core_percentage = 0.8 }
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { core_percentage = 0.6 }
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { core_percentage = 0.4 }
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { core_percentage = 0.2 }
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.108.b #Put a stop to it.
+		add_stability = -1
+		add_country_modifier = {
+			name = appeasing_the_populace
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 10
+				NOT = { stability = -2 }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { stability = -1 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { stability = 0 }
+			}
+			modifier = {
+				factor = 1.2
+				stability = 1
+			}
+			modifier = {
+				factor = 1.2
+				stability = 2
+			}
+			modifier = {
+				factor = 1.2
+				stability = 3
+			}
+			modifier = {
+				factor = 1.2
+				adm_power = 600
+			}
+			modifier = {
+				factor = 1.2
+				dip_power = 600
+			}
+			modifier = {
+				factor = 1.2
+				mil_power = 600
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.108.c #Remove the advisor
+		remove_advisor = random
+		random_owned_province = {
+			limit = {
+				is_state = yes
+				has_owner_accepted_culture = yes
+			}
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 2
+			}
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0.4
+				NOT = { army_size_percentage = 0.1 }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { army_size_percentage = 0.2 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { army_size_percentage = 0.3 }
+			}
+			modifier = {
+				factor = 1.2
+				army_size_percentage = 0.7
+			}
+			modifier = {
+				factor = 1.2
+				army_size_percentage = 0.8
+			}
+			modifier = {
+				factor = 1.2
+				army_size_percentage = 0.9
+			}
+			modifier = {
+				factor = 1.1
+				treasury = 50
+			}
+			modifier = {
+				factor = 1.1
+				treasury = 100
+			}
+			modifier = {
+				factor = 1.1
+				treasury = 250
+			}
+		}
+	}
+}
+
+# Legalism questioned
+country_event = {
+	id = new_idea_groups_mod.109
+	title = new_idea_groups_mod.109.t
+	desc = new_idea_groups_mod.109.d
+	picture = ANGRY_MOB_eventPicture
+	
+	trigger = {
+		has_idea_group = patronage_ideas
+		has_idea = legalism_idea
+		NOT = { has_country_flag = squashed_legalism_uprising }			
+	}
+
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 5
+			any_owned_province = {
+				NOT = { religion = ROOT }
+				tolerance_to_this = 0
+			}
+		}
+		modifier = {
+			factor = 5
+			all_owned_province = {
+				has_owner_religion = yes
+			}
+		}
+		modifier = {
+			factor = 0.9
+			average_effective_unrest = 1
+		}
+		modifier = {
+			factor = 0.9
+			average_effective_unrest = 2
+		}
+		modifier = {
+			factor = 0.9
+			average_effective_unrest = 3
+		}
+		modifier = {
+			factor = 0.9
+			average_effective_unrest = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_effective_unrest = 5
+		}
+		modifier = {
+			factor = 1.2
+			advisor = philosopher
+		}
+		modifier = {
+			factor = 1.2
+			advisor = theologian
+		}
+		modifier = {
+			factor = 0.9
+			advisor = inquisitor
+		}
+		modifier = {
+			factor = 0.8
+			is_defender_of_faith = yes
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { religious_unity = 0.9 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { religious_unity = 0.7 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { religious_unity = 0.6 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { religious_unity = 0.5 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { religious_unity = 0.4 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { religious_unity = 0.3 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { religious_unity = 0.2 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { religious_unity = 0.1 }
+		}
+	}
+
+	option = {
+		name = new_idea_groups_mod.109.a #Show them the right way
+		set_country_flag = squashed_legalism_uprising
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+		add_stability = -2
+		random_owned_province = {
+			limit = {
+				fort_level = 1
+				is_state = yes
+			}
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 3
+				win = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 2
+				win = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				is_state = yes
+			}
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 2
+				win = yes
+			}
+		}
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 1.1
+				stability = 1
+			}
+			modifier = {
+				factor = 1.1
+				stability = 2
+			}
+			modifier = {
+				factor = 1.1
+				stability = 3
+			}
+			modifier = {
+				factor = 1.05
+				adm_power = 300
+			}
+			modifier = {
+				factor = 1.05
+				adm_power = 600
+			}
+			modifier = {
+				factor = 1.05
+				adm_power = 900
+			}
+			modifier = {
+				factor = 1.05
+				dip_power = 300
+			}
+			modifier = {
+				factor = 1.05
+				dip_power = 600
+			}
+			modifier = {
+				factor = 1.05
+				dip_power = 900
+			}
+			modifier = {
+				factor = 1.05
+				mil_power = 300
+			}
+			modifier = {
+				factor = 1.05
+				mil_power = 600
+			}
+			modifier = {
+				factor = 1.05
+				mil_power = 900
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { manpower_percentage = 0.2 }
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { manpower_percentage = 0.4 }
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { manpower_percentage = 0.6 }
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { manpower_percentage = 0.8 }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = HUN
+					tag = USA
+				}
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.109.b #Overthrow it
+		hidden_effect = {
+			remove_idea_group = patronage_ideas
+			add_idea_group = patronage_no_legalism_ideas
+			add_idea = public_inaugurations_no_legalism
+			add_idea = localised_court_no_legalism
+			add_idea = utopian_dream_no_legalism
+			add_idea = public_galleries_no_legalism
+			add_idea = gifts_from_state_no_legalism
+			add_idea = domestic_policy_focus_no_legalism
+			add_idea = legalism_lost_idea
+		}
+		custom_tooltip = remove_legalism_event_tooltip
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				any_owned_province = {
+					NOT = { religion = ROOT }
+					tolerance_to_this = 0
+				}
+			}
+			modifier = {
+				factor = 3
+				all_owned_province = {
+					has_owner_religion = yes
+				}
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { army_size_percentage = 0.5 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { army_size_percentage = 0.25 }
+			}
+			modifier = {
+				factor = 1.2
+				religious_unity = 0.99
+			}
+			modifier = {
+				factor = 1.2
+				religious_unity = 0.90
+			}
+			modifier = {
+				factor = 1.2
+				religious_unity = 0.80
+			}
+		}
+	}
+}
+
+# Inspiring nation to the world
+country_event = {
+	id = new_idea_groups_mod.110
+	title = new_idea_groups_mod.110.t
+	desc = new_idea_groups_mod.110.d
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		NOT = {
+			has_country_modifier = embraced_architectural_development
+			has_country_modifier = national_celebration 
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.110.a #We will further these architectural wonders.
+		trigger = { NOT = { ruler_has_personality = architectural_visionary_personality } }
+		add_adm_power = -40
+		add_country_modifier = {
+			name = embraced_architectural_development
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.2
+				treasury = 500
+			}
+			modifier = {
+				factor = 1.2
+				treasury = 1000
+			}
+			modifier = {
+				factor = 1.2
+				treasury = 2000
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { adm_power = 40 }
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_province = {
+						num_free_building_slots = 1
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				ruler_has_personality = architectural_visionary
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.110.b #This sounds like cause for celebration.
+		add_years_of_income = -0.15
+		add_country_modifier = {
+			name = national_celebration
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.2
+				average_effective_unrest = 1
+			}
+			modifier = {
+				factor = 1.3
+				average_effective_unrest = 2
+			}
+			modifier = {
+				factor = 1.4
+				average_effective_unrest = 3
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { years_of_income = 0.15 }
+			}
+			modifier = {
+				factor = 0.8
+				splendor = 800
+			}
+		}
+	}
+	option = {
+		name = new_idea_groups_mod.110.c #We will further these architectural wonders.
+		highlight = yes
+		trigger = { ruler_has_personality = architectural_visionary_personality }
+		add_country_modifier = {
+			name = embraced_architectural_development
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.2
+				treasury = 500
+			}
+			modifier = {
+				factor = 1.2
+				treasury = 1000
+			}
+			modifier = {
+				factor = 1.2
+				treasury = 2000
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_province = {
+						num_free_building_slots = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+# The people worship <monarch>
+country_event = {
+	id = new_idea_groups_mod.111
+	title = new_idea_groups_mod.111.t
+	desc = new_idea_groups_mod.111.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		NOT = { has_country_modifier = ruler_worshipped_by_all }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.111.a #So they should.
+		add_country_modifier = {
+			name = ruler_worshipped_by_all
+			duration = 730
+		}
+	}
+}
+
+# Great work produced
+country_event = {
+	id = new_idea_groups_mod.112
+	title = new_idea_groups_mod.112.t
+	desc = new_idea_groups_mod.112.d
+	picture = ARTWORK_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		any_owned_province = {
+			is_state = yes
+			NOT = { has_province_modifier = great_work_produced }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				is_state = yes
+				NOT = { has_province_modifier = great_work_produced }
+			}
+			save_global_event_target_as = home_of_a_great_work
+		}
+	}
+
+	option = {
+		name = new_idea_groups_mod.112.a #This will go in the history books.
+		event_target:home_of_a_great_work = {
+			add_permanent_province_modifier = {
+				name = great_work_produced
+				duration = 18250
+			}
+		}
+	}
+}
+
+# <MONARCH> brings unity
+country_event = {
+	id = new_idea_groups_mod.113
+	title = new_idea_groups_mod.113.t
+	desc = new_idea_groups_mod.113.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = new_idea_groups_mod.113.a #I am what is best for the people.
+		add_stability_or_adm_power = yes
+	}
+}
+
+# Great Work Destroyed
+province_event = {
+	id = new_idea_groups_mod.114
+	title = new_idea_groups_mod.114.t
+	desc = new_idea_groups_mod.114.d
+	picture = SIEGE_eventPicture
+	
+	trigger = {
+		devastation = 1
+		has_province_modifier = great_work_produced
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.9
+			devastation = 5
+		}
+		modifier = {
+			factor = 0.8
+			devastation = 10
+		}
+		modifier = {
+			factor = 0.7
+			devastation = 25
+		}
+		modifier = {
+			factor = 0.6
+			devastation = 50
+		}
+		modifier = {
+			factor = 0.5
+			devastation = 85
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { controlled_by = owner }
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				is_at_war = yes
+			}
+		}		
+	}
+
+	option = {
+		name = new_idea_groups_mod.114.a #We will have to find a new one.
+		remove_province_modifier = great_work_produced
+	}
+}

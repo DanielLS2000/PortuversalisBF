@@ -1,0 +1,42 @@
+###OPINION MODIFIERS###
+included_in_celebrations = {
+	opinion = 20
+	yearly_decay = 1
+	max = 20
+}
+
+stolen_artefacts_diplomatic = {
+	opinion = -50
+	yearly_decay = 1
+	min = -50
+}
+
+peaceful_resolution_to_conflict = {
+	opinion = 50
+	yearly_decay = 2.5
+	max = 50
+}
+
+global_threat_coalition_accepted = {
+	opinion = 20
+	yearly_decay = 2
+	max = 20
+}
+
+global_threat_coalition_declined = {
+	opinion = -20
+	yearly_decay = 2
+	min = -20
+}
+
+global_threat_coalition_joined = {
+	opinion = -100
+	min = -100
+	months = 60
+}
+
+arrogant_country = {
+	opinion = -20
+	yearly_decay = 1
+	min = -20
+}

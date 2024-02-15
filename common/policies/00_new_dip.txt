@@ -1,0 +1,497 @@
+
+merchant_expansion_act = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = maritime_ideas
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		OR = {
+			full_idea_group = maritime_ideas
+			full_idea_group = patronage_no_legalism_ideas
+			full_idea_group = patronage_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = maritime_ideas
+		OR = {
+			full_idea_group = patronage_no_legalism_ideas
+			full_idea_group = patronage_ideas
+		}
+	}
+	
+	light_ship_cost = -0.25
+	transport_cost = -0.25
+	ai_will_do = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 0 }
+		}	
+	}
+}
+proclaim_naval_achievements = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = trade_ideas
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		OR = {
+			full_idea_group = trade_ideas
+			full_idea_group = patronage_no_legalism_ideas
+			full_idea_group = patronage_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = trade_ideas
+		OR = {
+			full_idea_group = patronage_no_legalism_ideas
+			full_idea_group = patronage_ideas
+		}
+	}
+	
+	ship_power_propagation = 0.2
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_light_ship = 20 }
+		}	
+	}
+}
+
+forgery_of_claims = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = spy_ideas
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		OR = {
+			full_idea_group = spy_ideas
+			full_idea_group = patronage_no_legalism_ideas
+			full_idea_group = patronage_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = spy_ideas
+		OR = {
+			full_idea_group = patronage_no_legalism_ideas
+			full_idea_group = patronage_ideas
+		}
+	}
+	
+	fabricate_claims_cost = -0.33
+	ai_will_do = {
+		factor = 1	
+	}
+}
+
+cultural_gifts_to_allies = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = diplomatic_ideas
+		OR = {
+			has_idea_group = patronage_ideas
+			has_idea_group = patronage_no_legalism_ideas
+		}
+		OR = {
+			full_idea_group = diplomatic_ideas
+			full_idea_group = patronage_no_legalism_ideas
+			full_idea_group = patronage_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = diplomatic_ideas
+		OR = {
+			full_idea_group = patronage_no_legalism_ideas
+			full_idea_group = patronage_ideas
+		}
+	}
+	
+	improve_relation_modifier = 0.33
+	ai_will_do = {
+		factor = 1	
+	}
+}
+
+foreign_guard_act = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = administrative_ideas
+		has_idea_group = sovereignty_ideas
+		OR = {
+			full_idea_group = administrative_ideas
+			full_idea_group = sovereignty_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = administrative_ideas
+		full_idea_group = sovereignty_ideas
+	}
+	
+	mercenary_discipline = 0.05
+	possible_mercenaries = 0.25
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}	
+	}
+}
+
+rights_for_subjects_act = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = humanist_ideas
+		has_idea_group = sovereignty_ideas
+		OR = {
+			full_idea_group = humanist_ideas
+			full_idea_group = sovereignty_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = humanist_ideas
+		full_idea_group = sovereignty_ideas
+	}
+	
+	reduced_liberty_desire = 10
+	diplomatic_annexation_cost = -0.1
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_subjects = 1 }
+		}
+		modifier = {
+			factor = 1.2
+			num_of_subjects = 2
+		}	
+		modifier = {
+			factor = 1.2
+			num_of_subjects = 3
+		}
+	}
+}
+
+proclaimation_of_international_unity = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = religious_ideas
+		has_idea_group = sovereignty_ideas
+		OR = {
+			full_idea_group = religious_ideas
+			full_idea_group = sovereignty_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = religious_ideas
+		full_idea_group = sovereignty_ideas
+	}
+	
+	enforce_religion_cost = -0.5
+	imperial_authority = 0.1
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			is_emperor = no
+		}
+		modifier = {
+			factor = 2
+			at_war_with_religious_enemy = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_border_with_religious_enemy = yes
+		}	
+	}
+}
+
+bigger_guns_policy = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = defensive_ideas
+		has_idea_group = sovereignty_ideas
+		OR = {
+			full_idea_group = defensive_ideas
+			full_idea_group = sovereignty_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = defensive_ideas
+		full_idea_group = sovereignty_ideas
+	}
+	
+	backrow_artillery_damage = 0.15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { artillery_fraction = 0.1 }
+		}
+		modifier = {
+			factor = 1.5
+			artillery_fraction = 0.3
+		}
+		modifier = {
+			factor = 1.5
+			artillery_fraction = 0.4
+		}	
+		modifier = {
+			factor = 1.5
+			artillery_fraction = 0.5
+		}
+	}
+}
+
+international_peace_corps = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = logistics_ideas
+		has_idea_group = sovereignty_ideas
+		OR = {
+			full_idea_group = logistics_ideas
+			full_idea_group = sovereignty_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = logistics_ideas
+		full_idea_group = sovereignty_ideas
+	}
+	
+	possible_condottieri = 0.5
+	diplomatic_reputation = 1
+	
+	ai_will_do = {
+		factor = 0.8
+		modifier = {
+			factor = 0.1
+			is_at_war = yes
+		}	
+	}
+}
+
+armed_merchants = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = sovereignty_ideas
+		has_idea_group = naval_ideas
+		OR = {
+			full_idea_group = sovereignty_ideas
+			full_idea_group = naval_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = sovereignty_ideas
+		full_idea_group = naval_ideas
+	}
+	light_ship_power = 0.33
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_light_ship = 10 }
+		}
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+state_sponsored_exploration = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = exploration_ideas
+		has_idea_group = logistics_ideas
+		OR = {
+			full_idea_group = exploration_ideas
+			full_idea_group = logistics_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = exploration_ideas
+		full_idea_group = logistics_ideas
+	}
+	
+	range = 0.2
+	movement_speed = 0.1
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_colonists = 1
+		}
+		modifier = {
+			factor = 1.2
+			num_of_conquistadors = 1
+		}	
+	}
+}
+
+young_diplomatic_training = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = diplomatic_ideas
+		has_idea_group = logistics_ideas
+		OR = {
+			full_idea_group = diplomatic_ideas
+			full_idea_group = logistics_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = diplomatic_ideas
+		full_idea_group = logistics_ideas
+	}
+	
+	diplomats = 2
+
+	ai_will_do = {
+		factor = 1	
+	}
+}
+
+merchant_training_school = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = trade_ideas
+		has_idea_group = logistics_ideas
+		OR = {
+			full_idea_group = trade_ideas
+			full_idea_group = logistics_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = trade_ideas
+		full_idea_group = logistics_ideas
+	}
+	
+	merchants = 2
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.2
+			is_trade_league_leader = yes
+		}	
+	}
+}
+
+the_double_agent_act = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = spy_ideas
+		has_idea_group = logistics_ideas
+		OR = {
+			full_idea_group = spy_ideas
+			full_idea_group = logistics_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = spy_ideas
+		full_idea_group = logistics_ideas
+	}
+	discovered_relations_impact = -0.33
+	spy_offence = 0.1
+
+	ai_will_do = {
+		factor = 0.6
+		modifier = {
+			factor = 0.2
+			is_at_war = yes
+		}
+	}
+}
+
+nomadic_government_policy = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = horde_gov_ideas
+		has_idea_group = sovereignty_ideas
+		OR = {
+			full_idea_group = horde_gov_ideas
+			full_idea_group = sovereignty_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = horde_gov_ideas
+		full_idea_group = sovereignty_ideas
+	}
+	move_capital_cost_modifier = -0.5
+	monthly_gold_inflation_modifier = -0.2
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tribal_empowerment = {
+
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = indigenous_ideas
+		has_idea_group = sovereignty_ideas
+		OR = {
+			full_idea_group = indigenous_ideas
+			full_idea_group = sovereignty_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = indigenous_ideas
+		full_idea_group = sovereignty_ideas
+	}
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+
+	ai_will_do = {
+		factor = 1
+	}
+}

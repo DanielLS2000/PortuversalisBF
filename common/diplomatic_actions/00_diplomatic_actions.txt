@@ -123,6 +123,19 @@ declarewar = {
 		}
 	}
 	condition = {
+		tooltip = NO_OTHER_WAR
+		potential = {
+			is_at_war = yes
+		}
+		allow = {
+			NOT = {
+				is_in_war = {
+					attacker_leader = ROOT
+				}
+			}
+		}
+	}
+	condition = {
 		tooltip = AI_CANNOT_DECLARE_WHEN_STABILITY_LOSS
 		potential = {
 			ai = yes
@@ -200,6 +213,20 @@ declarewar = {
 }
 
 allianceaction = {
+	condition = {
+        tooltip = CANNOT_ALLY_BROKEN_ALLIANCE
+        potential = {
+            FROM = {
+                has_opinion_modifier = {
+					who = ROOT
+					modifier = break_alliance
+				}
+            }
+        }
+        allow = {
+            always = no
+        }
+    }
 	condition = {
 		tooltip = PIRATE_DENIED_ALLIANCE
 		potential = {

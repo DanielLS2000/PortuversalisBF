@@ -1,0 +1,7 @@
+﻿l_english:
+# Tooltips
+ NO_OTHER_WAR: "We are already engaged in a war and are not able to started another"
+ CANNOT_ALLY_BROKEN_ALLIANCE: "We have ended our alliance with them not long ago"
+ NOT_FRIEND: "[From.GetName] is not our ally there is no reason to spend money on then"
+ empire_of_asia: "Asian Empire"
+ ming_dinasty: "Ruler of All China"

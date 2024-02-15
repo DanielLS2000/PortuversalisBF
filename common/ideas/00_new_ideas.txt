@@ -1,0 +1,393 @@
+# Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+# ai_will do is only used to determine which idea group is picked if AI_USES_HISTORICAL_IDEA_GROUPS define is 0, OR start is custom/random
+# ai never picks an idea that resolves to ai_will_do = 0, even if AI_USES_HISTORICAL_IDEA_GROUPS = 1
+# ROOT = country picking the idea
+# groups set to colonial=yes will be higher prioritized by the AI when spending power
+
+logistics_ideas = {
+	category = MIL
+
+	bonus = {
+		global_supply_limit_modifier = 0.2
+	}
+	
+	selective_breeding = {
+		cavalry_flanking = 0.5
+		cav_to_inf_ratio = 0.2
+	}
+	overnight_marching = {
+		movement_speed = 0.1
+	}
+	expanded_supply_lines = {
+		reinforce_cost_modifier = -0.2
+	}
+	live_off_the_land = {
+		loot_amount = 0.5
+		raze_power_gain = 0.2
+	}
+	medical_supply_priority = {
+		reserves_organisation = 0.5
+	}
+	superior_leadership = {
+		free_leader_pool = 1
+		leader_cost = -0.2
+	}
+	advanced_battle_formations = {
+		backrow_artillery_damage = 0.2
+	}
+	
+
+	ai_will_do = {
+		factor = 0.72
+		
+		modifier = {
+			factor = 2
+			government = steppe_horde
+		}
+		modifier = {
+			factor = 1.5
+			cavalry_fraction = 0.2
+			num_of_cavalry = 10
+		}
+		modifier = {
+			factor = 1.2
+			artillery_fraction = 0.2
+		}
+		modifier = {
+			factor = 1.2
+			artillery_fraction = 0.4
+		}
+		modifier = {
+			factor = 1.1
+			land_forcelimit = 50
+		}
+		modifier = {
+			factor = 1.1
+			land_forcelimit = 100
+		}
+		modifier = {
+			factor = 1.33
+			tag = POL
+		}
+		modifier = {
+			factor = 1.1
+			num_of_cities = 25
+		}
+		modifier = {
+			factor = 1.1
+			num_of_cities = 50
+		}
+		modifier = {
+			factor = 1.1
+			num_of_cities = 100
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { num_of_cities = 5 }
+		}
+	}
+}
+
+sovereignty_ideas = {
+	category = DIP
+
+	bonus = {
+		cb_on_government_enemies = yes
+		allowed_marine_fraction = 0.1
+	}
+	
+	open_court = {
+		promote_culture_cost = -0.5
+		relation_with_accepted_culture = 10
+	}
+	assert_independence = {
+		capture_ship_chance = 0.1
+		claim_duration = 0.5
+	}
+	dominate_the_seas = {
+		own_coast_naval_combat_bonus = 1	
+		global_ship_trade_power = 0.2
+	}
+	foreign_aid = {
+		monthly_favor_modifier = 0.2
+		possible_condottieri = 0.5
+	}
+	expanded_administration = {
+		administrative_efficiency = 0.05
+	}
+	recognised_government = {
+		max_absolutism = 10
+	}
+	flexible_foreign_policy = {
+		rival_change_cost = -1.0
+		rival_border_fort_maintenance = -0.5
+	}
+	
+
+	ai_will_do = {
+		factor = 0.48
+		
+		
+		modifier = {
+			factor = 1.1
+			num_of_subjects = 1
+		}
+		modifier = {
+			factor = 1.1
+			num_of_subjects = 2
+		}
+		modifier = {
+			factor = 1.2
+			num_of_subjects = 3
+		}
+		modifier = {
+			factor = 1.33
+			num_of_subjects = 5
+		}
+		modifier = {
+			factor = 1.1
+			num_of_cities = 5
+		}
+		modifier = {
+			factor = 1.1
+			num_of_cities = 10
+		}
+		modifier = {
+			factor = 1.2
+			total_development = 100
+		}
+		modifier = {
+			factor = 1.1
+			num_of_ports = 1
+		}
+		modifier = {
+			factor = 1.1
+			num_of_ports = 5
+		}
+		modifier = {
+			factor = 1.1
+			num_of_ports = 10
+		}
+		modifier = {
+			factor = 1.2
+			num_of_states = 10
+		}
+		modifier = {
+			factor = 1.2
+			num_of_states = 20
+		}
+		modifier = {
+			factor = 1.2
+			num_of_states = 30
+		}
+		modifier = {
+			factor = 0.1
+			government = imperial_city
+		}
+		modifier = {
+			factor = 0.4
+			is_subject = yes
+		}
+		modifier = {
+			factor = 0.8
+			num_accepted_cultures = 3
+		}
+		modifier = {
+			factor = 0.8
+			num_accepted_cultures = 6
+		}
+		modifier = {
+			factor = 0.8
+			num_accepted_cultures = 9
+		}
+		modifier = {
+			factor = 1.33
+			has_unified_culture_group = yes
+		}
+	}
+}
+
+patronage_ideas = {
+	category = ADM
+
+	bonus = {
+		great_project_upgrade_cost = -0.25
+		free_policy = 1
+	}
+
+	trigger = {
+		NOT = { has_idea_group = patronage_no_legalism_ideas }
+	}
+	
+	public_inaugurations = {
+		legitimacy = 0.5
+		devotion = 1
+		horde_unity = 0.5
+		republican_tradition = 0.2
+		meritocracy = 0.2
+		monthly_heir_claim_increase = 0.05	
+	}
+	localised_court = {
+		same_culture_advisor_cost  = -0.15
+		relation_with_same_culture = 20
+	}
+	public_galleries = {
+		monthly_reform_progress_modifier = 0.2
+	}
+	utopian_dream = {
+		monthly_splendor = 1
+		build_time = -0.1
+	}
+	gifts_from_state = {
+		discovered_relations_impact = -0.5
+		imperial_mandate = 0.05
+		imperial_authority = 0.1
+	}
+	domestic_policy_focus = {
+		global_trade_goods_size_modifier = 0.1
+		global_prosperity_growth = 0.1
+	}
+	legalism_idea = {
+		no_religion_penalty = yes
+	}
+	
+
+	ai_will_do = {
+		factor = 0.37
+		
+		modifier = {
+			factor = 0.1
+			government = steppe_horde
+		}
+		modifier = {
+			factor = 1.33
+			NOT = { legitimacy_equivalent = 50 }
+		}
+		modifier = {
+			factor = 1.33
+			NOT = { legitimacy_equivalent = 75 }
+		}
+		modifier = {
+			factor = 1.5
+			any_known_country = {
+				tech_difference = 4
+			} 
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { has_institution = renaissance }
+			NOT = { 
+				capital_scope = {
+					continent = europe
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_idea_group = humanist_ideas
+		}
+		modifier = {
+			factor = 1.2
+			has_unified_culture_group = yes
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { splendor = 100 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { splendor = 250 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { splendor = 400 }
+		}
+		modifier = {
+			factor = 1.2
+			any_owned_province = {
+				continent = europe
+			}
+		}
+		modifier = {
+			factor = 1.2
+			any_owned_province = {
+				region = italy_region
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { has_institution = renaissance }
+			NOT = { current_institution_growth = 0.01 }
+		}
+		modifier = {
+			factor = 1.5
+			is_emperor = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_emperor_of_china = yes
+		}
+		modifier = {
+			factor = 1.2
+			NOT = { num_of_cities = 5 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { num_of_cities = 10 }
+		}
+	}
+}
+#FOR LEGALISM EVENT - TO REMOVE RELIGIOUS TOLERANCE BONUS
+patronage_no_legalism_ideas = {
+	
+	category = ADM
+
+	bonus = {
+		great_project_upgrade_cost = -0.25
+		free_policy = 1
+	}
+
+	trigger = {
+		ai = yes
+	}
+	
+	public_inaugurations_no_legalism = {
+		legitimacy = 0.5
+		devotion = 1
+		horde_unity = 0.5
+		republican_tradition = 0.2
+		meritocracy = 0.2
+		monthly_heir_claim_increase = 0.05	
+	}
+	localised_court_no_legalism = {
+		same_culture_advisor_cost  = -0.15
+		relation_with_same_culture = 20
+	}
+	public_galleries_no_legalism = {
+		reform_progress_growth = 0.2
+	}
+	utopian_dream_no_legalism = {
+		monthly_splendor = 1
+		build_time = -0.1
+	}
+	gifts_from_state_no_legalism = {
+		discovered_relations_impact = -0.5
+		imperial_mandate = 0.05
+		imperial_authority = 0.1
+	}
+	domestic_policy_focus_no_legalism = {
+		global_trade_goods_size_modifier = 0.1
+		global_prosperity_growth = 0.1
+	}
+	legalism_lost_idea = {
+		production_efficiency = 0.1 #This is a filler…
+	}
+	
+
+	ai_will_do = {
+		factor = 0
+	}
+}

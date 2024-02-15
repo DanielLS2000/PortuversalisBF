@@ -3422,7 +3422,7 @@ industrialization = {
 
 	
 	embracement_speed = {
-		#Split between RB and non-RB for these four as RB gives more possibilities for spread (so higher for non-RB to compensate
+		#Split between RB and non-RB for these four as RB gives more possibilities for spread so higher for non-RB to compensate
 		modifier = {
 			factor = 0.25
 			force_potential = yes

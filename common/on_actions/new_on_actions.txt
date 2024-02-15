@@ -1,0 +1,58 @@
+
+on_five_year_pulse = {
+	random_events = {
+
+		# Patronage		15 (9g 4b + 2b(MTTH))
+		100 = new_idea_groups_mod.100
+		100 = new_idea_groups_mod.101
+		100 = new_idea_groups_mod.102
+		100 = new_idea_groups_mod.103
+		100 = new_idea_groups_mod.104
+		100 = new_idea_groups_mod.105
+		100 = new_idea_groups_mod.106
+		100 = new_idea_groups_mod.107
+		100 = new_idea_groups_mod.108
+		# 109 triggered by MTTH
+		100 = new_idea_groups_mod.110
+		100 = new_idea_groups_mod.111
+		100 = new_idea_groups_mod.112
+		100 = new_idea_groups_mod.113
+		# 114 is generic and triggered by MTTH
+
+		# Sovereignty		14 (8g 5b + 1g(MTTH))
+		# 200 triggered by MTTH	
+		100 = new_idea_groups_mod.201
+		100 = new_idea_groups_mod.202
+		100 = new_idea_groups_mod.203
+		100 = new_idea_groups_mod.204
+		100 = new_idea_groups_mod.205
+		100 = new_idea_groups_mod.206
+		100 = new_idea_groups_mod.207
+		# 208 is a subevent of 207
+		# 209 is a subevent of 207
+		100 = new_idea_groups_mod.210
+		100 = new_idea_groups_mod.211
+		100 = new_idea_groups_mod.212
+		100 = new_idea_groups_mod.213
+		100 = new_idea_groups_mod.214
+		100 = new_idea_groups_mod.215
+
+		# Logistics		13 (8g 5b + 0g(MTTH))
+		100 = new_idea_groups_mod.300
+		100 = new_idea_groups_mod.301
+		100 = new_idea_groups_mod.302
+		100 = new_idea_groups_mod.303
+		100 = new_idea_groups_mod.304
+		100 = new_idea_groups_mod.305
+		100 = new_idea_groups_mod.306
+		100 = new_idea_groups_mod.307
+		100 = new_idea_groups_mod.308
+		100 = new_idea_groups_mod.309
+		100 = new_idea_groups_mod.310
+		100 = new_idea_groups_mod.311
+		100 = new_idea_groups_mod.312
+
+	}
+
+}
+

@@ -1,0 +1,29 @@
+spriteTypes = {	spriteType = {
+		name = "GFX_idea_patronage_ideas"
+		texturefile = "gfx//interface//ideas//idea_patronage_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_idea_patronage_no_legalism_ideas"
+		texturefile = "gfx//interface//ideas//idea_patronage_no_legalism_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_idea_logistics_ideas"
+		texturefile = "gfx//interface//ideas//idea_logistics_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_idea_sovereignty_ideas"
+		texturefile = "gfx//interface//ideas//idea_sovereignty_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+}

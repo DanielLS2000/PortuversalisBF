@@ -22,6 +22,7 @@
 - Trade Goods Expanded totalmente integrado
 ### Diplomacia
 - Sistema de Aliança do Gurkan Integrado, players possuem limite de aliados que varia com seu dev
+- Subsidios só podem ser enviados a aliados ou para vassalos (de qualquer nação)
 - Não é possivel declarar mais de uma guerra ofensiva ao mesmo tempo
 - Não é possivel se aliar com países com os quais você quebrou aliança recentemente
 - Mecânica de Esferas de Influencia similar ao Victoria II
@@ -51,6 +52,7 @@
 - Evento que remove todos os nativos com habilidade de migrar no Novo Mundo
 - Culturas mudam dinamicamente, em nações coloniais certas provincias mudam tanto a cultura quanto a religião
 - GME totalmente integrado!
+- Total de 10 Idea Groups Pickaveis (Adicionados 6 idea groups, sem contar a exclusividade)
 
 ## Mods Incorporados (Total/Parcialmente)
 - Responsible Blobbing (Mudanças)
@@ -85,3 +87,5 @@
 - - Norway-Sweden
 - Proibir Gifts e Subisidios durante guerras (Talvez não, sei lá)
 - Revolucionario ganha 200 de AE com todos os países do mesmo continente
+- Finalizar de importar as policies das novas idea groups(Standing Army e Conscription)
+- Adicionar um idea group militar pra realmente serem 6 novos(tirando os mutuamente exclusivos)
