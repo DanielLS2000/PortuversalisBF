@@ -23,6 +23,11 @@ country_event = {
 					has_country_flag = new_world_found
 				}
 			}
+			ROOT = {
+				any_ally = {
+					has_country_flag = new_world_found
+				}
+			}
 		}
 	}
 
@@ -403,11 +408,11 @@ country_event = {
 	mean_time_to_happen = {
 		months = 120
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			is_year = 1485
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			AND = {
 				capital_scope = {
 					region = iberia_region

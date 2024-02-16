@@ -88,3 +88,5 @@
 - Revolucionario ganha 200 de AE com todos os países do mesmo continente
 - Finalizar de importar as policies das novas idea groups(Standing Army e Conscription)
 - Adicionar um idea group militar pra realmente serem 6 novos(tirando os mutuamente exclusivos)
+- Importar missões portuguesas do Beyond the Cape
+- Missão de descobrir ouro no Brasil de portugal vira evento
