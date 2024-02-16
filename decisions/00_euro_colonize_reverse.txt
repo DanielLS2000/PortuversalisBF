@@ -6,7 +6,10 @@ country_decisions = {
 		allow = {
 			stability = 2
 			treasury = 1000
-			dip = 6
+			government_rank = 3
+			trade_income_percentage = 0.4
+			navy_size = 30
+			num_of_admirals_with_traits = 1
 		}
 		effect = {
 			add_treasury = -1000

@@ -11,7 +11,7 @@
 - Custo extra ao ficar acima do forcelimit aumentado de 2.0 para 3.0
 ### Administração
 - Governing capacity recebe um nerf percentual pra cada era do jogo de forma crescente(0/10%/15%/25%)
-- A partir da era da reforma paises asiaticos recebem um buff de 10% de gov cap para permitir imperios maiores
+- Países asiaticos/africanos que se tornarem imperios recebem um bonus de 10% de gov cap
 - Custo de governo das provincias em geral aumentada, em compensação centralizar estado reduz mais o custo de governo
 - Você recebe buffs gradualmente menores partindo de 0% para 50% de gov cap usado
 - Você recebe nerfs gradualmente maiores partindo de 50% para 100% de gov cap usado
@@ -25,7 +25,7 @@
 - Subsidios só podem ser enviados a aliados ou para vassalos (de qualquer nação)
 - Não é possivel declarar mais de uma guerra ofensiva ao mesmo tempo
 - Não é possivel se aliar com países com os quais você quebrou aliança recentemente
-- Mecânica de Esferas de Influencia similar ao Victoria II
+- Mecânica de Esferas de Influencia similar ao Victoria II a partir de 1608
 - Mecânica de fusão de colônias
 - Vassalos tem chance de receber um evento declarando independencia se chegarem a 70% de liberty desire
 - Colonias tem o mesmo se chegarem a bater alguns criterios além do 70% de liberty desire:
@@ -75,17 +75,16 @@
 - Trade Goods Expanded (Total)
 - Great Monuments Expanded (Total)
 - Automatic Colonial Cultural Conversion (Total)
-- Gurkan Alliance System
+- Gurkan Alliance System (Total)
 
 ## Todo
-- Incorporar partes do Better Renaissance Cultures
+- Incorporar partes do Better Renaissance Cultures (Mais complicado doq pensei)
 - Impor merc limit do gecko
 - Adicionar Formaveis
 - - Rework Arabia
 - - Great Moravia
 - - Carthage
 - - Norway-Sweden
-- Proibir Gifts e Subisidios durante guerras (Talvez não, sei lá)
 - Revolucionario ganha 200 de AE com todos os países do mesmo continente
 - Finalizar de importar as policies das novas idea groups(Standing Army e Conscription)
 - Adicionar um idea group militar pra realmente serem 6 novos(tirando os mutuamente exclusivos)
