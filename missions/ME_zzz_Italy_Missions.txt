@@ -518,16 +518,6 @@ italy_missions_3 = {
 	ita_italian_kingship = {
 		icon = complete_the_risorgimento
 		required_missions = {
-			gen_conquest_of_rome
-			lvn_conquest_of_rome
-			spi_conquest_of_rome
-			tts_conquest_of_rome
-			tus_conquest_of_rome
-			fer_conquest_of_rome
-			man_conquest_of_rome
-			italian_minor_conquest_of_rome
-			pga_conquest_of_rome
-			vrn_conquest_of_rome
 		}
 		provinces_to_highlight = {
 			province_id = 118

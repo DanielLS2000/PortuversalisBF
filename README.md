@@ -55,7 +55,6 @@
 - Italia
 - Cologne
 - Westphalia
-- Borgonha
 
 ### Conteudo Extra
 - Evento que remove todos os nativos com habilidade de migrar no Novo Mundo
