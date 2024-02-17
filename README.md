@@ -48,9 +48,19 @@
 - Illyria
 - Zapadoslavia
 - Carolingian Empire
+
+### Missões Refeitas
+- Austria
+- Veneza
+- Italia
+- Cologne
+- Westphalia
+- Borgonha
+
 ### Conteudo Extra
 - Evento que remove todos os nativos com habilidade de migrar no Novo Mundo
 - Culturas mudam dinamicamente, em nações coloniais certas provincias mudam tanto a cultura quanto a religião
+- Mecanica de Governo "Habsburg Glory" emplementado
 - GME totalmente integrado!
 - Total de 10 Idea Groups Pickaveis (Adicionados 6 idea groups, sem contar a exclusividade)
 
@@ -76,6 +86,7 @@
 - Great Monuments Expanded (Total)
 - Automatic Colonial Cultural Conversion (Total)
 - Gurkan Alliance System (Total)
+- Europa Expanded (Parcial)
 
 ## Todo
 - Incorporar partes do Better Renaissance Cultures (Mais complicado doq pensei)
