@@ -116,7 +116,12 @@ province_event = {
 			NOT = {same_continent = capital }
 			NOT = {
 				owner = {
-					tag = ADU
+					OR = {
+						tag = ADU
+						capital_scope = {
+							superregion = near_east_superregion
+						}
+					}
 				}
 			}	
 		}
