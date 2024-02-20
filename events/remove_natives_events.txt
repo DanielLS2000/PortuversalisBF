@@ -94,7 +94,17 @@ country_event = { #You guessed it, removes africans
 	option = { #Remove
 		name = remove_natives_events.2.a		
 		custom_tooltip = "The nations of the sahel will be removed"
-		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = {
+				any_country = {
+					capital_scope = {
+						region = sahel_region
+					}
+					was_player = yes
+				}
+			}
+		}
+		# ai_chance = { factor = 100 }
 		hidden_effect = {
 			sahel_region = {
 				cede_province = ---
