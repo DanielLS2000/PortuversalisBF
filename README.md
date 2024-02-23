@@ -49,12 +49,13 @@
 - Zapadoslavia
 - Carolingian Empire
 
-### Missões Refeitas
+### Missões Novas
 - Austria
 - Veneza
 - Italia
 - Cologne
 - Westphalia
+- Renânia
 
 ### Conteudo Extra
 - Evento que remove todos os nativos com habilidade de migrar no Novo Mundo
@@ -86,6 +87,7 @@
 - Automatic Colonial Cultural Conversion (Total)
 - Gurkan Alliance System (Total)
 - Europa Expanded (Parcial)
+- Historical Ideas Expanded (Parcial)
 
 ## Todo
 - Incorporar partes do Better Renaissance Cultures (Mais complicado doq pensei)
@@ -102,3 +104,4 @@
 - Missão de descobrir ouro no Brasil de portugal vira evento
 - Permitir que arabes conquistem a africa
 - Remover o outro evento de Colombo que fica no flavor de Portugal
+- Rework Netherlands e Borgonha
