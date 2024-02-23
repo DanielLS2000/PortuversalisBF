@@ -4740,47 +4740,40 @@ TRE_ideas = {
 
 GEO_ideas = {
 	start = {
-		defensiveness = 0.25
-		infantry_power = 0.1
+		hostile_attrition = 1
+		defensiveness = 0.30
 	}
-	
 	bonus = {
-		infantry_cost = -0.2
+		missionaries = 1
 	}
-	
 	trigger = {
-		OR = {
-			tag = GEO
-			tag = IME
-		}
+		tag = GEO
+		NOT = { has_country_flag = hie_use_vanilla_ideas }
 	}
 	free = yes
-	
-	bagrationi_dynasty = {
-		heir_chance = 0.5
-		legitimacy = 0.5
-		devotion = 0.5
-		republican_tradition = 0.15
-		meritocracy = 0.5
-		horde_unity = 0.5
-	}
-	georgian_isolation = {
-		improve_relation_modifier = 0.3
-	}
-	geo_legacy_of_saint_nino = {
-		tolerance_own = 2
-	}
-	restoration_of_fortresses_and_churches = {
-		build_cost = -0.1
-	}
-	sadrosho_districts = {
-		manpower_recovery_speed = 0.2
-	}
-	geo_dasturlamali = {
-		war_exhaustion = -0.02
-	}
-	georgian_embassies = {
+	hie_geo_bagrationi_dynasty = {
+		accept_vassalization_reasons = 10
 		diplomatic_reputation = 1
+	}
+	hie_geo_last_christian_bastion = {
+		global_missionary_strength = 0.03
+	}
+	hie_geo_kipchak_settlements = {
+		development_cost = -0.10
+		manpower_recovery_speed = 0.10
+	}
+	hie_geo_campaigns_king_tamar = {
+		movement_speed = 0.15
+		discipline = 0.05
+	}
+	hie_geo_sadrosho_banners = {
+		manpower_in_true_faith_provinces = 0.20
+	}
+	hie_geo_shadow_empire = {
+		infantry_power = 0.10
+	}
+	hie_geo_avenge_battle_chalagan = {
+		leader_land_manuever = 1
 	}
 }
 

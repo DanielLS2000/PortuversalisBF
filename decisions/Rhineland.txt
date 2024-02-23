@@ -45,7 +45,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = RHI
+			change_tag = RHN
 			add_prestige = 25
 			if = {
 				limit = {
