@@ -3,16 +3,7 @@ country_decisions = {
 	rhi_form_decision = {
 		major = yes
 		potential = {
-			culture = hessian
-			NOT = {
-				exists = RHI
-			}
-			NOT = { 
-				tag = PRU
-				tag = NGC
-				tag = GER
-				tag = HAB
-			}
+			tag = KOL
 		}
 		provinces_to_highlight = {
 			OR = {

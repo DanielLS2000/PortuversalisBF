@@ -91,7 +91,7 @@ RHI_ideas = {
 	}
 	
 	trigger = {
-		tag = RHI
+		tag = RHN
 	}
 	free = yes		#will be added at load.
 
