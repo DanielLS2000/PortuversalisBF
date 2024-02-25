@@ -1,0 +1,40 @@
+remove_fog = {
+    category = alliance
+    alert_index = 6
+    alert_tooltip = VISUAL_ALLIANCE
+
+    require_acceptance = yes
+
+    is_visible = {
+        FROM = {
+            is_player = yes
+        }
+    }
+
+    is_allowed = {
+        AND = {
+            FROM = {
+                is_at_war = yes
+            }
+            NOT = {
+                ROOT = {
+                    has_opinion_modifier = {
+                        who = FROM
+                        modifier = visual_alliance
+                    }
+                }
+            }
+            NOT = { alliance_with = ROOT}
+        }
+    }
+
+    on_accept = {
+        FROM = {
+            remove_fow = 12
+        }
+        add_opinion = {
+            who = FROM
+            modifier = visual_alliance
+        }
+    }
+}

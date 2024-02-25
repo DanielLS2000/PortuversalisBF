@@ -1,0 +1,8 @@
+﻿l_english:
+# Tooltips
+ remove_fog: "Visual Alliance"
+ remove_fog_title: "Ask for Visual Alliance"
+ remove_fog_desc: "Ask for a visual alliance with [From.GetName] so we can see their frontlines to watch the war closely"
+ remove_fog_tooltip: "Ask for a visual alliance"
+ remove_fog_alert_tooltip: "Ask for a visual alliance"
+ visual_alliance: "Visual Alliance"
