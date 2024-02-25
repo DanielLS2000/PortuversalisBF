@@ -102,9 +102,6 @@
 - Adicionar um idea group militar pra realmente serem 6 novos(tirando os mutuamente exclusivos)
 - Importar missões portuguesas do Beyond the Cape
 - Missão de descobrir ouro no Brasil de portugal vira evento
-- Permitir que arabes conquistem a africa
 - Rework Netherlands e Borgonha
 - Remover o nerf de não colonizar de não europeus e impedi-los de explorar
-- Buffar o governing capacity gradual pra asian empire
-- reduzir o custo extra de pegar tech sem instituição
-- dar gov cap flat de 150 pra asian empire
+- reduzir o custo extra de pegar tech sem instituição pela metade
