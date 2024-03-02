@@ -1,0 +1,91 @@
+dutch_trade_fleet = {
+	can_select = {
+		is_primitive = no
+		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
+		NOT = { has_country_flag = unlock_frisian_naval_doctrine } 
+		OR = {
+			primary_culture = dutch
+			primary_culture = flemish
+			primary_culture = frisian
+		}
+	}
+
+	country_modifier = {
+		global_ship_trade_power = 0.25
+		range = 0.25
+	}
+	effect = {}
+	removed_effect = {}
+	
+	button_gfx = 12
+}
+
+#norse_raid_fleet = {
+#	can_select = {
+#		is_primitive = no
+#		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
+#		primary_culture = norse
+#	}
+#
+#	country_modifier = {
+#		privateer_efficiency = 0.33
+#		movement_speed_in_fleet_modifier = 3
+#	}
+#	effect = {}
+#	removed_effect = {}
+#	
+#	button_gfx = 13
+#}
+#
+#hanseatic_trade_fleet = {
+#	can_select = {
+#		is_primitive = no
+#		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
+#		primary_culture = lower_saxon
+#	}
+#
+#	country_modifier = {
+#		global_ship_trade_power = 0.25
+#		naval_tradition_from_trade = 1
+#	}
+#	effect = {}
+#	removed_effect = {}
+#	
+#	button_gfx = 17
+#}
+
+#maghrebi_corsairs = {
+#	can_select = {
+#		is_primitive = no
+#		NOT = { has_country_flag = unlock_norwegian_naval_doctrine }
+#		culture_group = maghrebi
+#	}
+#
+#	country_modifier = {
+#		privateer_efficiency = 0.25
+#		may_perform_slave_raid = yes
+#		available_province_loot = 0.5
+#	}
+#	effect = {}
+#	removed_effect = {}
+#	
+#	button_gfx = 19
+#}
+
+frisian_privateers = {
+	can_select = {
+		is_primitive = no
+		NOT = { has_country_flag = unlock_norwegian_naval_doctrine }
+		has_country_flag = unlock_frisian_naval_doctrine
+	}
+
+	country_modifier = {
+		may_perform_slave_raid = yes
+		privateer_efficiency = 0.25
+		capture_ship_chance = 0.1 
+	}
+	effect = {}
+	removed_effect = {}
+	
+	button_gfx = 31
+}

@@ -1,0 +1,96 @@
+estate_burghers_hoekse_kabeljauwse_twisten = {
+	icon = privilege_grant_autonomy
+	influence = 0.25
+	loyalty = -0.10
+	is_valid = {
+		OR = {
+			tag = HOL
+			has_estate_privilege = estate_burghers_hoekse_kabeljauwse_twisten
+		}
+	}
+	on_granted = {
+		#custom_tooltip = prussian_confederation_privilege_tt
+		#add_estate_loyalty = {
+		#	estate = estate_burghers
+		#	loyalty = 20
+		#}
+		#change_estate_land_share = {
+		#	estate = estate_burghers
+		#	share = 20
+		#}
+	}
+	penalties = {
+		global_unrest = 1
+		stability_cost_modifier = 0.10
+	}
+	benefits = {
+	}
+	can_revoke = {
+		estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 60
+		}
+		NOT = {
+			estate_influence = {
+				estate = estate_burghers
+				influence = 60
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_nobles_multi_succession_claims = {
+	icon = privilege_grant_autonomy
+	influence = 0.25
+	loyalty = -0.10
+	is_valid = {
+		OR = {
+			tag = LUX
+			has_estate_privilege = estate_nobles_multi_succession_claims
+		}
+	}
+	on_granted = {
+		#custom_tooltip = prussian_confederation_privilege_tt
+		#add_estate_loyalty = {
+		#	estate = estate_burghers
+		#	loyalty = 20
+		#}
+		#change_estate_land_share = {
+		#	estate = estate_burghers
+		#	share = 20
+		#}
+	}
+	penalties = {
+		stability_cost_modifier = 0.1
+		liberty_desire = 65
+	}
+	benefits = {
+	}
+	can_revoke = {
+		estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 60
+		}
+		NOT = {
+			estate_influence = {
+				estate = estate_nobles
+				influence = 60
+			}
+		}
+		NOT = {
+			94 = {
+				OR = {
+					is_claim = POL
+					is_claim = HAB
+					is_claim = THU
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
