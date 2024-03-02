@@ -801,7 +801,7 @@ me_hab_1_1 = {
 				has_mil_advisor_3 = yes
 			}
 			is_at_war = no
-			land_forcelimit = 200
+			land_forcelimit = 100
 			manpower = 200
 			if = {
 				limit = {
@@ -5462,7 +5462,7 @@ me_hab_4_navy = {
 				tooltip = me_hab_venetian_branch
 				always = no
 			}
-			naval_forcelimit = 100
+			naval_forcelimit = 50
 			num_of_galley = 30
 			num_of_admirals = 2
 			
@@ -5638,7 +5638,7 @@ me_hab_4_venetian_module = {
 		}
 		position = 9
 		trigger = {
-			naval_forcelimit = 100
+			naval_forcelimit = 70
 			num_of_galley = 30
 			num_of_admirals = 2
 		}
