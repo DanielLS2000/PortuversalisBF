@@ -18,3 +18,6 @@ NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.8 -- default is 0.6
 -- Peace Deal, Total occupation after 1 year and extra cost per province
 NDefines.NDiplomacy.MONTHS_BEFORE_TOTAL_OCCUPATION = 12
 NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 1.0 -- default is 0.8
+
+-- More Garrison for Forts
+NDefines.NMilitary.GARRISON_SIZE = 1500

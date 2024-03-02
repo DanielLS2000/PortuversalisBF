@@ -1578,12 +1578,12 @@ gbr_row_3 = {
 			not_in_mission_preview_mode = { key = GBR }
 			if = {
 				limit = { ai = no }
-				navy_size = 50
+				navy_size = 32
 				navy_size_percentage = 1
 				num_of_admirals = 1
 			}
 			else = {
-				navy_size = 25
+				navy_size = 16
 			}
 		}	
 		effect = {
@@ -1627,7 +1627,7 @@ gbr_row_3 = {
 			num_of_special_units = { 
 				special_unit_category = man_of_war
 				type = heavy_ship 
-				value = 40
+				value = 26
 			}
 			is_bankrupt = no
 			is_in_deficit = no
@@ -1635,7 +1635,7 @@ gbr_row_3 = {
 				limit = { has_dlc = "Golden Century" }
 				has_flagship = yes
 			}
-			navy_size = 200
+			navy_size = 130
 			total_own_and_non_tributary_subject_development = 1500
 		}	
 		effect = {
@@ -4227,9 +4227,9 @@ ave_row_5 = {
 		trigger = { 
 			not_in_mission_preview_mode = { key = GBR }
 			num_of_man_of_war = 10
-			num_of_marines = 20
+			num_of_marines = 14
 			army_size_percentage = 1
-			army_size = 50
+			army_size = 35
 			monthly_mil = 10
 		}	
 		effect = {
@@ -4792,7 +4792,7 @@ gbr_ave_row_5 = {
 		}		
 		trigger = {
 			#max_manpower = 40
-			army_size = 50
+			army_size = 30
 			if = {
 				limit = { has_dlc = "Cradle of Civilization" }
 				army_professionalism = 0.2
@@ -4832,8 +4832,8 @@ gbr_ave_row_5 = {
 		}		
 		trigger = { 
 			reform_level = 4
-			max_manpower = 120
-			army_size = 80
+			max_manpower = 72
+			army_size = 53
 			if = {
 				limit = { has_dlc = "Cradle of Civilization" }
 				army_professionalism = 0.4

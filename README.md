@@ -102,6 +102,6 @@
 - Adicionar um idea group militar pra realmente serem 6 novos(tirando os mutuamente exclusivos)
 - Importar missões portuguesas do Beyond the Cape
 - Missão de descobrir ouro no Brasil de portugal vira evento
-- Permitir que arabes conquistem a africa
-- Remover o outro evento de Colombo que fica no flavor de Portugal
 - Rework Netherlands e Borgonha
+- Remover o nerf de não colonizar de não europeus e impedi-los de explorar
+- reduzir o custo extra de pegar tech sem instituição pela metade
