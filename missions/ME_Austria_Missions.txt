@@ -750,7 +750,7 @@ me_hab_1_1 = {
 					value = 0.1
 				}
 			}
-			army_size = 100
+			army_size = 50
 			OR = {
 				army_organiser = 2
 				has_mil_advisor_3 = yes
@@ -802,7 +802,7 @@ me_hab_1_1 = {
 			}
 			is_at_war = no
 			land_forcelimit = 100
-			manpower = 200
+			manpower = 100
 			if = {
 				limit = {
 					has_dlc = "Cradle of Civilization"
@@ -4057,7 +4057,7 @@ me_hab_3_2 = {
 			capital_scope = {
 				development = 30
 			}
-			army_size = 150
+			army_size = 100
 			OR = {
 				num_accepted_cultures = 5
 				num_of_owned_provinces_with = {
