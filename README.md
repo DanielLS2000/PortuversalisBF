@@ -105,3 +105,4 @@
 - Rework Netherlands e Borgonha
 - Remover o nerf de não colonizar de não europeus e impedi-los de explorar
 - reduzir o custo extra de pegar tech sem instituição pela metade
+- Consertar o botão de entrar no HRE
