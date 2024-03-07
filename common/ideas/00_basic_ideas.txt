@@ -928,6 +928,10 @@ exploration_ideas = {
 				superregion = europe_superregion
 			}
 		}
+		OR = {
+			technology_group = western
+			technology_group = eastern
+		} 
 	}
 
 	quest_for_the_new_world	= {

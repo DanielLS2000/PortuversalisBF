@@ -1,5 +1,5 @@
 euro_colonize = {
-	colonists = -5
+	colonists = 0
 }
 
 no_settlers = {
