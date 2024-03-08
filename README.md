@@ -102,7 +102,7 @@
 - Adicionar um idea group militar pra realmente serem 6 novos(tirando os mutuamente exclusivos)
 - Importar missões portuguesas do Beyond the Cape
 - Missão de descobrir ouro no Brasil de portugal vira evento
-- Rework Netherlands e Borgonha
+- Revisar toda a mission tree de Portugal
 - Remover o nerf de não colonizar de não europeus e impedi-los de explorar
-- reduzir o custo extra de pegar tech sem instituição pela metade
 - Consertar o botão de entrar no HRE
+- Adicionar a localização de triggered modifiers de tech cost para não europeus

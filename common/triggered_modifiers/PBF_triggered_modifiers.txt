@@ -144,6 +144,168 @@ empire_of_asia_revolution = {
 	governing_capacity = 150
 }
 
+muslim_nation_absolutism = {
+	potential = {
+		technology_group = muslim
+	}
+	trigger = {
+		current_age = age_of_absolutism
+	}
+	technology_cost = 0.15
+}
+
+muslim_nation_revolution = {
+	potential = {
+		technology_group = muslim
+	}
+	trigger = {
+		current_age = age_of_revolutions
+	}
+	technology_cost = 0.3
+}
+
+chinese_reformation_malus = {
+	potential = {
+		technology_group = chinese
+	}
+	trigger = {
+		current_age = age_of_reformation
+	}
+	technology_cost = 0.2
+}
+
+chinese_absolutism_malus = {
+	potential = {
+		technology_group = chinese
+	}
+	trigger = {
+		current_age = age_of_absolutism
+	}
+	technology_cost = 0.4
+}
+
+chinese_revolution_malus = {
+	potential = {
+		technology_group = chinese
+	}
+	trigger = {
+		current_age = age_of_revolutions
+	}
+	technology_cost = 0.6
+}
+
+african_reformation_malus = {
+	potential = {
+		OR = {
+			technology_group = sub_saharan
+			technology_group = central_african
+			technology_group = east_african
+		}
+	}
+	trigger = {
+		current_age = age_of_reformation
+	}
+	technology_cost = 0.3
+}
+
+african_absolutism_malus = {
+	potential = {
+		OR = {
+			technology_group = sub_saharan
+			technology_group = central_african
+			technology_group = east_african
+		}
+	}
+	trigger = {
+		current_age = age_of_absolutism
+	}
+	technology_cost = 0.6
+}
+
+african_revolution_malus = {
+	potential = {
+		OR = {
+			technology_group = sub_saharan
+			technology_group = central_african
+			technology_group = east_african
+		}
+	}
+	trigger = {
+		current_age = age_of_revolutions
+	}
+	technology_cost = 0.9
+}
+
+indian_reformation_malus = {
+	potential = {
+		technology_group = indian
+	}
+	trigger = {
+		current_age = age_of_reformation
+	}
+	technology_cost = 0.25
+}
+
+indian_absolutism_malus = {
+	potential = {
+		technology_group = indian
+	}
+	trigger = {
+		current_age = age_of_absolutism
+	}
+	technology_cost = 0.5
+}
+
+indian_revolution_malus = {
+	potential = {
+		technology_group = indian
+	}
+	trigger = {
+		current_age = age_of_revolutions
+	}
+	technology_cost = 0.75
+}
+
+nomadic_discovery_malus = {
+	potential = {
+		technology_group = nomad_group
+	}
+	trigger = {
+		current_age = age_of_discovery
+	}
+	technology_cost = 0.3
+}
+
+nomadic_reformation_malus = {
+	potential = {
+		technology_group = nomad_group
+	}
+	trigger = {
+		current_age = age_of_reformation
+	}
+	technology_cost = 0.6
+}
+
+nomadic_absolutim_malus = {
+	potential = {
+		technology_group = nomad_group
+	}
+	trigger = {
+		current_age = age_of_absolutism
+	}
+	technology_cost = 0.9
+}
+
+nomadic_revolution_malus = {
+	potential = {
+		technology_group = nomad_group
+	}
+	trigger = {
+		current_age = age_of_revolutions
+	}
+	technology_cost = 1.2
+}
+
 debbuging_stuff = {
 	potential = {
 		always = no

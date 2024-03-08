@@ -76,7 +76,7 @@ technology = {
 	# Tech 2
 	year = 1420
 	expects_institution = {
-		feudalism = 0.5
+		# feudalism = 0.5
 	}
 	
 	infantry_shock		= 	0.2
@@ -91,7 +91,7 @@ technology = {
 	# Tech 3
 	year = 1440
 	expects_institution = {
-		feudalism = 0.5
+		# feudalism = 0.5
 	}
 	
 	land_morale = 	0.5
@@ -102,7 +102,7 @@ technology = {
 	# Tech 4
 	year = 1453
 	expects_institution = {
-		feudalism = 0.5
+		# feudalism = 0.5
 	}
 
 	#Pike Square
@@ -116,8 +116,8 @@ technology = {
 	# Tech 5
 	year = 1466
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.15
+		# feudalism = 0.5
+		# renaissance = 0.15
 	}
 	
 	#Standardised Pikes
@@ -161,8 +161,8 @@ technology = {
 	# Tech 6
 	year = 1479
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
+		# feudalism = 0.5
+		# renaissance = 0.3
 	}
 	
 	#Arquebus
@@ -196,8 +196,8 @@ technology = {
 	# Tech 7
 	year = 1492
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
+		# feudalism = 0.5
+		# renaissance = 0.5
 	}
 	
 	#The limber
@@ -212,8 +212,8 @@ technology = {
 	# Tech 8
 	year = 1505
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
+		# feudalism = 0.5
+		# renaissance = 0.5
 	}
 
 	
@@ -229,9 +229,9 @@ technology = {
 	# Tech 9
 	year = 1518
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.15
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.15
 	}
 	
 	#Ditch
@@ -255,9 +255,9 @@ technology = {
 	# Tech 10
 	year = 1531
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.3
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.3
 	}
 	
 	#Reiter
@@ -294,9 +294,9 @@ technology = {
 	# Tech 11
 	year = 1544
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
 	}
 	
 	#Matchlock Musket
@@ -313,9 +313,9 @@ technology = {
 	# Tech 12
 	year = 1557
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
 	}
 	
 	#Spanish Square
@@ -345,10 +345,10 @@ technology = {
 	# Tech 13
 	year = 1570
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.15
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.15
 	}
 	
 	#Trunnions
@@ -363,10 +363,10 @@ technology = {
 	# Tech 14
 	year = 1583
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.3
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.3
 	}
 	
 	#Star Bastions
@@ -405,10 +405,10 @@ technology = {
 	# Tech 15
 	year = 1596
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
 	}
 	
 	#Maurician Infantry
@@ -434,10 +434,10 @@ technology = {
 	# Tech 16
 	year = 1609
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
 	}
 	
 	#Standardisation of Calibre
@@ -457,11 +457,11 @@ technology = {
 	# Tech 17
 	year = 1622
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.15
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.15
 	}
 	
 	cavalry_shock		=	1.0
@@ -476,11 +476,11 @@ technology = {
 	# Tech 18
 	year = 1635
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.3
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.3
 	}
 	
 	#Carbine
@@ -507,11 +507,11 @@ technology = {
 	# Tech 19
 	year = 1648
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
 	}
 	
 	#Gustavian Infantry
@@ -545,11 +545,11 @@ technology = {
 	# Tech 20
 	year = 1661
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
 	}
 	
 	#Killing Grounds
@@ -566,12 +566,12 @@ technology = {
 	# Tech 21
 	year = 1674
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
-		manufactories = 0.15
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
+		# manufactories = 0.15
 	}
 	
 	#Line Infantry
@@ -585,12 +585,12 @@ technology = {
 	# Tech 22
 	year = 1687
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
-		manufactories = 0.3
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
+		# manufactories = 0.3
 	}
 	
 	#Cartridge	(1620)?)
@@ -614,12 +614,12 @@ technology = {
 	# Tech 23
 	year = 1700
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
-		manufactories = 0.5
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
+		# manufactories = 0.5
 	}
 	
 	#Light Cavalry
@@ -661,13 +661,13 @@ technology = {
 	# Tech 24
 	year = 1715
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
-		manufactories = 0.5
-		enlightenment = 0.15
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
+		# manufactories = 0.5
+		# enlightenment = 0.15
 	}
 	
 	#Covered Way
@@ -681,13 +681,13 @@ technology = {
 	# Tech 25
 	year = 1730
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
-		manufactories = 0.5
-		enlightenment = 0.3
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
+		# manufactories = 0.5
+		# enlightenment = 0.3
 	}
 	
 	#Metallurgy
@@ -702,13 +702,13 @@ technology = {
 	# Tech 26
 	year = 1745
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
-		manufactories = 0.5
-		enlightenment = 0.5
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
+		# manufactories = 0.5
+		# enlightenment = 0.5
 	}
 	
 	#Light Infantry Companies
@@ -753,13 +753,13 @@ technology = {
 	# Tech 27
 	year = 1760
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
-		manufactories = 0.5
-		enlightenment = 0.5
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
+		# manufactories = 0.5
+		# enlightenment = 0.5
 	}
 	
 	#Bayonet
@@ -771,14 +771,14 @@ technology = {
 	# Tech 28
 	year = 1775
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
-		manufactories = 0.5
-		enlightenment = 0.5
-		industrialization = 0.25
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
+		# manufactories = 0.5
+		# enlightenment = 0.5
+		# industrialization = 0.25
 	}
 	
 	#Cuirassier
@@ -808,14 +808,14 @@ technology = {
 	# Tech 29
 	year = 1790
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
-		manufactories = 0.5
-		enlightenment = 0.5
-		industrialization = 0.5
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
+		# manufactories = 0.5
+		# enlightenment = 0.5
+		# industrialization = 0.5
 	}
 	
 	#Defense in Depth
@@ -828,14 +828,14 @@ technology = {
 	# Tech 30
 	year = 1805
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
-		manufactories = 0.5
-		enlightenment = 1
-		industrialization = 0.5
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
+		# manufactories = 0.5
+		# enlightenment = 1
+		# industrialization = 0.5
 	}
 	
 	#Impulse Warfare
@@ -865,14 +865,14 @@ technology = {
 	# Tech 31
 	year = 1820
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
-		manufactories = 0.5
-		enlightenment = 0.5
-		industrialization = 1
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
+		# manufactories = 0.5
+		# enlightenment = 0.5
+		# industrialization = 1
 	}
 	
 	#Rifle
@@ -885,14 +885,14 @@ technology = {
 	# Tech 32
 	year = 1835
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
-		manufactories = 1
-		enlightenment = 1
-		industrialization = 1
+		# feudalism = 0.5
+		# renaissance = 0.5
+		# new_world_i = 0.5
+		# printing_press = 0.5
+		# global_trade = 0.5
+		# manufactories = 1
+		# enlightenment = 1
+		# industrialization = 1
 	}
 	
 	#Field Howitzer

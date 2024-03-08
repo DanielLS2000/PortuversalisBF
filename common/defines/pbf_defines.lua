@@ -21,3 +21,6 @@ NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 1.0 -- default is 0.8
 
 -- More Garrison for Forts
 NDefines.NMilitary.GARRISON_SIZE = 1500
+
+-- Ahead of time more expensive
+NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.2
