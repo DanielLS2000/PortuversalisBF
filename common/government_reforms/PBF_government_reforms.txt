@@ -5,8 +5,8 @@ prussian_monarchy = {
 		has_dlc = "Domination"
 		NOT = { has_reform = prussian_monarchy_base }
 		OR = {
+			tag = PRU
 			AND = {
-				tag = PRU
 				OR = {
 					has_mission = emp_brapru_army_reforms_2
 					has_mission = emp_brapru_army_reforms_3
@@ -21,13 +21,6 @@ prussian_monarchy = {
 		}
 	}
 	trigger = {
-		OR = {
-			uses_church_aspects = yes
-			uses_fervor = yes
-			has_unlocked_government_reform_tooltip = {
-				government_reform = prussian_monarchy
-			}
-		}
 	}
 	legacy_equivalent = prussian_monarchy_legacy
 
