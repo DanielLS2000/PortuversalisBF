@@ -71,7 +71,7 @@ post_office = {
 			development = 20
 		}	
 	}
-	modifier = { governing_capacity = 300 possible_policy = 1 all_power_cost = -0.025  }
+	modifier = { governing_capacity = 150 possible_policy = 1 global_autonomy = -0.05 }
 	ai_will_do = {
 		factor = 1
 	}

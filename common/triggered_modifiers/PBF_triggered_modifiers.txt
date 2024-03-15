@@ -68,8 +68,8 @@ empire_of_asia_discovery = {
 		government_rank = 3
 		current_age = age_of_discovery
 	}
-	governing_capacity_modifier = 0.1
-	governing_capacity = 150
+	# governing_capacity_modifier = 0.1
+	# governing_capacity = 150
 }
 
 empire_of_asia_reformation = {
@@ -92,8 +92,8 @@ empire_of_asia_reformation = {
 		government_rank = 3
 		current_age = age_of_reformation
 	}
-	governing_capacity_modifier = 0.2
-	governing_capacity = 150
+	# governing_capacity_modifier = 0.2
+	# governing_capacity = 150
 }
 
 empire_of_asia_absolutism = {
@@ -116,8 +116,8 @@ empire_of_asia_absolutism = {
 		government_rank = 3
 		current_age = age_of_absolutism
 	}
-	governing_capacity_modifier = 0.25
-	governing_capacity = 150
+	# governing_capacity_modifier = 0.25
+	# governing_capacity = 150
 }
 
 empire_of_asia_revolution = {
@@ -140,8 +140,8 @@ empire_of_asia_revolution = {
 		government_rank = 3
 		current_age = age_of_revolutions
 	}
-	governing_capacity_modifier = 0.35
-	governing_capacity = 150
+	# governing_capacity_modifier = 0.35
+	# governing_capacity = 150
 }
 
 muslim_nation_absolutism = {
@@ -151,7 +151,7 @@ muslim_nation_absolutism = {
 	trigger = {
 		current_age = age_of_absolutism
 	}
-	technology_cost = 0.15
+	technology_cost = 0.3
 }
 
 muslim_nation_revolution = {
@@ -161,7 +161,7 @@ muslim_nation_revolution = {
 	trigger = {
 		current_age = age_of_revolutions
 	}
-	technology_cost = 0.3
+	technology_cost = 0.6
 }
 
 chinese_reformation_malus = {
