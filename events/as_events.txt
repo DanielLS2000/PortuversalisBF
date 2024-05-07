@@ -218,7 +218,7 @@ country_event = {
             config_version = 1 # <--- CONFIG VERSION
 
             # Base alliance points each player receives
-            base_points = 11
+            base_points = 110 # <-- Default 11, increse to ignore
 
             # HRE Emperor cost addition (before 1470) !!! NOT WORKING !!!
             hre_emperor_cost = 0

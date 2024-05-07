@@ -238,42 +238,6 @@ feudalism = {
 				}
 			}
 		}
-        modifier = {
-			factor = -0.2
-			scale = yes
-			potential = {
-				owner = {
-					has_reform = steppe_horde
-				}
-			}
-           custom_trigger_tooltip = {
-                tooltip = ECI_HORDE
-				owner = {
-					has_reform = steppe_horde
-				}
-			}
-		}
-        modifier = {
-			factor = -0.2
-			scale = yes
-			potential = {
-				owner = {
-                    OR = {
-                        government = native
-                        has_reform = siberian_tribe
-                    }
-				}
-			}
-           custom_trigger_tooltip = {
-                tooltip = ECI_NATIVE_COUNCIL
-				owner = {
-                    OR = {
-                        government = native
-                        has_reform = siberian_tribe
-                    }
-				}
-			}
-		}
     }
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -537,148 +501,6 @@ renaissance = {
 				}
 			}
 		}
-		modifier = {
-			factor = -0.2
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = muslim
-						technology_group = east_african
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_MUSLIM
-				owner = {
-					OR = {
-						technology_group = muslim
-						technology_group = east_african
-					}
-				}
-			}  
-		}
-		modifier = {
-			factor = -0.4
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = indian
-						AND = {
-							technology_group = chinese
-							OR = {
-								religion = shinto
-								religion_group = christian
-							}
-						}
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_INDIAN_OR_JAPANESE
-				owner = {
-					OR = {
-						technology_group = indian
-						AND = {
-							technology_group = chinese
-							OR = {
-								religion = shinto
-								religion_group = christian
-							}
-						}
-					}
-				}
-			}  
-		}
-		modifier = {
-			factor = -0.6
-			scale = yes
-			potential = {
-				owner = {
-					technology_group = chinese
-					NOT = { religion = shinto }
-					NOT = { religion_group = christian }
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_CHINESE_NOT_JAPAN
-				owner = {
-					technology_group = chinese
-					NOT = { religion = shinto }
-					NOT = { religion_group = christian }
-				}
-			}  
-		}
-		modifier = {
-			factor = -0.8
-			scale = yes
-			potential = {
-				owner = {
-					technology_group = nomad_group
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_NOMAD
-				owner = {
-					technology_group = nomad_group
-				}
-			}  
-		}
-		modifier = {
-			factor = -1.0
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = andean
-						technology_group = mesoamerican
-						technology_group = north_american
-						technology_group = south_american
-						technology_group = sub_saharan
-						technology_group = central_african
-						technology_group = aboriginal_tech
-						technology_group = polynesian_tech
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_PRIMITIVE_TECH_GROUP
-				owner = {
-					OR = {
-						technology_group = andean
-						technology_group = mesoamerican
-						technology_group = north_american
-						technology_group = south_american
-						technology_group = sub_saharan
-						technology_group = central_african
-						technology_group = aboriginal_tech
-						technology_group = polynesian_tech
-					}
-				}
-			}  
-		}
-        modifier = {
-			factor = -100.0
-			scale = no
-			potential = {
-				owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
-                }
-            }
-            custom_trigger_tooltip = {
-                tooltip = ECI_HAS_TRIBAL_GOVT
-                owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
-                }
-            }  
-        }
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -847,16 +669,7 @@ new_world_i = {
 	
 	
 	can_embrace = {
-		owner = {
-			NOT = { technology_group = andean }
-			NOT = { technology_group = mesoamerican }
-			NOT = { technology_group = north_american }
-			NOT = { technology_group = south_american }
-			NOT = { technology_group = aboriginal_tech }
-			NOT = { technology_group = polynesian_tech }
-			NOT = { government = tribal }
-			NOT = { government = native }
-		}
+		always = yes
 	}
 
 
@@ -968,165 +781,6 @@ new_world_i = {
 				}
 			}
 		}
-        modifier = {
-			factor = -0.6
-			scale = yes
-			potential = {
-				OR = {
-					region = maghreb_region
-					superregion = near_east_superregion
-				}
-            }
-            custom_trigger_tooltip = {
-				tooltip = ECI_MENA
-				OR = {
-					region = maghreb_region
-					superregion = near_east_superregion
-				}
-			}
-        }
-		modifier = {
-			factor = -0.2
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = muslim
-						technology_group = east_african
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_MUSLIM
-				owner = {
-					OR = {
-						technology_group = muslim
-						technology_group = east_african
-					}
-				}
-			}  
-		}
-		modifier = {
-			factor = -0.4
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = indian
-						AND = {
-							technology_group = chinese
-							OR = {
-								religion = shinto
-								religion_group = christian
-							}
-						}
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_INDIAN_OR_JAPANESE
-				owner = {
-					OR = {
-						technology_group = indian
-						AND = {
-							technology_group = chinese
-							OR = {
-								religion = shinto
-								religion_group = christian
-							}
-						}
-					}
-				}
-			}  
-		}
-		modifier = {
-			factor = -0.6
-			scale = yes
-			potential = {
-				owner = {
-					technology_group = chinese
-					NOT = { religion = shinto }
-					NOT = { religion_group = christian }
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_CHINESE_NOT_JAPAN
-				owner = {
-					technology_group = chinese
-					NOT = { religion = shinto }
-					NOT = { religion_group = christian }
-				}
-			}  
-		}
-		modifier = {
-			factor = -0.8
-			scale = yes
-			potential = {
-				owner = {
-					technology_group = nomad_group
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_NOMAD
-				owner = {
-					technology_group = nomad_group
-				}
-			}  
-		}
-		modifier = {
-			factor = -1.0
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = andean
-						technology_group = mesoamerican
-						technology_group = north_american
-						technology_group = south_american
-						technology_group = sub_saharan
-						technology_group = central_african
-						technology_group = aboriginal_tech
-						technology_group = polynesian_tech
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_PRIMITIVE_TECH_GROUP
-				owner = {
-					OR = {
-						technology_group = andean
-						technology_group = mesoamerican
-						technology_group = north_american
-						technology_group = south_american
-						technology_group = sub_saharan
-						technology_group = central_african
-						technology_group = aboriginal_tech
-						technology_group = polynesian_tech
-					}
-				}
-			}  
-		}
-        modifier = {
-			factor = -100.0
-			scale = no
-			potential = {
-				owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
-                }
-            }
-            custom_trigger_tooltip = {
-                tooltip = ECI_HAS_TRIBAL_GOVT
-                owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
-                }
-            }  
-        }
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -1273,10 +927,7 @@ printing_press = {
 	
 	
 	can_embrace = {
-		owner = {
-			NOT = { government = tribal }
-			NOT = { government = native }
-		}
+		always = yes
 	}
 
 	
@@ -1479,26 +1130,8 @@ printing_press = {
 				}
 			}
 		}
-        modifier = { # Moveable type was not that advantageous over woodblock printing in East Asia during this era due to pictographic languages with thousands of characters. Mechanical press didn't arrive until 1800s
-			factor = -1.8
-			scale = yes
-			potential = {
-				owner = { 
-                    technology_group = chinese
-                }
-				NOT = {
-					is_year = 1750
-				}
-            }
-            custom_trigger_tooltip = {
-                tooltip = ECI_CHINESE
-                owner = { 
-                    technology_group = chinese
-                }
-            }  
-        }
         modifier = { # The Jesuits brought the printing press to Japan in the 1590s and printed a romanized form of Japanese. Historically the Tokugawa shogunate did not embrace them, and the press didn't return until the 1800s
-			factor = 2.8
+			factor = 1
 			scale = yes
 			potential = {
 				owner = { 
@@ -1509,177 +1142,6 @@ printing_press = {
                 tooltip = ECI_KIRISHITAN
                 owner = { 
                     has_country_flag = a_kirishitan_realm
-                }
-            }  
-        }
-        modifier = {
-			factor = -1.0
-			scale = no
-			potential = {
-				owner = { 
-                    OR = {
-                        technology_group = north_american
-                        technology_group = south_american
-                        technology_group = central_african
-                        technology_group = andean
-                        technology_group = aboriginal_tech
-						technology_group = polynesian_tech
-                    }
-                }
-            }
-            custom_trigger_tooltip = {
-                tooltip = ECI_NONLITERATE
-                owner = { 
-                    OR = {
-                        technology_group = north_american
-                        technology_group = south_american
-                        technology_group = central_african
-                        technology_group = andean
-                        technology_group = aboriginal_tech
-						technology_group = polynesian_tech
-                    }
-                }
-            }  
-        }
-		modifier = {
-			factor = -0.2
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = muslim
-						technology_group = east_african
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_MUSLIM
-				owner = {
-					OR = {
-						technology_group = muslim
-						technology_group = east_african
-					}
-				}
-			}  
-		}
-		modifier = {
-			factor = -0.4
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = indian
-						AND = {
-							technology_group = chinese
-							OR = {
-								religion = shinto
-								religion_group = christian
-							}
-						}
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_INDIAN_OR_JAPANESE
-				owner = {
-					OR = {
-						technology_group = indian
-						AND = {
-							technology_group = chinese
-							OR = {
-								religion = shinto
-								religion_group = christian
-							}
-						}
-					}
-				}
-			}  
-		}
-		modifier = {
-			factor = -0.6
-			scale = yes
-			potential = {
-				owner = {
-					technology_group = chinese
-					NOT = { religion = shinto }
-					NOT = { religion_group = christian }
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_CHINESE_NOT_JAPAN
-				owner = {
-					technology_group = chinese
-					NOT = { religion = shinto }
-					NOT = { religion_group = christian }
-				}
-			}  
-		}
-		modifier = {
-			factor = -0.8
-			scale = yes
-			potential = {
-				owner = {
-					technology_group = nomad_group
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_NOMAD
-				owner = {
-					technology_group = nomad_group
-				}
-			}  
-		}
-		modifier = {
-			factor = -1.0
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = andean
-						technology_group = mesoamerican
-						technology_group = north_american
-						technology_group = south_american
-						technology_group = sub_saharan
-						technology_group = central_african
-						technology_group = aboriginal_tech
-						technology_group = polynesian_tech
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_PRIMITIVE_TECH_GROUP
-				owner = {
-					OR = {
-						technology_group = andean
-						technology_group = mesoamerican
-						technology_group = north_american
-						technology_group = south_american
-						technology_group = sub_saharan
-						technology_group = central_african
-						technology_group = aboriginal_tech
-						technology_group = polynesian_tech
-					}
-				}
-			}  
-		}
-        modifier = {
-			factor = -100.0
-			scale = no
-			potential = {
-				owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
-                }
-            }
-            custom_trigger_tooltip = {
-                tooltip = ECI_HAS_TRIBAL_GOVT
-                owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
                 }
             }  
         }
@@ -1824,10 +1286,7 @@ global_trade = {
 	
 	
 	can_embrace = {
-		owner = {
-			NOT = { government = tribal }
-			NOT = { government = native }
-		}
+		always = yes
 	}
 
 	
@@ -1991,127 +1450,6 @@ global_trade = {
 				}
 			}
 		}
-		modifier = {
-			factor = -0.2
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = indian
-						AND = {
-							technology_group = chinese
-							OR = {
-								religion = shinto
-								religion_group = christian
-							}
-						}
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_INDIAN_OR_JAPANESE
-				owner = {
-					OR = {
-						technology_group = indian
-						AND = {
-							technology_group = chinese
-							OR = {
-								religion = shinto
-								religion_group = christian
-							}
-						}
-					}
-				}
-			}  
-		}
-		modifier = {
-			factor = -0.4
-			scale = yes
-			potential = {
-				owner = {
-					technology_group = chinese
-					NOT = { religion = shinto }
-					NOT = { religion_group = christian }
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_CHINESE_NOT_JAPAN
-				owner = {
-					technology_group = chinese
-					NOT = { religion = shinto }
-					NOT = { religion_group = christian }
-				}
-			}  
-		}
-		modifier = {
-			factor = -0.8
-			scale = yes
-			potential = {
-				owner = {
-					technology_group = nomad_group
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_NOMAD
-				owner = {
-					technology_group = nomad_group
-				}
-			}  
-		}
-		modifier = {
-			factor = -1.0
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = andean
-						technology_group = mesoamerican
-						technology_group = north_american
-						technology_group = south_american
-						technology_group = sub_saharan
-						technology_group = central_african
-						technology_group = aboriginal_tech
-						technology_group = polynesian_tech
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_PRIMITIVE_TECH_GROUP
-				owner = {
-					OR = {
-						technology_group = andean
-						technology_group = mesoamerican
-						technology_group = north_american
-						technology_group = south_american
-						technology_group = sub_saharan
-						technology_group = central_african
-						technology_group = aboriginal_tech
-						technology_group = polynesian_tech
-					}
-				}
-			}  
-		}
-        modifier = {
-			factor = -100.0
-			scale = no
-			potential = {
-				owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
-                }
-            }
-            custom_trigger_tooltip = {
-                tooltip = ECI_HAS_TRIBAL_GOVT
-                owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
-                }
-            }  
-        }
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -2260,10 +1598,7 @@ manufactories = {
 	
 	
 	can_embrace = {
-		owner = {
-			NOT = { government = tribal }
-			NOT = { government = native }
-		}
+		always = yes
 	}
 
 	
@@ -2679,148 +2014,6 @@ manufactories = {
 				}
 			}
 		}
-        modifier = {
-			factor = -0.4
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = muslim
-						technology_group = east_african
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_MUSLIM
-				owner = {
-					OR = {
-						technology_group = muslim
-						technology_group = east_african
-					}
-				}
-			}
-		}
-		modifier = {
-			factor = -0.1
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = indian
-						AND = {
-							technology_group = chinese
-							OR = {
-								religion = shinto
-								religion_group = christian
-							}
-						}
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_INDIAN_OR_JAPANESE
-				owner = {
-					OR = {
-						technology_group = indian
-						AND = {
-							technology_group = chinese
-							OR = {
-								religion = shinto
-								religion_group = christian
-							}
-						}
-					}
-				}
-			}  
-		}
-		modifier = {
-			factor = -0.6
-			scale = yes
-			potential = {
-				owner = {
-					technology_group = chinese
-					NOT = { religion = shinto }
-					NOT = { religion_group = christian }
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_CHINESE_NOT_JAPAN
-				owner = {
-					technology_group = chinese
-					NOT = { religion = shinto }
-					NOT = { religion_group = christian }
-				}
-			}  
-		}
-		modifier = {
-			factor = -0.8
-			scale = yes
-			potential = {
-				owner = {
-					technology_group = nomad_group
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_NOMAD
-				owner = {
-					technology_group = nomad_group
-				}
-			}  
-		}
-		modifier = {
-			factor = -2
-			scale = yes
-			potential = {
-				owner = {
-					OR = {
-						technology_group = andean
-						technology_group = mesoamerican
-						technology_group = north_american
-						technology_group = south_american
-						technology_group = sub_saharan
-						technology_group = central_african
-						technology_group = aboriginal_tech
-						technology_group = polynesian_tech
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = ECI_PRIMITIVE_TECH_GROUP
-				owner = {
-					OR = {
-						technology_group = andean
-						technology_group = mesoamerican
-						technology_group = north_american
-						technology_group = south_american
-						technology_group = sub_saharan
-						technology_group = central_african
-						technology_group = aboriginal_tech
-						technology_group = polynesian_tech
-					}
-				}
-			}  
-		}
-        modifier = {
-			factor = -100.0
-			scale = no
-			potential = {
-				owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
-                }
-            }
-            custom_trigger_tooltip = {
-                tooltip = ECI_HAS_TRIBAL_GOVT
-                owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
-                }
-            }  
-        }
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -2945,36 +2138,7 @@ enlightenment = {
 	
 	
 	can_embrace = {
-		owner = {
-			OR = {
-				OR = {
-					technology_group = western
-					technology_group = eastern
-					technology_group = high_american
-					technology_group = ottoman
-				}
-				OR = {
-					AND = {
-						OR = {
-							technology_group = chinese
-							technology_group = indian
-						}
-						is_year = 1725
-					}
-				}
-				OR = {
-					AND = {
-						technology_group = muslim
-						is_year = 1750
-					}
-				}
-				OR = {
-					is_year = 1780
-				}
-			}
-			NOT = { government = tribal }
-			NOT = { government = native }
-		}
+		always = yes
 	}
 
 	
@@ -3230,48 +2394,6 @@ enlightenment = {
 				}
 			}
 		}
-        modifier = {
-			factor = -2
-			scale = no
-			potential = {
-				owner = { 
-					NOT = { technology_group = western }
-                    NOT = { technology_group = eastern }
-					NOT = { technology_group = high_american }
-					NOT = { technology_group = ottoman }
-                }
-            }
-            custom_trigger_tooltip = {
-                tooltip = ECI_NOT_CIVILIZED
-                owner = { 
-                    NOT = { technology_group = western }
-                    NOT = { technology_group = eastern }
-					NOT = { technology_group = high_american }
-					NOT = { technology_group = ottoman }
-                }
-            }  
-        }
-        modifier = {
-			factor = -100.0
-			scale = no
-			potential = {
-				owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
-                }
-            }
-            custom_trigger_tooltip = {
-                tooltip = ECI_HAS_TRIBAL_GOVT
-                owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
-                }
-            }  
-        }
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -3399,27 +2521,7 @@ industrialization = {
 	
 	
 	can_embrace = {
-		owner = {
-			OR = {
-				OR = {
-					technology_group = western
-					technology_group = eastern
-					technology_group = high_american
-					technology_group = ottoman
-				}
-				OR = {
-					AND = {
-						OR = {
-							technology_group = chinese
-							technology_group = indian
-						}
-						is_year = 1790
-					}
-				}
-			}
-			NOT = { government = tribal }
-			NOT = { government = native }
-		}
+		always = yes
 	}
 
 	
@@ -4071,48 +3173,6 @@ industrialization = {
 				}
 			}
 		}
-		modifier = {
-			factor = -0.5
-			scale = no
-			potential = {
-				owner = { 
-					NOT = { technology_group = western }
-                    NOT = { technology_group = eastern }
-					NOT = { technology_group = high_american }
-					NOT = { technology_group = ottoman }
-                }
-            }
-            custom_trigger_tooltip = {
-                tooltip = ECI_NOT_CIVILIZED
-                owner = { 
-                    NOT = { technology_group = western }
-                    NOT = { technology_group = eastern }
-					NOT = { technology_group = high_american }
-					NOT = { technology_group = ottoman }
-                }
-            }  
-        }
-		modifier = {
-			factor = -100.0
-			scale = no
-			potential = {
-				owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
-                }
-            }
-            custom_trigger_tooltip = {
-                tooltip = ECI_HAS_TRIBAL_GOVT
-                owner = { 
-                    OR = {
-                        government = tribal
-                        government = native
-                    }
-                }
-            }  
-        }
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)

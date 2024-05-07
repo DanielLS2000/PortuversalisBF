@@ -20,10 +20,6 @@ NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.8 -- default is 0.6
 NDefines.NDiplomacy.MONTHS_BEFORE_TOTAL_OCCUPATION = 12
 NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 1.0 -- default is 0.8
 
--- More Garrison for Forts
-NDefines.NMilitary.GARRISON_SIZE = 1500
-
 -- Ahead of time more expensive
 NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.2
 NDefines.NCountry.TECH_TIME_COST = 0.6
-NDefines.NCountry.IDEA_TO_TECH = 0
