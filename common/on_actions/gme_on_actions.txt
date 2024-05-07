@@ -1,3 +1,0 @@
-on_startup = {
-	country_event = { id = great_monuments_expanded_events.1 } # set flag
-}

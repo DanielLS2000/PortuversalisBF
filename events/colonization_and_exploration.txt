@@ -375,34 +375,8 @@ country_event = {
 	trigger = {
 		NOT = { has_global_flag = columbus_happened }
 		NOT = { has_country_flag = turned_down_columbus }
-		full_idea_group = exploration_ideas
+		exploration_ideas = 3
 		is_year = 1476
-		OR = {
-			NOT = {
-				north_america = {
-					has_discovered = ROOT
-				}
-			}
-			NOT = {
-				south_america = {
-					has_discovered = ROOT
-				}
-			}
-			NOT = {
-				any_known_country = {
-					north_america = {
-						has_discovered = PREV
-					}
-				}
-			}
-			NOT = {
-				any_known_country = {
-					south_america = {
-						has_discovered = PREV
-					}
-				}
-			}
-		}
 	}
 
 	mean_time_to_happen = {

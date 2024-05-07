@@ -1,7 +1,3 @@
-euro_colonize = {
-	colonists = 0
-}
-
 no_settlers = {
 	global_colonial_growth = -50
 	colonist_placement_chance = -0.1

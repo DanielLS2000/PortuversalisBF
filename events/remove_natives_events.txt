@@ -64,6 +64,13 @@ country_event = { #You guessed it, removes natives
 					remove_building = fort_15th
 				}
 			}
+			kamchatka_area = {
+				cede_province = ---
+				every_owned_province = {
+					limit = { has_building = fort_15th }
+					remove_building = fort_15th
+				}
+			}
 		}
 	}
 	option = { #Keep
