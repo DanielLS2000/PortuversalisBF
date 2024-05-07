@@ -251,7 +251,7 @@ patronage_ideas = {
 		global_prosperity_growth = 0.1
 	}
 	legalism_idea = {
-		no_religion_penalty = yes
+		production_efficiency = 0.1
 	}
 	
 

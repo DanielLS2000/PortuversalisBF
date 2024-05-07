@@ -15,7 +15,7 @@
 #######################################
 
 feudalism = {
-	bonus = {r 
+	bonus = {
 		free_leader_pool = 1
 	}
 	

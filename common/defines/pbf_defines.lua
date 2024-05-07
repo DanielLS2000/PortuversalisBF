@@ -23,3 +23,6 @@ NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 1.0 -- default is 0.8
 -- Ahead of time more expensive
 NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.2
 NDefines.NCountry.TECH_TIME_COST = 0.6
+
+-- No way to focus only on one type of idea group
+NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.4

@@ -76,7 +76,7 @@ RB_ClampReformation = {
 	trigger = {
 		current_age = age_of_reformation
 	}
-	#governing_capacity_modifier = -0.10
+	governing_capacity_modifier = -0.10
 	mercenary_manpower = -0.3
 }
 
@@ -87,7 +87,7 @@ RB_ClampAbsolutism = {
 	trigger = {
 		current_age = age_of_absolutism
 	}
-	#governing_capacity_modifier = -0.15
+	governing_capacity_modifier = -0.15
 	mercenary_manpower = -0.4
 }
 
@@ -98,7 +98,7 @@ RB_ClampRevolutions = {
 	trigger = {
 		current_age = age_of_revolutions
 	}
-	#governing_capacity_modifier = -0.25
+	governing_capacity_modifier = -0.25
 	mercenary_manpower = -0.5
 }
 
