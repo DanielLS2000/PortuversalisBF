@@ -4752,7 +4752,7 @@ gbr_ave_row_4 = {
 		provinces_to_highlight = {
 		}		
 		trigger = {
-			num_of_marines = 30
+			num_of_marines = 15
 			has_reform = royal_marines_reform
 		}
 		effect = {
