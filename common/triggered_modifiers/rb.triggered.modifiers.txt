@@ -66,7 +66,7 @@ RB_ClampDiscovery = {
 	trigger = {
 		current_age = age_of_discovery
 	}
-	mercenary_manpower = -0.2
+	#mercenary_manpower = -0.2
 }
 
 RB_ClampReformation = {
@@ -77,7 +77,7 @@ RB_ClampReformation = {
 		current_age = age_of_reformation
 	}
 	governing_capacity_modifier = -0.10
-	mercenary_manpower = -0.3
+	#mercenary_manpower = -0.3
 }
 
 RB_ClampAbsolutism = {
@@ -88,7 +88,7 @@ RB_ClampAbsolutism = {
 		current_age = age_of_absolutism
 	}
 	governing_capacity_modifier = -0.15
-	mercenary_manpower = -0.4
+	#mercenary_manpower = -0.4
 }
 
 RB_ClampRevolutions = {
@@ -99,7 +99,7 @@ RB_ClampRevolutions = {
 		current_age = age_of_revolutions
 	}
 	governing_capacity_modifier = -0.25
-	mercenary_manpower = -0.5
+	#mercenary_manpower = -0.5
 }
 
 RB_MissionToCivilize = {
