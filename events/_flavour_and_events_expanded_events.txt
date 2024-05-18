@@ -1,0 +1,27 @@
+namespace = flavour_and_events_expanded_events
+
+country_event = {
+	id = flavour_and_events_expanded_events.1
+	title = flavour_and_events_expanded_events.1.T
+	desc = flavour_and_events_expanded_events.1.D
+	picture = DIPLOMACY_eventPicture
+
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = flavour_and_events_expanded_mod_active
+			NAP = {
+				set_country_flag = naples_submits_to_the_pope
+			}
+		}
+	}
+
+	option = {
+		name = flavour_and_events_expanded_events.1.OPT1
+
+		ai_chance = { factor = 100 }
+	}
+}

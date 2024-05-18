@@ -26,3 +26,8 @@ NDefines.NCountry.TECH_TIME_COST = 0.6
 
 -- No way to focus only on one type of idea group
 NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.4
+
+-- Nerf Trade
+NDefines.NEconomy.CARAVAN_FACTOR = 3.0
+NDefines.NEconomy.CARAVAN_POWER_MAX = 30
+NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER = 10

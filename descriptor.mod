@@ -4,4 +4,4 @@ tags={
 	"Historical"
 }
 name="Portuversalis Lite"
-supported_version="1.36.2"
+supported_version="1.37.*"
