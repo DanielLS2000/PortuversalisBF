@@ -878,7 +878,7 @@ NED_2_1 = {
 			OR = {
 				AND = {
 					navy_size_percentage = 1
-					naval_forcelimit = 20
+					naval_forcelimit = 15
 				}
 				navy_size = 40
 			}
