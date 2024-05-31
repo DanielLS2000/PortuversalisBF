@@ -4,5 +4,5 @@ tags={
 	"Historical"
 }
 name="Portuversalis Lite"
-supported_version="1.37.1"
+supported_version="v1.37.*"
 remote_file_id="3249205692"

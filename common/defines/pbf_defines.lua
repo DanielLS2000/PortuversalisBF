@@ -36,3 +36,6 @@ NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER = 10
 NDefines.NMilitary.MERCENARY_COMPANY_MANPOWER_PER_REGIMENT = 1.3
 -- IA take other mercs too
 NDefines.NAI.ONLY_INFANTRY_MERCS = 0
+
+-- Players can sell provinces without fucking their prestige
+CORE_LOSE_PRESTIGE = 0
