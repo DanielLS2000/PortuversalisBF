@@ -58,7 +58,7 @@ greatest_achievements_policy = {
 			full_idea_group = patronage_ideas
 		}
 	}
-	land_morale = 0.15
+	land_morale = 0.075
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -125,7 +125,7 @@ artillery_development_act = {
 			full_idea_group = patronage_ideas
 		}
 	}
-	siege_ability = 0.2
+	siege_ability = 0.15
 	ai_will_do = {
 		factor = 1
 		modifier = {

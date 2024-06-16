@@ -29,7 +29,7 @@ logistics_ideas = {
 		raze_power_gain = 0.2
 	}
 	medical_supply_priority = {
-		reserves_organisation = 0.5
+		reinforce_speed = 0.2
 	}
 	superior_leadership = {
 		free_leader_pool = 1

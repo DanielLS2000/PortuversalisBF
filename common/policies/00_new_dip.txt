@@ -57,7 +57,7 @@ proclaim_naval_achievements = {
 		}
 	}
 	
-	ship_power_propagation = 0.2
+	ship_power_propagation = 0.15
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -91,7 +91,7 @@ forgery_of_claims = {
 		}
 	}
 	
-	fabricate_claims_cost = -0.33
+	fabricate_claims_cost = -0.2
 	ai_will_do = {
 		factor = 1	
 	}

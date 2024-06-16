@@ -38,4 +38,4 @@ NDefines.NMilitary.MERCENARY_COMPANY_MANPOWER_PER_REGIMENT = 1.3
 NDefines.NAI.ONLY_INFANTRY_MERCS = 0
 
 -- Players can sell provinces without fucking their prestige
-CORE_LOSE_PRESTIGE = 0
+NDefines.NCountry.ABANDON_CORE_PRESTIGE = 0
