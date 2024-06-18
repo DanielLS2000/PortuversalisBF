@@ -4,14 +4,14 @@ development = {
 	allowed_num_of_buildings = 0.1
 	supply_limit_modifier = 0.02
 	local_missionary_strength = -0.001
-	land_forcelimit	= 0.04		# 40%
-	naval_forcelimit = 0.04		# 40%
+	land_forcelimit	= 0.06		# 60%
+	naval_forcelimit = 0.06		# 60%
 	local_sailors = 30			# Halved
 	province_trade_power_value = 0.2
-	local_amount_of_banners = 0.033 # Halved
-	local_amount_of_cawa = 0.0625 # Halved
-	local_amount_of_carolean = 0.05 # Halved
-	local_amount_of_hussars = 0.005 # Halved
+	local_amount_of_banners = 0.066
+	local_amount_of_cawa = 0.125
+	local_amount_of_carolean = 0.1
+	local_amount_of_hussars = 0.01
 }
 
 states_in_hre = {

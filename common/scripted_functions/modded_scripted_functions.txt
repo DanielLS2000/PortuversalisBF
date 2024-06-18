@@ -13,7 +13,6 @@ can_colonize_province = {
                             region = horn_of_africa_region
                             region = east_africa_region
                             region = kongo_region
-                            region = south_africa_region
                         }
 						has_port = yes
 					}	

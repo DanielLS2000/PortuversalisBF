@@ -67,8 +67,7 @@ general_cost_modifier = {
 
 	reserves_organisation = 0.5
 	free_leader_pool = 1	
-	recover_army_morale_speed = 0.10
-	cavalry_flanking = 0.50	
+	recover_army_morale_speed = 0.10	
 }
 
 reserves_organisation_modifier = {

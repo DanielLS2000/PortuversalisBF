@@ -1948,7 +1948,7 @@ gross0 = { # Heavy Ship
 	}
 
 	gross5 = {
-		 	heavy_ship_hull_size_modifier = 0.15
+		heavy_ship_hull_size_modifier = 0.15
 	}
 	gross6 = {
 		naval_forcelimit_modifier = 0.2
@@ -2123,8 +2123,7 @@ handel0 = { # Light ship
 		
 	}
 	handel7 = {
-		naval_morale = 0.2
-		
+		recover_navy_morale_speed = 0.2
 	}
 	
 	ai_will_do = {

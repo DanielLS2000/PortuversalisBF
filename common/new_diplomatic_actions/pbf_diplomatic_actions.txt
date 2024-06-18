@@ -30,7 +30,7 @@ remove_fog = {
 
     on_accept = {
         FROM = {
-            remove_fow = 12
+            remove_fow = 36
         }
         add_opinion = {
             who = FROM
