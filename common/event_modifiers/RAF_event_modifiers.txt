@@ -1,0 +1,7 @@
+rebel_sentiment = {
+
+local_unrest = 15
+supply_limit_modifier = -0.5
+min_local_autonomy = 100
+
+}

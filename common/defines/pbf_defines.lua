@@ -39,3 +39,8 @@ NDefines.NAI.ONLY_INFANTRY_MERCS = 0
 
 -- Players can sell provinces without fucking their prestige
 NDefines.NCountry.ABANDON_CORE_PRESTIGE = 0
+
+-- Nerf institution bonus from dev by half
+NDefines.NCountry.INSTITUTION_BONUS_FROM_IMP_DEVELOPMENT = 2.5
+NDefines.NCountry.INSTITUTION_CAP_IMP_DEVELOPMENT = 5
+NDefines.NCountry.INSTITUTION_BASE_IMP_DEVELOPMENT = 15

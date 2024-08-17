@@ -2,6 +2,7 @@ in_capital_state = {
 	local_institution_spread = 0.05
 	local_state_maintenance_modifier = -0.5
 	local_governing_cost = -2.5				# RB: Up from -1.0 since capital states can't be centralized so this nails it at always 1% cost.
+	local_has_qizilbash = yes
 }
 
 core = {
@@ -58,7 +59,8 @@ non_accepted_culture = {
 	local_missionary_strength = -0.02
 	local_manpower_modifier = -0.33
 	local_sailors_modifier = -0.2
-	local_unrest = 8					# RB Higher unrest, from 2.
+	local_governing_cost = 0.25
+	local_unrest = 10					# RB Higher unrest, from 2.
 }
 
 # Corruption does NOT lower unrest - it INCREASES it!
@@ -122,6 +124,8 @@ over_governing_capacity_modifier = {
 	administrative_efficiency = -0.5
 	monthly_ottoman_decadence = 2
 	yearly_corruption = 0.5					# RB: Added here.
+	global_unrest = 10						# RAF
+	liberty_desire_from_subject_development = 0.5 # RAF
 }
 
 # Make centralization easier since we increased base core governing cost to +50%
@@ -151,16 +155,133 @@ under_governing_capacity_modifier = {
 reverse_under_governing_capacity_modifier = {
 	ae_impact = -0.2
 
-	build_cost = -0.15
+	build_cost = -0.2
 	yearly_corruption = -0.15
 
 	technology_cost = -0.05
-	reform_progress_growth = 0.2
+	reform_progress_growth = 0.25
 
 	culture_conversion_cost = -0.5
 	promote_culture_cost = -0.5
 
 	global_unrest = -4.0
 	stability_cost_modifier = -0.2
+
+	global_rebel_suppression_efficiency = 1
+	global_tax_modifier = 0.25
 }
 
+# Rise And Fall of Empires
+negative_stability = {
+	global_unrest = -2					#2 revolt risk each step
+	legitimacy = 1
+	interest = -1
+	migration_cost = 0.1
+	devotion = 1
+	caravan_power = 0.05
+	yearly_harmony = 0.25
+	monthly_russian_modernization = 0.03
+	monthly_ottoman_decadence = -0.15
+}
+
+same_culture_group = {
+	local_tax_modifier = -0.15				#10% penalty if same culture group but nothing else. Not applied if the controller is the Union Tag of the culture group, or has culture_group_union set.
+	local_manpower_modifier = -0.15
+	local_sailors_modifier = -0.1
+	local_governing_cost = 0.1
+	local_unrest = 5
+}
+
+nationalism = {
+	local_unrest = 1 #Double unrest
+	local_governing_cost = 0.03
+}
+
+recent_uprising = {
+	local_unrest = -100
+	picture = "recent_uprising"
+}
+
+## changes the dev bonuses
+provincial_tax_income = {
+	local_great_project_upgrade_time = -0.01
+	local_build_time = -0.01
+	local_build_cost = -0.01
+	local_institution_spread = 0.02
+}
+
+provincial_production_size = {
+	trade_goods_size = 0.2
+	ship_recruit_speed = -0.01
+	local_ship_cost = -0.01
+	local_ship_repair = 0.01
+	
+}
+
+manpower = {
+	garrison_growth = 0.01
+	local_regiment_cost = -0.01
+	regiment_recruit_speed  = -0.02
+}
+
+## increases winter attrition
+
+mild_winter = {
+	local_hostile_attrition = 2
+	supply_limit_modifier = -0.2
+
+	picture = "winter_mild"
+}
+
+normal_winter = {
+	local_hostile_attrition = 4
+	supply_limit_modifier = -0.4
+	migration_cost = 0.1
+
+	picture = "winter_normal"
+}
+
+severe_winter = {
+	local_hostile_attrition = 6
+	supply_limit_modifier = -0.6
+	migration_cost = 0.2
+
+	picture = "winter_severe"
+}
+
+##Native Policy
+
+native_policy_coexist = {
+	native_uprising_chance = -1.0
+	tolerance_heathen = 1
+	diplomatic_annexation_cost = 0.2
+}
+
+native_policy_trade = {
+	native_assimilation = 0.5
+	native_uprising_chance = -0.5
+	global_foreign_trade_power = 0.1
+	center_of_trade_upgrade_cost = 0.2
+}
+
+native_policy_hostile = {
+	global_colonial_growth = 20
+	tolerance_own = 1
+	native_assimilation = -0.5
+}
+
+## blockade defensiveness
+
+coastal = {
+	supply_limit_modifier = 0.5
+	province_trade_power_modifier = 0.25
+	local_defensiveness = 0.5
+}
+
+blockaded = {
+	regiment_recruit_speed = 0.2
+	ship_recruit_speed = 0.2
+	local_monthly_devastation = 0.25
+	province_trade_power_modifier = -1
+	local_defensiveness = -0.5
+}
