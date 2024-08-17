@@ -73,8 +73,8 @@ country_event = { #You guessed it, removes natives
 			}
 		}
 	}
-	option = { #Keep
-		name = remove_natives_events.1.b
-		custom_tooltip = "The natives will remain for this campaign."
-	}
+	#option = { #Keep
+		#name = remove_natives_events.1.b
+		#custom_tooltip = "The natives will remain for this campaign."
+	#}
 }

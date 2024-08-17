@@ -1,5 +1,6 @@
 namespace = SAC
 
+# Event to slower colonization in the new world and spread malaria around the world
 country_event = {
 	id = SAC_malaria.1
 	title = "SAC_malaria.1.t"
