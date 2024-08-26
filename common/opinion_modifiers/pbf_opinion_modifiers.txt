@@ -1,4 +1,4 @@
 visual_alliance = {
     opinion = 1
-    yearly_decay = 1
+    yearly_decay = 0.3
 }

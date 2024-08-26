@@ -1,0 +1,70 @@
+country_decisions = {
+	remove_natives_decision = {
+		color = { 176 60 63 }
+		potential = {
+			is_year = 1444
+			# NOT = { is_month = 11 }
+			NOT = { is_date = 1444.11.12 }
+			
+			NOT = { has_global_flag = natives_removed_flag }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			custom_tooltip = "The migratory natives of the Americas as well as Oceania will be removed, along with irrelevant countries in Africa and Siberia"
+			hidden_effect = {
+				south_america = {
+					limit = {
+						owner = {
+							technology_group = south_american
+						}
+					}
+					cede_province = ---
+					every_owned_province = {
+						limit = { has_building = fort_15th }
+						remove_building = fort_15th
+					}
+				}
+				north_america = {
+					limit = {
+						owner = {
+							technology_group = north_american
+						}
+					}
+					cede_province = ---
+					every_owned_province = {
+						limit = { has_building = fort_15th }
+						remove_building = fort_15th
+					}
+				}
+				oceania = {
+					limit = {
+						owner = {
+							OR = { technology_group = aboriginal_tech technology_group = polynesian_tech }
+						}
+					}
+					cede_province = ---
+					every_owned_province = {
+						limit = { has_building = fort_15th }
+						remove_building = fort_15th
+					}
+				}
+				central_africa_region = {
+					cede_province = ---
+					every_owned_province = {
+						limit = { has_building = fort_15th }
+						remove_building = fort_15th
+					}
+				}
+				kamchatka_area = {
+					cede_province = ---
+					every_owned_province = {
+						limit = { has_building = fort_15th }
+						remove_building = fort_15th
+					}
+				}
+			}
+		}
+	}
+}
