@@ -18,6 +18,19 @@ country_event = {
 	}
 
 	option = {
+		name = FEE_Fairs_Events.1.OPT1
+
+		custom_tooltip = FEE_FAIRS_STARTING_TT
+		set_global_flag = fee_trading_fairs_enabled
+		hidden_effect = {
+			every_province = {
+				limit = { province_has_center_of_trade_of_level = 1 }
+				set_province_flag = fee_trading_fair_eligible
+			}
+		}
+	}
+
+	option = {
 		name = FEE_Fairs_Events.1.OPT2
 
 		custom_tooltip = FEE_FAIRS_DISABLE_TT
