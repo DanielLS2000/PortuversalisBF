@@ -941,6 +941,101 @@ guiTypes = {
 				clicksound = back_click
 			}
 		}
+		
+		# BT Custom Buttons
+		guiButtonType = {
+			name = "monthly_dev_points_button"
+			position = { x= 11 y = 580 }
+			spriteType = "monthly_dev_points_button"	
+			scripted = yes
+			clicksound = back_click
+		}	
+		
+		
+		
+		guiButtonType = {
+			name = "extra_missionary_button" 
+			position = { x= 77 y = 580 }
+			spriteType = "extra_missionary_button"	
+			scripted = yes
+			clicksound = back_click
+		}	
+		
+		guiButtonType = {
+			name = "institution_spread_button"
+			position = { x= 123 y = 580 }
+			spriteType = "institution_spread_button"	
+			scripted = yes
+			clicksound = back_click
+		}	
+		
+		guiButtonType = {
+			name = "reform_progress_growth_button"
+			position = { x= 171 y = 580 }
+			spriteType = "reform_progress_growth_button"	
+			scripted = yes
+			clicksound = back_click
+		}	
+		
+		
+		
+		guiButtonType = {
+			name = "extra_colonist_button"
+			position = { x= 235 y = 580 }
+			spriteType = "extra_colonist_button"	
+			scripted = yes
+			clicksound = back_click
+		}	
+		
+		guiButtonType = {
+			name = "extra_diplomat_button"
+			position = { x= 283 y = 580 }
+			spriteType = "extra_diplomat_button"	
+			scripted = yes
+			clicksound = back_click
+		}	
+		
+		guiButtonType = {
+			name = "extra_merchant_button"
+			position = { x= 331 y = 580 }
+			spriteType = "extra_merchant_button"	
+			scripted = yes
+			clicksound = back_click
+		}	
+		
+		
+		
+		guiButtonType = {
+			name = "yearly_absolutism_button"
+			position = { x= 395 y = 580 }
+			spriteType = "yearly_absolutism_button"	
+			scripted = yes
+			clicksound = back_click
+		}	
+		
+		guiButtonType = {
+			name = "yearly_army_professionalism_button"
+			position = { x= 443 y = 580 }
+			spriteType = "yearly_army_professionalism_button"	
+			scripted = yes
+			clicksound = back_click
+		}	
+		
+		guiButtonType = {
+			name = "yearly_army_tradition_button"
+			position = { x= 443 y = 580 }
+			spriteType = "yearly_army_tradition_button"	
+			scripted = yes
+			clicksound = back_click
+		}	
+		
+		guiButtonType = {
+			name = "yearly_innovativeness_button"
+			position = { x= 491 y = 580 }
+			spriteType = "yearly_innovativeness_button"	
+			scripted = yes
+			clicksound = back_click
+		}
 	}
 
 	################################################################################################
