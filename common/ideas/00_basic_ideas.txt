@@ -957,9 +957,10 @@ exploration_ideas = {
 	trigger = {
 		OR = {
 			dip_tech = 7
-			capital_scope = {
-				superregion = europe_superregion
-			}
+			adm_tech = 7
+			#capital_scope = {
+			#	superregion = europe_superregion
+			#}
 		}
 		OR = {
 			technology_group = western
