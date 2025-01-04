@@ -39,6 +39,7 @@ technology = { #Advanced Tribes
 	
 	tribal_democracy_legacy = yes
 	tribal_kingdom_legacy = yes
+	road_network = yes
 }
 
 technology = { #Feudal Monarchy
@@ -200,6 +201,8 @@ technology = { #Improved Drainage
 	
 	#Improved Drainage
 	production_efficiency 	=	0.02
+	
+	mint = yes
 }
 
 technology = { #Scientific Experimentation

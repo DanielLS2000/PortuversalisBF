@@ -113,7 +113,7 @@ temple = {
 	cost = 100
 	time = 12
 	modifier = {
-		local_tax_modifier = 0.4
+		local_tax_modifier = 0.5
 	}
 	on_built = {
 		on_built_tax_building_effect = yes
@@ -1117,9 +1117,9 @@ naval_battery = {
 		has_port = yes
 	}
 	modifier = {
-		blockade_force_required = 1.0
+		blockade_force_required = 2.0
 		hostile_disembark_speed = 2.0
-		hostile_fleet_attrition = 5
+		hostile_fleet_attrition = 10
 		block_slave_raid = yes
 	}
 
@@ -1138,7 +1138,7 @@ cathedral = {
 	time = 12
 	modifier = {
 		local_missionary_strength = 0.03
-		local_tax_modifier = 0.6
+		local_tax_modifier = 1
 	}
 	on_built = {
 		on_built_tax_building_effect = yes
@@ -2951,6 +2951,80 @@ state_house = {
 
 	ai_will_do = {
 		factor = 1
+	}
+}
+
+# Added
+mint = {
+	manufactory = {
+		all
+	}
+
+	modifier = {
+		tax_income = 4
+	}
+	onmap = no
+	show_separate = yes # Means as a manufactory it will be shown according to the old way
+	on_built = {
+		add_development_from_building = {
+			building = mint
+			type = tax
+			value = 2
+		}
+		ROOT = {
+			if = {
+				limit = {
+					NOT = { has_province_modifier = mint_temple_modifier }
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+				}
+				add_permanent_province_modifier = { 
+					name = mint_temple_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	on_destroyed = {
+		remove_development_from_building = {
+			building = mint
+			type = tax
+			value = 2
+		}
+		ROOT = {
+			if = {
+				limit = {
+					has_province_modifier = mint_temple_modifier
+				}
+				remove_province_modifier = mint_temple_modifier
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1000		
+		modifier = {
+			factor = 0.75
+			NOT = { base_tax = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			NOT = { base_tax = 4 }
+		}		
+		modifier = {
+			factor = 2.0
+			base_tax = 6
+		}
+		modifier = {
+			factor = 2.0
+			base_tax = 8
+		}	
+		modifier = {
+			factor = 2.0
+			base_tax = 10
+		}			
 	}
 }
 

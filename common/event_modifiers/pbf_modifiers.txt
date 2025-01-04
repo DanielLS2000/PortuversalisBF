@@ -4,3 +4,16 @@ tripitaka_koreana = {
 	monthly_splendor = 1
 	technology_cost = -0.1
 }
+
+road_workshop_modifier = {
+	local_production_efficiency = 0.1
+}
+road_temple_modifier = {
+	local_tax_modifier = 0.175
+}
+road_marketplace_modifier = {
+	province_trade_power_modifier = 0.25
+}
+mint_temple_modifier = {
+	local_tax_modifier = 0.25
+}

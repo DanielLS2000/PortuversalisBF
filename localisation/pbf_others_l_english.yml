@@ -10,3 +10,11 @@
  ming_dinasty: "Ruler of All China"
 # Monuments
  batalha_monastery: "Batalha Monastery"
+# Buildings
+ mint: "Mint"
+ building_mint_desc: "If §YMint§! and §YTaxation§! building are on same province, then province gains '§YImproved Minting Taxation§!', giving the following effects:\nLocal Tax Modifier: §G+25.0%§!\n\n"
+ mint_temple_modifier: "Improved Minting Taxation"
+ building_road_network_desc: "If §YRoad Network§! and §YProduction§! building are on same province, then province gains '§YImproved Production Network§!', giving the following effects:\nLocal Production Efficiency: §G+10.0%§!\n\nIf §YRoad Network§! and §YTaxation§! building are on same province, then province gains '§YImproved Taxation Network§!', giving the following effects:\nLocal Tax Modifier: §G+17.5%§!\n\nIf §YRoad Network§! and §YTrade§! building are on same province, then province gains '§YImproved Trading Network§!', giving the following effects:\nLocal Trade Power: §G+25.0%§!\n\n"
+ road_workshop_modifier: "Improved Production Network"
+ road_temple_modifier: "Improved Taxation Network"
+ road_marketplace_modifier: "Improved Trading Network"

@@ -284,4 +284,17 @@ blockaded = {
 	local_monthly_devastation = 0.25
 	province_trade_power_modifier = -1
 	local_defensiveness = -0.5
+	local_unrest = 2
+}
+
+devastation = {
+	trade_goods_size_modifier = -2
+	supply_limit_modifier = -0.5
+	local_institution_spread = -2.0
+	local_development_cost = 0.2
+	local_manpower_modifier = -2.0
+	local_sailors_modifier = -2.0
+	local_hostile_movement_speed = -0.25
+	local_friendly_movement_speed = -0.25
+	local_unrest = 10
 }

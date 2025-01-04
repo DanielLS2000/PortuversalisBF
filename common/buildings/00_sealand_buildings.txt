@@ -1,0 +1,87 @@
+#####################################
+#####################################
+# Sealand, taken from 1.4.1 but modified:
+# Special buildings:
+
+#####################################
+# Roads:
+
+road_network = {
+	cost = 90
+	time = 12
+	modifier = {
+		local_friendly_movement_speed = 0.125
+		local_hostile_movement_speed = 0.125
+		supply_limit_modifier = 0.25
+		local_institution_spread = 0.05
+		allowed_num_of_buildings = 1
+		local_build_time = -0.15
+	}
+	on_built = {
+		ROOT = {
+			if = {
+				limit = {
+					OR = {
+						has_building = workshop
+						has_building = counting_house 
+					}
+				}
+				add_permanent_province_modifier = { 
+					name = road_workshop_modifier
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+				}
+				add_permanent_province_modifier = { 
+					name = road_temple_modifier
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_building = marketplace
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+				add_permanent_province_modifier = { 
+					name = road_marketplace_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	on_destroyed = {
+		ROOT = {
+			if = {
+				limit = {
+					has_province_modifier = road_workshop_modifier
+				}
+				remove_province_modifier = road_workshop_modifier
+			}
+			if = {
+				limit = {
+					has_province_modifier = road_temple_modifier
+				}
+				remove_province_modifier = road_temple_modifier
+			}
+			if = {
+				limit = {
+					has_province_modifier = road_marketplace_modifier
+				}
+				remove_province_modifier = road_marketplace_modifier
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
