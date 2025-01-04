@@ -12,7 +12,7 @@ country_event = {
 		NOT = { has_country_flag = quest_for_the_new_world }
 		NOT = { has_country_modifier = quest_for_the_new_world }
 		OR = {
-			has_idea_group = exploration_ideas	
+			has_idea_group = exploration_ideas
 			has_idea = call_of_our_forefathers
 		}
 		OR = {

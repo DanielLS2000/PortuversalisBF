@@ -958,13 +958,13 @@ exploration_ideas = {
 		OR = {
 			dip_tech = 7
 			adm_tech = 7
-			#capital_scope = {
-			#	superregion = europe_superregion
-			#}
 		}
 		OR = {
 			technology_group = western
 			technology_group = eastern
+			capital_scope = {
+				superregion = europe_superregion
+			}
 		} 
 	}
 
