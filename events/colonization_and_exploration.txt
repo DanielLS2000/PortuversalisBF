@@ -29,6 +29,13 @@ country_event = {
 				}
 			}
 		}
+		OR = {
+			technology_group = western
+			technology_group = eastern
+			capital_scope = {
+				superregion = europe_superregion
+			}
+		}
 	}
 
 	option = {

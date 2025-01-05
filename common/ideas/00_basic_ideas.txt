@@ -955,17 +955,10 @@ exploration_ideas = {
 	}
 
 	trigger = {
-		OR = {
+		AND = {
 			dip_tech = 7
 			adm_tech = 7
 		}
-		OR = {
-			technology_group = western
-			technology_group = eastern
-			capital_scope = {
-				superregion = europe_superregion
-			}
-		} 
 	}
 
 	quest_for_the_new_world	= {
