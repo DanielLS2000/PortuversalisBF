@@ -402,6 +402,10 @@ country_event = {
 				is_year = 1485
 			}
 		}
+		modifier = {
+			factor = 0.01
+			is_year = 1492
+		}
 	}
 
 	option = {		# Reject his proposal
