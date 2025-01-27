@@ -120,5 +120,71 @@ country_decisions = {
             }
         }
 	}
+
+    Estabilish_latin_empire = {
+		color = { 120 81 169 }
+        major = yes
+        potential = {
+            religion = catholic
+			capital_scope = {
+				region = balkan_region
+			}
+			NOT = { tag = VEN}
+			NOT = { tag = PAP}
+			NOT = { tag = LAE}
+			was_never_end_game_tag_trigger = yes
+        }
+		provinces_to_highlight = {
+			OR = {
+				area = northern_greece_area
+				area = macedonia_area
+				area = thrace_area
+				area = hudavendigar_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+        allow = {
+			owns_core_province = 151
+			northern_greece_area = { country_or_non_sovereign_subject_holds = ROOT }
+			macedonia_area = { country_or_non_sovereign_subject_holds = ROOT }
+			thrace_area = { country_or_non_sovereign_subject_holds = ROOT }
+			hudavendigar_area = { country_or_non_sovereign_subject_holds = ROOT }
+            
+			is_at_war = no
+            is_free_or_tributary_trigger = yes
+        }
+        effect = {
+            if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			if = {
+				limit = {
+					OR = {
+						government = monarchy
+						government = theocracy
+					}
+				}
+				add_government_reform = holy_state_reform
+			}
+			change_tag = LAE
+			set_country_flag = has_byz_missions
+			on_change_tag_effect = yes
+			if = {
+				limit = { NOT = { has_idea_group = LAE_ideas } }
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			else = {
+				add_prestige_or_monarch_power = {
+					amount = 50
+				}
+			}
+        }
+	}
 }
 
