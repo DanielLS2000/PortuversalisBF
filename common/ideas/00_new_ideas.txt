@@ -13,6 +13,10 @@ logistics_ideas = {
 	bonus = {
 		global_supply_limit_modifier = 0.2
 	}
+
+	trigger = {
+		adm_tech = 18
+	}
 	
 	selective_breeding = {
 		cavalry_flanking = 0.5
@@ -97,6 +101,10 @@ sovereignty_ideas = {
 	bonus = {
 		cb_on_government_enemies = yes
 		allowed_marine_fraction = 0.1
+	}
+
+	trigger = {
+		adm_tech = 18
 	}
 	
 	open_court = {
@@ -220,8 +228,9 @@ patronage_ideas = {
 
 	trigger = {
 		NOT = { has_idea_group = patronage_no_legalism_ideas }
+		adm_tech = 18
 	}
-	
+
 	public_inaugurations = {
 		legitimacy = 0.5
 		devotion = 1
@@ -351,6 +360,7 @@ patronage_no_legalism_ideas = {
 	}
 
 	trigger = {
+		adm_tech = 18
 		ai = yes
 	}
 	

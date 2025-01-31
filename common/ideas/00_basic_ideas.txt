@@ -1860,6 +1860,7 @@ zentra0 = { # Centralization
 		NOT = {
 			has_idea_group = dezentra0
 		}
+		adm_tech = 18
 	}
 	
 	bonus = {
@@ -1904,6 +1905,7 @@ dezentra0 = { #Decentralization
 		NOT = {
 			has_idea_group = zentra0
 		}
+		adm_tech = 18
 	}
 	
 	bonus = {
@@ -1951,6 +1953,7 @@ gross0 = { # Heavy Ship
 			has_idea_group = galle0
 			#has_idea_group = transport_ideas
 			}
+		adm_tech = 18
 	}
 	
 	bonus = {
@@ -2032,6 +2035,7 @@ galle0 = { #Galley
 			has_idea_group = gross0
 			#has_idea_group = transport_ideas
 		}
+		adm_tech = 18
 	}
 	
 	bonus = {
@@ -2110,6 +2114,7 @@ handel0 = { # Light ship
 			has_idea_group = galle0
 			has_idea_group = gross0
 		}
+		adm_tech = 18
 	}
 	
 	bonus = {
@@ -2197,6 +2202,7 @@ stehendesheer0 = { # Standing Army
 		NOT = {
 			has_idea_group = wehrpflicht0
 		}
+		adm_tech = 18
 	}
 	
 	stehendesheer1 = {
@@ -2246,6 +2252,7 @@ wehrpflicht0 = { # Conscription
 		NOT = {
 			has_idea_group = stehendesheer0
 		}
+		adm_tech = 18
 	}
 	
 	wehrpflicht3 = {
