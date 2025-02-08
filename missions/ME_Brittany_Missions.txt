@@ -1187,12 +1187,15 @@ EE_Brittany_missions_Celtic = {
 			EE_BRI_preview = yes
 			custom_trigger_tooltip = {
 				tooltip = EE_BRI_has_100_opinion_with_BUR_tt
-				BUR = {
-					has_opinion_modifier = {
-						who = ROOT
-						modifier = improved_relation
-						value = 100
+				OR = {
+					BUR = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = improved_relation
+							value = 100
+						}
 					}
+					NOT = {exists = BUR}
 				}
 			}
 			NOT = { alliance_with = FRA }
