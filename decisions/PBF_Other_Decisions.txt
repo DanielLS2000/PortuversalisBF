@@ -1,0 +1,34 @@
+country_decisions = {
+	the_fix = {
+		potential = {
+			is_player = yes
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+
+	restore_name = {
+		potential = {
+			OR = {
+				has_country_flag = is_dual_monarchy_flag
+			}
+		}
+
+		allow = {
+			always = yes
+		}
+
+		effect = {
+			clr_country_flag = is_dual_monarchy_flag
+			restore_country_name = yes
+			restore_country_color = yes
+
+			add_prestige = -20
+			add_legitimacy = -20
+		}
+	}
+}

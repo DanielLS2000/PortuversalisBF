@@ -186,5 +186,106 @@ country_decisions = {
 			}
         }
 	}
+
+	dual_monarchy = {
+		color = { 120 81 169 }
+        major = yes
+        potential = {
+            religion = catholic
+			ROOT = {
+				OR = {
+					culture_group = british
+					culture_group = french
+				}
+			}
+			OR = {
+				AND = {
+					owns_core_province = 236		# London
+					owns_core_province = 183	# �le-de-France
+				}
+				NOT = { is_year = 1450 }
+			}
+
+			NOT = {
+				has_country_flag = is_dual_monarchy_flag
+			}
+        }
+		provinces_to_highlight = {
+			OR = {
+				# England
+				province_id = 236		# London
+				province_id = 237		# Oxfordshire
+				province_id = 234		# Wessex
+				province_id = 235		# Kent
+				province_id = 238		# East Anglia
+
+				# France
+				AND = {
+					region = france_region
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 15
+								region = france_region
+								is_core = root
+							}
+						}
+						owns_core_province = 183
+						owns_core_province = 184
+						owns_core_province = 186
+					}
+				}
+				province_id = 183	# �le-de-France
+				province_id = 184	# Orl�annais
+				province_id = 186	# Champagne
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+        allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+
+			# France
+			owns_core_province = 184	# Orl�annais
+			owns_core_province = 186	# Champagne
+			owns_core_province = 183	# �le-de-France
+			183 = { 					# �le-de-France / Paris
+				is_state = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 15
+				region = france_region
+				is_core = root
+			}
+
+			# England
+			owns_core_province = 237		# Oxfordshire
+			owns_core_province = 234		# Wessex
+			owns_core_province = 235		# Kent
+			owns_core_province = 238		# East Anglia
+			owns_core_province = 236		# London
+			236 = { 						# London
+				is_state = yes
+			}
+        }
+        effect = {
+            183 = { #Paris
+				move_capital_effect = yes
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+
+			add_legitimacy = 20
+			add_prestige = 20
+			override_country_name = DUAL_MONARCHY
+			change_country_color = {
+				color = { 120 81 169 }
+			}
+			set_country_flag = is_dual_monarchy_flag
+        }
+	}
 }
 
