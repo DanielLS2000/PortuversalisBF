@@ -31,4 +31,19 @@ country_decisions = {
 			add_legitimacy = -20
 		}
 	}
+
+	heretic_slayer = {
+		potential = {
+			ai = yes
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			excommunicate = ROOT
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }
