@@ -2,6 +2,9 @@
 # Tooltips
  NO_OTHER_WAR: "We are already engaged in a war and are not able to started another"
  CANNOT_ALLY_BROKEN_ALLIANCE: "We have ended our alliance with them not long ago"
+ HEGEMON_CANNOT_ALLY_HEGEMON: "We can't ally other hegemons"
+ AT_WAR: "We are too busy in this war and cannot risk angering ours valuable allies"
+ PLAYER_MARCH: "Players cannot become marches"
  NOT_FRIEND: "[From.GetName] is not our ally there is no reason to spend money on then"
  empire_of_asia_discovery: "Glorius Empire"
  empire_of_asia_reformation: "Glorius Empire"

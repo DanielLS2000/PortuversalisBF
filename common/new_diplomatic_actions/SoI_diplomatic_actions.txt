@@ -258,8 +258,15 @@ buy_influence_action = {
 		}
 		if = {
 			limit = {
-				FROM = {
-					is_part_of_hre = yes
+				AND = {
+					FROM = {
+						is_part_of_hre = yes
+					}
+					ROOT = {
+						NOT = {
+							is_part_of_hre = yes
+						}
+					}
 				}
 			}
 			custom_trigger_tooltip = {
@@ -411,8 +418,15 @@ discredit_action = {
 		}
 		if = {
 			limit = {
-				FROM = {
-					is_part_of_hre = yes
+				AND = {
+					FROM = {
+						is_part_of_hre = yes
+					}
+					ROOT = {
+						NOT = {
+							is_part_of_hre = yes
+						}
+					}
 				}
 			}
 			custom_trigger_tooltip = {
@@ -592,8 +606,15 @@ expel_advisors_action = {
 		}
 		if = {
 			limit = {
-				FROM = {
-					is_part_of_hre = yes
+				AND = {
+					FROM = {
+						is_part_of_hre = yes
+					}
+					ROOT = {
+						NOT = {
+							is_part_of_hre = yes
+						}
+					}
 				}
 			}
 			custom_trigger_tooltip = {
@@ -748,8 +769,15 @@ ban_embassy_action = {
 		}
 		if = {
 			limit = {
-				FROM = {
-					is_part_of_hre = yes
+				AND = {
+					FROM = {
+						is_part_of_hre = yes
+					}
+					ROOT = {
+						NOT = {
+							is_part_of_hre = yes
+						}
+					}
 				}
 			}
 			custom_trigger_tooltip = {
@@ -994,8 +1022,15 @@ add_to_sphere_action = {
 		}
 		if = {
 			limit = {
-				FROM = {
-					is_part_of_hre = yes
+				AND = {
+					FROM = {
+						is_part_of_hre = yes
+					}
+					ROOT = {
+						NOT = {
+							is_part_of_hre = yes
+						}
+					}
 				}
 			}
 			custom_trigger_tooltip = {

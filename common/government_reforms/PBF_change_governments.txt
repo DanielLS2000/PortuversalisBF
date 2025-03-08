@@ -1,0 +1,209 @@
+# Monarchy
+install_theocratic_government_reform = {
+	icon = "pope_highlighted"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+	}
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+		if = {
+			limit = { NOT = { has_government_attribute = theocratic_monarchy_mechanic } }
+			stability = 2
+		}
+        NOT = { legitimacy = 40 }
+	}
+	effect = {
+		set_country_flag = populists_in_government
+		if = {
+			limit = { NOT = { has_government_attribute = theocratic_monarchy_mechanic } }
+			add_stability = -3
+		}
+		change_government = theocracy
+		if = {
+			limit = {
+				tag = AVE
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavor_gbr.20
+				}
+			}
+		}
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+become_a_republic_reform = {
+	icon = "parliament_highlighted"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+	}
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		is_emperor = no
+		NOT = { is_lesser_in_union = yes }
+		stability = 2
+        NOT = { legitimacy = 40 }
+	}
+	effect = {
+		set_country_flag = populists_in_government
+		add_stability = -3
+		change_government = republic
+		if = {
+			limit = {
+				tag = AVE
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavor_gbr.20
+				}
+			}
+		}
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+# Republic
+
+seize_executive_power_reform = {
+	icon = "king_2_highlighted"
+	allow_normal_conversion = yes
+
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		stability = 2
+        NOT = { republican_tradition = 20 }
+	}
+
+	modifiers = {
+	}
+	effect = {
+		if = {
+			limit = { has_government_attribute = states_general_mechanic }
+			set_country_flag = had_states_general_mechanic
+		}
+		set_country_flag = populists_in_government
+		add_stability = -3
+		change_government = monarchy
+		if = {
+			limit = {
+				tag = AVE
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavor_gbr.20
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = had_states_general_mechanic }
+			country_event = { id = dutch_republic.33 }
+			clr_country_flag = had_states_general_mechanic
+		}
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+proclaim_divine_guidance_reform = {
+	icon = "religious_leader_highlighted"
+	allow_normal_conversion = yes
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		stability = 2
+        NOT = { republican_tradition = 20 }
+	}
+	modifiers = {
+	}
+	effect = {
+		set_country_flag = populists_in_government
+		add_stability = -3
+		change_government = theocracy
+		if = {
+			limit = {
+				tag = AVE
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavor_gbr.20
+				}
+			}
+		}
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+# Theocracy
+
+crown_leader_reform = {
+	icon = "crown_highlighted"
+	allow_normal_conversion = yes
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		if = {
+			limit = { NOT = { has_government_attribute = theocratic_monarchy_mechanic } }
+			stability = 2
+		}
+        NOT = { devotion = 40 }
+	}
+	effect = {
+		set_country_flag = populists_in_government
+		if = {
+			limit = { NOT = { has_government_attribute = theocratic_monarchy_mechanic } }
+			add_stability = -3
+		}
+		change_government = monarchy
+		if = {
+			limit = {
+				tag = AVE
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavor_gbr.20
+				}
+			}
+		}
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+proclaim_republic_reform = {
+	icon = "parliament_highlighted"
+	allow_normal_conversion = yes
+	trigger = {
+		NOT = { has_government_attribute_short_desc = locked_government_type }
+		stability = 2
+        NOT = { devotion = 40 }
+	}
+	effect = {
+		set_country_flag = populists_in_government
+		add_stability = -3
+		change_government = republic
+		if = {
+			limit = {
+				tag = AVE
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavor_gbr.20
+				}
+			}
+		}
+	}
+	ai = {
+		factor = 0
+	}
+}

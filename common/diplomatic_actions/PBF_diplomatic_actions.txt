@@ -18,3 +18,17 @@ warsubsidy = {
         }
     }
 }
+
+designate_march = {
+	condition = {
+        tooltip = PLAYER_MARCH
+        potential = {
+			FROM = {
+				is_player = yes
+			}
+        }
+        allow = {
+            always = no
+        }
+    }
+}

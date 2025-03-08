@@ -228,6 +228,22 @@ allianceaction = {
         }
     }
 	condition = {
+        tooltip = HEGEMON_CANNOT_ALLY_HEGEMON
+        potential = {
+			AND = {
+				FROM = {
+                	is_hegemon = yes
+            	}
+				ROOT = {
+                	is_hegemon = yes
+            	}
+			}
+        }
+        allow = {
+            always = no
+        }
+    }
+	condition = {
 		tooltip = PIRATE_DENIED_ALLIANCE
 		potential = {
 			has_government_attribute = cannot_ally_non_pirates
@@ -794,6 +810,17 @@ ask_for_tributary_state_action = {
 }
 
 break_alliance = {
+	condition = {
+		tooltip = AT_WAR
+		potential = {
+			is_at_war = yes
+		}
+		allow = {
+			NOT = {
+				is_at_war = yes
+			}
+		}
+	}
 	effect = {
 		on_alliance_broken_effect = yes
 
