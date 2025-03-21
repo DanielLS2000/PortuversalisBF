@@ -21,3 +21,5 @@
  road_workshop_modifier: "Improved Production Network"
  road_temple_modifier: "Improved Taxation Network"
  road_marketplace_modifier: "Improved Trading Network"
+# Triggered Modifiers
+ Professionalism_Decay: "Professionalism Decay"

@@ -707,7 +707,7 @@ defensive_ideas = {
 	}
 	improved_manuever = {
 		leader_land_manuever = 1
-		shock_damage_received = -0.05
+		shock_damage_received = -0.1
 	}
 	regimental_system = {
 		land_maintenance_modifier = -0.05
@@ -719,7 +719,7 @@ defensive_ideas = {
 	}
 	supply_trains = {
 		reinforce_speed = 0.3
-		fire_damage_received = -0.05
+		fire_damage_received = -0.1
 	}
 	improved_foraging = {
 		garrison_size = 0.33
@@ -1337,16 +1337,16 @@ quantity_ideas = {
 	category = MIL
 
 	bonus = {
-		land_forcelimit_modifier  = 0.33
+		land_forcelimit_modifier  = 0.5
 	}
 	trigger = {
 		NOT = { has_idea_group = quality_ideas }
 	}
 	mass_army = {
-		global_manpower_modifier = 0.33
+		global_manpower_modifier = 0.5
 	}
 	the_young_can_serve = {
-		manpower_recovery_speed = 0.20
+		manpower_recovery_speed = 0.33
 	}
 	enforced_service = {
 		global_regiment_cost = -0.1
@@ -2194,8 +2194,6 @@ stehendesheer0 = { # Standing Army
 
 	bonus = {
 		drill_decay_modifier = -0.25
-		reinforce_cost_modifier = 0.3
-		reinforce_speed = -0.3
 	}
 		
 	trigger = {
@@ -2232,7 +2230,7 @@ stehendesheer0 = { # Standing Army
 	}
 	
 	stehendesheer4 = {
-		discipline = 0.05
+		morale_damage_received = -0.1
 	}
 	
 	ai_will_do = {
@@ -2245,7 +2243,6 @@ wehrpflicht0 = { # Conscription
 
 	bonus = {
 		manpower_recovery_speed = 0.2
-		discipline = -0.05
 	}
 		
 	trigger = {
@@ -2278,7 +2275,7 @@ wehrpflicht0 = { # Conscription
 		may_return_manpower_on_disband = yes
 	}
 	wehrpflicht6 = {
-		land_morale = 0.15
+		recover_army_morale_speed = 0.15
 	}
 	
 	ai_will_do = {
