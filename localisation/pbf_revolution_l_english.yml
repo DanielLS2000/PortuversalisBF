@@ -1,0 +1,13 @@
+﻿l_english:
+# Coalitions
+ pbf_revolution.1.t: "The First Coalition"
+ pbf_revolution.1.d: "Fearing the growing power and unchecked ambitions of a rising force, the surrounding nations have set aside their differences to form a grand coalition. Determined to curb its influence and restore balance, these nations now prepare for war. Whether this alliance will stand the test of time or crumble under the weight of conflicting interests remains to be seen."
+ pbf_revolution.1.A: "Let them come"
+ pbf_revolution.2.t: "The Second Coalition"
+ pbf_revolution.3.t: "The Third Coalition"
+ pbf_revolution.4.t: "The Fourth Coalition"
+ pbf_revolution.5.t: "The Fifth Coalition"
+ pbf_revolution.6.t: "The Sixth Coalition"
+ pbf_revolution.7.t: "The Seventh Coalition"
+# Dreams of Liberty
+ Dreams_Of_Liberty: "Dreams of Liberty"

@@ -126,5 +126,22 @@ Professionalism_Decay = {
 	trigger = {
 		army_professionalism = 0.7
 	}
-	yearly_army_professionalism = -0.02
+	yearly_army_professionalism = -0.01
+}
+
+# Dreams of liberty
+Dreams_Of_Liberty = {
+	potential = {
+		OR = {
+			is_colonial_nation = yes
+			is_overseas_subject = yes
+		}
+		age_of_revolutions = yes
+	}
+
+	trigger = {
+		is_year = 1776
+	}
+
+	liberty_desire_from_subject_development = 2
 }

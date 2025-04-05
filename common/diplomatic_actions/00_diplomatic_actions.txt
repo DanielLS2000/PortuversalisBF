@@ -440,6 +440,47 @@ enforce_peace = {
 			change_asha_vahishta = { value = 5 }
 		}
 	}
+
+	condition = {
+		tooltip = BREAKING_ALLIANCE_RULES
+		potential = {
+			has_country_flag = breaking_rules
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = FROM_BREAKING_ALLIANCE_RULES
+		potential = {
+			FROM = {
+				has_country_flag = breaking_rules
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = WOULD_BREAK_ALLIANCE_RULES
+		potential = {
+			would_break_rules = { compare = FROM }
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = FROM_WOULD_BREAK_ALLIANCE_RULES
+		potential = {
+			FROM = {
+				would_break_rules = { compare = ROOT }
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
 }
 
 royal_marriage = {
@@ -467,6 +508,20 @@ insultaction = {
 	}
 }
 giftaction = {
+	condition = {
+        tooltip = RECENT_GIFT
+        potential = {
+            FROM = {
+                has_opinion_modifier = {
+					who = ROOT
+					modifier = sent_gift
+				}
+            }
+        }
+        allow = {
+            always = no
+        }
+    }
 	effect = {
 		change_asha_vahishta = { value = 1 }
 	}
@@ -494,6 +549,47 @@ influence_nation = {
 intervene_in_war = {
 	effect = {
 		change_asha_vahishta = { value = 50 }
+	}
+
+	condition = {
+		tooltip = BREAKING_ALLIANCE_RULES
+		potential = {
+			has_country_flag = breaking_rules
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = FROM_BREAKING_ALLIANCE_RULES
+		potential = {
+			FROM = {
+				has_country_flag = breaking_rules
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = WOULD_BREAK_ALLIANCE_RULES
+		potential = {
+			would_break_rules = { compare = FROM }
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = FROM_WOULD_BREAK_ALLIANCE_RULES
+		potential = {
+			FROM = {
+				would_break_rules = { compare = ROOT }
+			}
+		}
+		allow = {
+			always = no
+		}
 	}
 }
 

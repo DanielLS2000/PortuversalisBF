@@ -22,14 +22,7 @@ country_event = {
 				}
 			}
 		}
-		OR = {
-			liberty_desire = 70
-			ROOT = {
-				overlord = {
-					is_revolutionary = yes
-				}
-			}
-		}
+		liberty_desire = 70
 		overlord = {
 			NOT = { truce_with = ROOT }
 		}

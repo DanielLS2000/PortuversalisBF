@@ -1,0 +1,329 @@
+namespace = pbf_revolution
+
+# First Coalition
+country_event = {
+    id = pbf_revolution.1
+	title = pbf_revolution.1.t
+	desc = pbf_revolution.1.d
+	picture = REVOLUTION_eventPicture
+	
+	major = yes
+    fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "Emperor"
+		is_revolution_target = yes
+		is_bankrupt = no
+        is_at_war = no
+        NOT = { has_global_flag = first_coalition }
+	}
+
+	mean_time_to_happen = {
+		days = 730
+	}
+
+    # Here it comes
+    option = {
+		name = pbf_revolution.1.A		
+		every_neighbor_country = {
+            limit = {
+                is_revolutionary = no
+                ai = no
+                is_subject = no
+                NOT = { alliance_with = ROOT }
+            }
+            form_coalition_against = ROOT
+        }
+        set_global_flag = first_coalition
+		
+	}
+}
+
+# Second Coalition
+country_event = {
+    id = pbf_revolution.2
+	title = pbf_revolution.2.t
+	desc = pbf_revolution.1.d
+	picture = REVOLUTION_eventPicture
+	
+	major = yes
+    fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "Emperor"
+		is_revolution_target = yes
+		is_bankrupt = no
+        is_at_war = no
+        had_global_flag = {
+            flag = first_coalition
+            days = 730
+        }
+	}
+
+	mean_time_to_happen = {
+		days = 730
+	}
+
+    # Here it comes AGAIN
+    option = {
+		name = pbf_revolution.1.A
+        every_country = {
+            limit = {
+                is_revolutionary = no
+                ai = no
+                is_subject = no
+                NOT = { alliance_with = ROOT }
+                OR = {
+                    any_subject_country = {
+                        is_neighbor_of = ROOT
+                    }
+                    is_neighbor_of = ROOT
+                }
+            }
+
+            form_coalition_against = ROOT
+        }	
+        set_global_flag = second_coalition
+		
+	}
+}
+
+# Third Coalition
+country_event = {
+    id = pbf_revolution.3
+	title = pbf_revolution.3.t
+	desc = pbf_revolution.1.d
+	picture = REVOLUTION_eventPicture
+	
+	major = yes
+    fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "Emperor"
+		is_revolution_target = yes
+		is_bankrupt = no
+        is_at_war = no
+        had_global_flag = {
+            flag = second_coalition
+            days = 730
+        }
+	}
+
+	mean_time_to_happen = {
+		days = 730
+	}
+
+    # Here it comes AGAIN
+    option = {
+		name = pbf_revolution.1.A
+        every_country = {
+            limit = {
+                is_revolutionary = no
+                ai = no
+                is_subject = no
+                NOT = { alliance_with = ROOT }
+                NOT = {
+                    border_distance = {
+                        who = ROOT
+                        distance = 100
+                    }
+                }
+            }
+
+            form_coalition_against = ROOT
+        }	
+        set_global_flag = third_coalition
+		
+	}
+}
+
+# Fourth Coalition
+country_event = {
+    id = pbf_revolution.4
+	title = pbf_revolution.4.t
+	desc = pbf_revolution.1.d
+	picture = REVOLUTION_eventPicture
+	
+	major = yes
+    fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "Emperor"
+		is_revolution_target = yes
+		is_bankrupt = no
+        is_at_war = no
+        had_global_flag = {
+            flag = third_coalition
+            days = 730
+        }
+	}
+
+	mean_time_to_happen = {
+		days = 730
+	}
+
+    # Here it comes AGAIN
+    option = {
+		name = pbf_revolution.1.A
+        every_country = {
+            limit = {
+                is_revolutionary = no
+                ai = no
+                is_subject = no
+                NOT = { alliance_with = ROOT }
+                NOT = {
+                    border_distance = {
+                        who = ROOT
+                        distance = 200
+                    }
+                }
+            }
+
+            form_coalition_against = ROOT
+        }	
+        set_global_flag = fourth_coalition
+	}
+}
+
+# Fifth Coalition
+country_event = {
+    id = pbf_revolution.5
+	title = pbf_revolution.5.t
+	desc = pbf_revolution.1.d
+	picture = REVOLUTION_eventPicture
+	
+	major = yes
+    fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "Emperor"
+		is_revolution_target = yes
+		is_bankrupt = no
+        is_at_war = no
+        had_global_flag = {
+            flag = fourth_coalition
+            days = 730
+        }
+	}
+
+	mean_time_to_happen = {
+		days = 730
+	}
+
+    # Here it comes AGAIN
+    option = {
+		name = pbf_revolution.1.A
+        every_country = {
+            limit = {
+                is_revolutionary = no
+                ai = no
+                is_subject = no
+                NOT = { alliance_with = ROOT }
+                NOT = {
+                    border_distance = {
+                        who = ROOT
+                        distance = 300
+                    }
+                }
+            }
+
+            form_coalition_against = ROOT
+        }	
+        set_global_flag = fifth_coalition
+	}
+}
+
+# Sixth Coalition
+country_event = {
+    id = pbf_revolution.6
+	title = pbf_revolution.6.t
+	desc = pbf_revolution.1.d
+	picture = REVOLUTION_eventPicture
+	
+	major = yes
+    fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "Emperor"
+		is_revolution_target = yes
+		is_bankrupt = no
+        is_at_war = no
+        had_global_flag = {
+            flag = fifth_coalition
+            days = 730
+        }
+	}
+
+	mean_time_to_happen = {
+		days = 730
+	}
+
+    # Here it comes AGAIN
+    option = {
+		name = pbf_revolution.1.A
+        every_country = {
+            limit = {
+                is_revolutionary = no
+                ai = no
+                is_subject = no
+                NOT = { alliance_with = ROOT }
+                NOT = {
+                    border_distance = {
+                        who = ROOT
+                        distance = 400
+                    }
+                }
+            }
+
+            form_coalition_against = ROOT
+        }	
+        set_global_flag = sixth_coalition
+	}
+}
+
+# Seventh Coalition
+country_event = {
+    id = pbf_revolution.7
+	title = pbf_revolution.7.t
+	desc = pbf_revolution.1.d
+	picture = REVOLUTION_eventPicture
+	
+	major = yes
+    fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "Emperor"
+		is_revolution_target = yes
+		is_bankrupt = no
+        is_at_war = no
+        had_global_flag = {
+            flag = sixth_coalition
+            days = 730
+        }
+	}
+
+	mean_time_to_happen = {
+		days = 730
+	}
+
+    # Here it comes AGAIN
+    option = {
+		name = pbf_revolution.1.A
+        every_country = {
+            limit = {
+                is_revolutionary = no
+                is_subject = no
+                NOT = { alliance_with = ROOT }
+                NOT = {
+                    border_distance = {
+                        who = ROOT
+                        distance = 400
+                    }
+                }
+            }
+
+            form_coalition_against = ROOT
+        }
+	}
+}
+

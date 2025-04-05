@@ -74,7 +74,7 @@ idea_variation_act_253 = {
 		full_idea_group = wehrpflicht0
 	}
 	
-	global_manpower_modifier = 0.25
+	global_manpower_modifier = 0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -208,7 +208,7 @@ idea_variation_act_314 = {
 		}
 	}
 	
-	global_manpower_modifier = 0.25
+	global_manpower_modifier = 0.1
 	
 	
 	ai_will_do = {

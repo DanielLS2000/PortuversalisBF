@@ -134,7 +134,7 @@ idea_variation_act_140 = {
 		full_idea_group = stehendesheer0
 	}
 	
-	global_manpower_modifier = 0.125
+	global_manpower_modifier = 0.1
 	
 	ai_will_do = {
 		factor = 1

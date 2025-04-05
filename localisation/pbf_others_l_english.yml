@@ -6,6 +6,7 @@
  AT_WAR: "We are too busy in this war and cannot risk angering ours valuable allies"
  PLAYER_MARCH: "Players cannot become marches"
  NOT_FRIEND: "[From.GetName] is not our ally there is no reason to spend money on then"
+ RECENT_GIFT: "[From.GetName] recently received a gift from us"
  empire_of_asia_discovery: "Glorius Empire"
  empire_of_asia_reformation: "Glorius Empire"
  empire_of_asia_absolutism: "Glorius Empire"

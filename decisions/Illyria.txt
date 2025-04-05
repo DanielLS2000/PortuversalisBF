@@ -15,6 +15,8 @@ country_decisions = {
 					area = rascia_area
 					area = serbia_area
 					area = carinthia_area
+					area = bulgaria_area
+					area = silistria_area
 				}
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
@@ -46,9 +48,21 @@ country_decisions = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				carinthia_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					carinthia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					AND = {
+						bulgaria_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						silistria_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
 				}
 			}
 			effect = {
