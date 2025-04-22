@@ -1337,13 +1337,13 @@ quantity_ideas = {
 	category = MIL
 
 	bonus = {
-		land_forcelimit_modifier  = 0.5
+		land_forcelimit_modifier  = 0.4
 	}
 	trigger = {
 		NOT = { has_idea_group = quality_ideas }
 	}
 	mass_army = {
-		global_manpower_modifier = 0.5
+		global_manpower_modifier = 0.4
 	}
 	the_young_can_serve = {
 		manpower_recovery_speed = 0.33

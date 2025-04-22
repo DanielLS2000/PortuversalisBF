@@ -143,5 +143,5 @@ Dreams_Of_Liberty = {
 		is_year = 1776
 	}
 
-	liberty_desire_from_subject_development = 2
+	liberty_desire_from_subject_development = 4
 }
