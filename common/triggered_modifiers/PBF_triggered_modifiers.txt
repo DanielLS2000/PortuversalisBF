@@ -145,3 +145,107 @@ Dreams_Of_Liberty = {
 
 	liberty_desire_from_subject_development = 4
 }
+
+# Revolutionary Bitch + Bonus
+revolutionary_weakling = {
+	potential = {
+		is_revolutionary = yes
+		total_development = 750
+	}
+	trigger = {
+		is_player = yes
+		is_revolution_target = no
+	}
+
+	land_morale = -0.1
+	naval_morale = -0.1
+	global_manpower_modifier = -0.1
+	land_maintenance_modifier = 0.15
+	naval_maintenance_modifier = 0.25
+}
+
+revolution_international_1 = {
+	potential = {
+		is_revolution_target = yes
+	}
+	trigger = {
+		calc_true_if = {
+			all_country = {
+				is_revolutionary = yes
+			}
+			amount = 2
+		}
+	}
+
+	land_forcelimit_modifier = 0.05
+	global_manpower_modifier = 0.05
+
+}
+
+revolution_international_2 = {
+	potential = {
+		is_revolution_target = yes
+	}
+	trigger = {
+		calc_true_if = {
+			all_country = {
+				is_revolutionary = yes
+			}
+			amount = 3
+		}
+	}
+
+	land_forcelimit_modifier = 0.05
+	global_manpower_modifier = 0.05
+}
+
+revolution_international_3 = {
+	potential = {
+		is_revolution_target = yes
+	}
+	trigger = {
+		calc_true_if = {
+			all_country = {
+				is_revolutionary = yes
+			}
+			amount = 4
+		}
+	}
+
+	land_forcelimit_modifier = 0.05
+	global_manpower_modifier = 0.05
+}
+
+revolution_international_4 = {
+	potential = {
+		is_revolution_target = yes
+	}
+	trigger = {
+		calc_true_if = {
+			all_country = {
+				is_revolutionary = yes
+			}
+			amount = 5
+		}
+	}
+
+	land_forcelimit_modifier = 0.05
+	global_manpower_modifier = 0.05
+}
+
+revolution_international_5 = {
+	potential = {
+		is_revolution_target = yes
+	}
+	trigger = {
+		calc_true_if = {
+			all_country = {
+				is_revolutionary = yes
+			}
+			amount = 6
+		}
+	}
+
+	land_forcelimit_modifier = 0.05
+	global_manpower_modifier = 0.05
+}

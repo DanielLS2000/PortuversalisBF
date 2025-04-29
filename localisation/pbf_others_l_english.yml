@@ -24,3 +24,9 @@
  road_marketplace_modifier: "Improved Trading Network"
 # Triggered Modifiers
  Professionalism_Decay: "Professionalism Decay"
+ revolutionary_weakling: "Revolution Minor"
+ revolution_international_1: "Weak Revolution"
+ revolution_international_2: "Rising Revolution"
+ revolution_international_3: "Moderate Revolution"
+ revolution_international_4: "Strong Revolution"
+ revolution_international_5: "Major Revolution"
