@@ -703,7 +703,7 @@ defensive_ideas = {
 		army_tradition_from_battle = 1.0
 	}
 	military_drill = {
-		land_morale = 0.15
+		land_morale = 0.1
 	}
 	improved_manuever = {
 		leader_land_manuever = 1
@@ -2186,99 +2186,5 @@ handel0 = { # Light ship
 				}
 			}
 		}
-	}
-}
-
-stehendesheer0 = { # Standing Army
-	category = MIL
-
-	bonus = {
-		drill_decay_modifier = -0.25
-	}
-		
-	trigger = {
-		NOT = {
-			has_idea_group = wehrpflicht0
-		}
-		adm_tech = 18
-	}
-	
-	stehendesheer1 = {
-		drill_gain_modifier = 0.25
-		army_tradition = 0.5
-		
-	}
-	stehendesheer2 = {
-		infantry_power = 0.1
-
-	}
-	stehendesheer3 = {
-		cavalry_power = 0.1
-	}
-
-	stehendesheer5 = {
-		artillery_power = 0.1
-	}
-	stehendesheer6 = {
-		land_attrition = -0.15
-		prestige_from_land = 1
-		
-	}
-	stehendesheer7 = {
-		siege_ability = 0.075
-		
-	}
-	
-	stehendesheer4 = {
-		morale_damage_received = -0.1
-	}
-	
-	ai_will_do = {
-		factor = 2.5
-	}
-}
-
-wehrpflicht0 = { # Conscription
-	category = MIL
-
-	bonus = {
-		manpower_recovery_speed = 0.2
-	}
-		
-	trigger = {
-		NOT = {
-			has_idea_group = stehendesheer0
-		}
-		adm_tech = 18
-	}
-	
-	wehrpflicht3 = {
-		reinforce_speed = 0.3
-	}
-	wehrpflicht1 = {
-		global_regiment_cost = -0.1
-	}
-
-	wehrpflicht4 = {
-		reinforce_cost_modifier = -0.25
-	}
-
-	wehrpflicht5 = {
-		global_regiment_recruit_speed = -0.25
-	}
-	wehrpflicht2 = {
-		global_manpower_modifier = 0.2
-	}
-	wehrpflicht7 = {
-		# You dont lose troops when disbanding
-		drill_decay_modifier = -0.25
-		may_return_manpower_on_disband = yes
-	}
-	wehrpflicht6 = {
-		recover_army_morale_speed = 0.15
-	}
-	
-	ai_will_do = {
-		factor = 2.5
 	}
 }
