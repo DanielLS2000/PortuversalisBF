@@ -660,3 +660,22 @@ reformer_state_reform = {
 		}
 	}
 }
+
+# Rev Nerf
+revolutionary_principle_reform = {
+	icon = "revolutionary_republic"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = yes
+		is_revolution_target = yes
+		has_dlc = "Emperor"
+	}
+	modifiers = {
+		rr_girondists_influence = 0.1
+		land_morale = 0.1
+		global_manpower_modifier = 0.15
+	}
+	ai = {
+		factor = 2
+	}
+}
