@@ -883,7 +883,7 @@ weapon_quality_standards = {
 		full_idea_group = quality_ideas
 	}
 	
-	morale_damage_received = -15%
+	morale_damage_received = -0.15
 	
 	effect = {}
 	removed_effect = {}

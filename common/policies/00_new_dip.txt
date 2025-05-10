@@ -144,8 +144,8 @@ foreign_guard_act = {
 		full_idea_group = sovereignty_ideas
 	}
 	
-	mercenary_discipline = 0.05
-	possible_mercenaries = 0.25
+	mercenary_discipline = 0.025
+	possible_mercenaries = 0.1
 	ai_will_do = {
 		factor = 1
 		modifier = {
