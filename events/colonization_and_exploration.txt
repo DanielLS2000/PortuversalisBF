@@ -112,23 +112,10 @@ country_event = {
 			which = maxNumOfSettlers	# maximum number of settlers of a country
 			which = numProvincesInStates
 		}
-		# AI Bonus
+
 		export_to_variable = {
 			which = numOfColonists	# current number of colonies
 			value = trigger_value:num_of_colonists
-		}
-		if = {
-			limit = {
-				ai = yes		# ai gets 500 extra settlers per each colonist
-			}
-			multiply_variable = {
-				which = numOfColonists
-				value = 500
-			}
-			change_variable = {
-				which = maxNumOfSettlers
-				which = numOfColonists
-			}
 		}
 
 		if = {
@@ -397,7 +384,10 @@ country_event = {
 			factor = 0.75
 			AND = {
 				capital_scope = {
-					region = iberia_region
+					OR = {
+						region = iberia_region
+						area = macaronesia_area
+					}
 				}
 				is_year = 1485
 			}
@@ -454,7 +444,10 @@ country_event = {
 			NOT = { tag = POR }
 			ROOT = {
 				capital_scope = {
-					region = iberia_region
+					OR = {
+						region = iberia_region
+						area = macaronesia_area
+					}
 				}
 			}
 		}
@@ -480,7 +473,7 @@ country_event = {
 		}
 		discover_province = 2659		
 		create_colony_mission_reward = {
-			province = 2659
+			province = 2659 # Magua - Hispaniola
 		}
 		add_country_modifier = {
 			name = colonial_enthusiasm
@@ -517,7 +510,7 @@ country_event = {
 			discover_province = 1596
 		}
 		create_colony_mission_reward = {
-			province = 757
+			province = 757 # Ilheus - Brazil
 		}
 		add_country_modifier = {
 			name = colonial_enthusiasm
@@ -559,7 +552,7 @@ country_event = {
 			discover_province = 1501		
 		}
 		create_colony_mission_reward = {
-			province = 932
+			province = 932 # Issati - South USA
 		}
 		add_country_modifier = {
 			name = colonial_enthusiasm
@@ -602,7 +595,7 @@ country_event = {
 			discover_province = 1564		
 		}
 		create_colony_mission_reward = {
-			province = 968
+			province = 968 # Massachussets - North USA
 		}
 		add_country_modifier = {
 			name = colonial_enthusiasm
@@ -646,7 +639,7 @@ country_event = {
 			discover_province = 1568
 		}
 		create_colony_mission_reward = {
-			province = 965
+			province = 965 # New York - North USA
 		}
 		add_country_modifier = {
 			name = colonial_enthusiasm
@@ -686,7 +679,7 @@ country_event = {
 			discover_province = 1498
 		}
 		create_colony_mission_reward = {
-			province = 980
+			province = 980 # Beothuk - NewFoundLand
 		}
 		add_country_modifier = {
 			name = colonial_enthusiasm
@@ -726,7 +719,7 @@ country_event = {
 			discover_province = 1596			
 		}
 		create_colony_mission_reward = {
-			province = 757
+			province = 831 # Caracas - Venezuela
 		}
 		add_country_modifier = {
 			name = colonial_enthusiasm
@@ -773,7 +766,7 @@ country_event = {
 			discover_province = 1568
 		}
 		create_colony_mission_reward = {
-			province = 965
+			province = 965 # Manhattan - North USA
 		}
 		add_country_modifier = {
 			name = colonial_enthusiasm

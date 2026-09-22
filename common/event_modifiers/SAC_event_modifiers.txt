@@ -2,18 +2,22 @@
 ##### Colonization Malus ####
 
 african_disease_modifier = {
-	local_colonial_growth = -200
+	local_colonial_growth = -400
+	colonist_placement_chance = -0.5
 	picture = "malaria_icon"
 }
 
 slow_colonization_modifier = {
-	local_colonial_growth = -50
+	local_colonial_growth = -100
+	colonist_placement_chance = -0.15
 }
 
 slower_colonization_modifier = {
-	local_colonial_growth = -75
+	local_colonial_growth = -150
+	colonist_placement_chance = -0.15
 }
 
 ultra_slower_colonization_modifier = {
-	local_colonial_growth = -150
+	local_colonial_growth = -200
+	colonist_placement_chance = -0.15
 }

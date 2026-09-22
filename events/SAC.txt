@@ -69,6 +69,7 @@ country_event = {
 				OR = {
 					region = great_plains_region
 					region = hudson_bay_region
+					region = cascadia_region
 				}
 				NOT = { area = james_bay_area }
 				NOT = { area = hudson_bay_area }
@@ -82,8 +83,8 @@ country_event = {
 		every_province = {
 			limit = {
 				OR = {
-					continent = oceania
-					region = cascadia_region
+					region = oceanea_region
+					region = australia_region
 					area = bahia_blanca_area
 					area = nehuenken_area
 					area = southern_chile_area
