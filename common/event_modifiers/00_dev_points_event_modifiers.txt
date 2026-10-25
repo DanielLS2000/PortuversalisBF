@@ -51,6 +51,6 @@ yearly_army_tradition_button_mod = {
 }
 
 yearly_innovativeness_button_mod = {
-	yearly_innovativeness = 0.25
+	yearly_innovativeness = 0.1
 	country_military_power = -1
 }

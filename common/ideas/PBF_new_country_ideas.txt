@@ -168,7 +168,10 @@ ILY_ideas = {
 	}
 	
 	trigger = {
-		tag = ILY
+		AND = {
+			tag = ILY
+			NOT = { was_tag = BSB }
+		}
 	}
 	free = yes
 	

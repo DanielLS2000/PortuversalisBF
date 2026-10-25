@@ -40,7 +40,7 @@
  yearly_army_tradition_disable_button:0 "Click to stop spending §Y1§! £mil£ per month to gain the following effects:\nYearly Army Tradition: §G+1.00§!"
  yearly_army_tradition_button_mod:0 "Reorganized Standing Army"
  yearly_innovativeness_loc:0 "§YSupport Freethinkers§!\n\n[Root.yearly_innovativeness_custom_loc]"
- yearly_innovativeness_enable_button:0 "Click to spend §Y1§! £mil£ per month to gain the following effects:\nYearly Innovativeness: §G+0.25§!\n\nLasts until disabled"
- yearly_innovativeness_disable_button:0 "Click to stop spending §Y1§! £mil£ per month to gain the following effects:\nYearly Innovativeness: §G+0.25§!"
+ yearly_innovativeness_enable_button:0 "Click to spend §Y1§! £mil£ per month to gain the following effects:\nYearly Innovativeness: §G+0.15§!\n\nLasts until disabled"
+ yearly_innovativeness_disable_button:0 "Click to stop spending §Y1§! £mil£ per month to gain the following effects:\nYearly Innovativeness: §G+0.15§!"
  yearly_innovativeness_button_mod:0 "Supported Freethinkers"
  
