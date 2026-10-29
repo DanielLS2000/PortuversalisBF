@@ -157,50 +157,6 @@ ARI_ideas = {
 	}
 }
 
-ILY_ideas = {
-	start = {
-		manpower_recovery_speed = 0.15
-		global_trade_power = 0.15
-	}
-	
-	bonus = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	
-	trigger = {
-		AND = {
-			tag = ILY
-			NOT = { was_tag = BSB }
-		}
-	}
-	free = yes
-	
-	ily_idea_1 = {
-		infantry_power = 0.15
-	}
-	ily_idea_2 = {
-		stability_cost_modifier = -0.25
-		global_unrest = -2
-	}
-	ily_idea_3 = {
-		num_accepted_cultures = 2
-	}
-	ily_idea_4 = {
-		years_of_nationalism = -10
-	}
-	ily_idea_5 = {
-		land_morale = 0.15
-	}
-	ily_idea_6 = {
-		global_sailors_modifier = 0.5
-		naval_forcelimit_modifier = 0.5
-	}
-	ily_idea_7 = {
-		tolerance_heretic = 3
-		tolerance_heathen = 3
-	}
-}
-
 ZPD_ideas = {
 	start = {
 		shock_damage = 0.15
