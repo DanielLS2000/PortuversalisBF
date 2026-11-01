@@ -570,95 +570,6 @@ colonial_garrisons = {
 	}
 }
 
-the_maritime_intelligencer_unit = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = naval_ideas
-		has_idea_group = spy_ideas
-	}
-	
-	allow = {
-		full_idea_group = naval_ideas
-		full_idea_group = spy_ideas
-	}	
-	
-	siege_blockade_progress = 1
-	global_naval_engagement_modifier = 0.1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { num_of_heavy_ship = 10 }
-		}
-	}
-}
-
-the_nautic_education_act = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = naval_ideas
-		has_idea_group = innovativeness_ideas
-	}
-	
-	allow = {
-		full_idea_group = naval_ideas
-		full_idea_group = innovativeness_ideas
-	}	
-	
-	recover_navy_morale_speed = 0.15
-	leader_naval_fire = 1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 10 }
-		}
-		modifier = {
-			factor = 0.6
-			NOT = { navy_size = 20 }
-		}
-	}
-}
-
-zealous_captains = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = naval_ideas
-		has_idea_group = religious_ideas
-	}
-	
-	allow = {
-		full_idea_group = naval_ideas
-		full_idea_group = religious_ideas
-	}	
-	
-	sunk_ship_morale_hit_recieved = -0.10
-	leader_naval_shock = 1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 10 }
-		}
-		modifier = {
-			factor = 0.6
-			NOT = { navy_size = 20 }
-		}
-	}
-}
-
 autonomous_estates = {
 	monarch_power = MIL
 	
@@ -724,33 +635,6 @@ inspirational_leaders = {
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
-		}
-	}
-}
-
-the_naval_inspection_act = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = humanist_ideas
-		has_idea_group = naval_ideas
-	}
-	
-	allow = {
-		full_idea_group = humanist_ideas
-		full_idea_group = naval_ideas
-	}	
-	
-	ship_durability = 0.05
-	recover_navy_morale_speed = 0.1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.8
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 20 }
 		}
 	}
 }
@@ -1559,29 +1443,6 @@ mass_conscription_act = {
 	}
 }
 
-naval_armament_act = { 
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = infrastructure_ideas
-		has_idea_group = naval_ideas 
-	}
-	
-	allow = {
-		full_idea_group = infrastructure_ideas
-		full_idea_group = naval_ideas 
-	}
-	
-	global_ship_recruit_speed = -0.25
-	movement_speed_in_fleet_modifier = 1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
 mercenary_tactical_movement_act = { 
 	monarch_power = MIL
 	
@@ -1736,29 +1597,6 @@ plentiful_materials_act = {
 	
 	artillery_cost = -0.15
 	infantry_cost = -0.1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-naval_competence_act = { 
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = court_ideas
-		has_idea_group = naval_ideas  
-	}
-	
-	allow = {
-		full_idea_group = court_ideas
-		full_idea_group = naval_ideas 
-	}
-	
-	leader_naval_manuever = 1 
-	leader_naval_fire = 1 
 
 	effect = {}
 	removed_effect = {}

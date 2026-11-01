@@ -944,7 +944,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
-			economic_ideas = 1
+			has_idea_group = economic_ideas
 		}
 	}
 

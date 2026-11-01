@@ -1310,13 +1310,6 @@ dom_cas_missions_2_b = {
 					}
 				}
 				AND = {
-					full_idea_group = naval_ideas 
-					num_of_owned_provinces_with = {
-						has_shipyard_building_trigger = yes 
-						value = 25 
-					}
-				}
-				AND = {
 					full_idea_group = trade_ideas 
 					num_of_owned_provinces_with = {
 						has_trade_building_trigger = yes 

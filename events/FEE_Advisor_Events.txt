@@ -8,6 +8,7 @@ country_event = {
 	picture = CITY_VIEW_eventPicture
 
 	trigger = {
+		ai = no
 		OR = {
 			advisor = treasurer
 			advisor = master_of_mint
@@ -33,6 +34,7 @@ country_event = {
 	picture = ADVISOR_eventPicture
 
 	trigger = {
+		ai = no
 		OR = {
 			advisor = treasurer
 			advisor = master_of_mint
@@ -105,6 +107,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_monumental_suggestion_active
 	}
 
@@ -143,6 +146,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_monumental_suggestion_active
 	}
 
@@ -244,6 +248,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_monumental_suggestion_active
 	}
 
@@ -288,6 +293,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_monumental_suggestion_active
 	}
 
@@ -332,6 +338,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_monumental_suggestion_active
 	}
 
@@ -376,6 +383,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_monumental_suggestion_active
 	}
 
@@ -452,6 +460,7 @@ country_event = {
 	picture = NEW_HEIR_eventPicture
 
 	trigger = {
+		ai = no
 		OR = {
 			advisor = treasurer
 			advisor = master_of_mint
@@ -498,6 +507,7 @@ country_event = {
 	picture = CITY_VIEW_eventPicture
 
 	trigger = {
+		ai = no
 		OR = {
 			advisor = treasurer
 			advisor = master_of_mint
@@ -534,6 +544,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_a_full_days_work_active
 	}
 
@@ -572,6 +583,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_a_full_days_work_active
 	}
 
@@ -622,6 +634,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_a_full_days_work_active
 	}
 
@@ -666,6 +679,7 @@ country_event = {
 	picture = CITY_VIEW_eventPicture
 
 	trigger = {
+		ai = no
 		OR = {
 			advisor = statesman
 			advisor = diplomat
@@ -736,6 +750,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_student_of_language_active
 	}
 
@@ -785,6 +800,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_student_of_language_active
 	}
 
@@ -846,6 +862,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_student_of_language_active
 	}
 
@@ -872,6 +889,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_student_of_language_active
 	}
 
@@ -897,6 +915,7 @@ country_event = {
 	picture = CITY_VIEW_eventPicture
 
 	trigger = {
+		ai = no
 		OR = {
 			advisor = statesman
 			advisor = diplomat
@@ -934,6 +953,7 @@ country_event = {
 	picture = CITY_VIEW_eventPicture
 
 	trigger = {
+		ai = no
 		OR = {
 			advisor = army_reformer
 			advisor = army_organiser
@@ -975,6 +995,7 @@ country_event = {
 	picture = CITY_VIEW_eventPicture
 
 	trigger = {
+		ai = no
 		OR = {
 			advisor = army_reformer
 			advisor = army_organiser
@@ -1025,6 +1046,7 @@ country_event = {
 	picture = CITY_VIEW_eventPicture
 
 	trigger = {
+		ai = no
 		OR = {
 			advisor = army_reformer
 			advisor = army_organiser
@@ -1077,6 +1099,7 @@ country_event = {
 	picture = CITY_VIEW_eventPicture
 
 	trigger = {
+		ai = no
 		OR = {
 			advisor = army_reformer
 			advisor = army_organiser
@@ -1132,6 +1155,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_the_brilliant_inventor_active
 	}
 
@@ -1153,6 +1177,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_the_brilliant_inventor_active
 	}
 
@@ -1174,6 +1199,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_the_brilliant_inventor_active
 	}
 
@@ -1253,6 +1279,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		ai = no
 		has_country_flag = fee_events_for_the_brilliant_inventor_active
 	}
 

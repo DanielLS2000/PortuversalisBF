@@ -181,37 +181,29 @@ province_event = {
 			}
 		}
 		### development ###
-		modifier = { # slow conversion if low base tax (sparse population)
-			factor = 1.7
-			NOT = {
-				development = 7
-			}
-			NOR = {
-				NOT = {
-					owner = { 
-						government = tribal 
-						has_reform = steppe_horde
-					}
-				}
-				AND = { # NOT for nomade-type lands iff nomade
-					NOT = {
-						owner = { 
-							government = tribal
-							has_reform = steppe_horde
-						}
-					}
-					OR = {
-						has_terrain = farmlands 
-						has_terrain = grasslands 
-						has_terrain = drylands 
-						has_terrain = savannah 
-						has_terrain = steppe 
-						has_terrain = desert 
-						has_terrain = coastal_desert 
-					}
-				}
-			}
-		}
+        modifier = { # slow conversion if low base tax (sparse population)
+            factor = 1.7
+            NOT = {
+                development = 7
+            }
+            NOT = {
+                AND = {
+                    owner = { 
+                        government = tribal 
+                        has_reform = steppe_horde
+                    }
+                    OR = {
+                        has_terrain = farmlands 
+                        has_terrain = grasslands 
+                        has_terrain = drylands 
+                        has_terrain = savannah 
+                        has_terrain = steppe 
+                        has_terrain = desert 
+                        has_terrain = coastal_desert 
+                    }
+                }
+            }
+        }
 		modifier = { # slower conversion if high development (high population)
 			factor = 1.3
 			development = 16
@@ -230,22 +222,26 @@ province_event = {
 			NOT = { # with high development it canNOT really be considered remote anymore
 				development = 12
 			}
-			NOR = {
-				has_terrain = glacier
-				has_terrain = hills
-				has_terrain = mountain
-				has_terrain = jungle
-				has_terrain = marsh
-				AND = {
-					OR = {
-						has_terrain = savannah
-						has_terrain = desert
-						has_terrain = coastal_desert
-					}
-					NOT = {
+			NOT = {
+				OR = {
+					has_terrain = glacier
+					has_terrain = hills
+					has_terrain = mountain
+					has_terrain = jungle
+					has_terrain = marsh
+					AND = {
+						OR = {
+							has_terrain = savannah
+							has_terrain = desert
+							has_terrain = coastal_desert
+						}
 						owner = { 
-							government = tribal
-							has_reform = steppe_horde
+							NOT = {
+								AND = {
+									government = tribal
+									has_reform = steppe_horde
+								}
+							}
 						}
 					}
 				}
@@ -254,22 +250,26 @@ province_event = {
 		modifier = { # quite slow conversion if a little remote (medium development, +4 supply)
 			factor = 1.35 # half of the above
 			base_tax = 12
-			NOR = {
-				has_terrain = glacier
-				has_terrain = hills
-				has_terrain = mountain
-				has_terrain = jungle
-				has_terrain = marsh
-				AND = {
-					OR = {
-						has_terrain = savannah
-						has_terrain = desert
-						has_terrain = coastal_desert
-					}
-					NOT = {
+			NOT = {
+				OR = {
+					has_terrain = glacier
+					has_terrain = hills
+					has_terrain = mountain
+					has_terrain = jungle
+					has_terrain = marsh
+					AND = {
+						OR = {
+							has_terrain = savannah
+							has_terrain = desert
+							has_terrain = coastal_desert
+						}
 						owner = { 
-							government = tribal
-							has_reform = steppe_horde
+							NOT = {
+								AND = {
+									government = tribal
+									has_reform = steppe_horde
+								}
+							}
 						}
 					}
 				}

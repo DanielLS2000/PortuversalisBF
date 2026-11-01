@@ -601,7 +601,6 @@ country_event = {
 			factor = 0.8
 			OR = {
 				has_idea_group = maritime_ideas
-				has_idea_group = naval_ideas
 			}
 		}
 		modifier = {

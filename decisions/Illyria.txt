@@ -5,6 +5,7 @@ country_decisions = {
 			potential = {
 				culture_group = south_slavic
 				NOT = { exists = ILY }
+				NOT = { has_country_flag = formed_illyria }
 			}
 			provinces_to_highlight = {
 				OR = {
@@ -66,6 +67,7 @@ country_decisions = {
 				}
 			}
 			effect = {
+				set_country_flag = formed_illyria
 				change_tag = ILY
 				add_prestige = 50
 				IF = {
