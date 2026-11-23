@@ -11,7 +11,7 @@ NDefines.NEconomy.DEBASE_MAX_CORRUPTION = 15
 -- Alliances
 NDefines.NDiplomacy.CHANGE_RIVAL_YEARS = 3
 NDefines.NDiplomacy.CALL_ALLY_DECLINE_PRESTIGE_PENALTY = -10
-NDefines.NDiplomacy.DISINHERIT_PRESTIGE_HIT = -25
+NDefines.NCountry.DISINHERIT_PRESTIGE_HIT = -25
 NDefines.NDiplomacy.MIN_RELATIONS_TO_ALLY = -50 -- You can hate then a little more
 -- Increased AE from provinces development
 NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.8 -- default is 0.6

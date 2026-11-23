@@ -1,0 +1,72 @@
+country_decisions = {
+
+	remove_sac_colonization_modifiers = {
+		major = yes
+		
+		# A decisão aparece se o país possuir qualquer província (mesmo colônia em andamento) com um dos modificadores
+		potential = {
+			any_owned_province = {
+				OR = {
+					has_province_modifier = slow_colonization_modifier
+					has_province_modifier = slower_colonization_modifier
+					has_province_modifier = ultra_slower_colonization_modifier
+				}
+			}
+            NOT = { technology_group = south_american }
+			NOT = { technology_group = north_american }
+            NOT = { technology_group = mesoamerican }
+			NOT = { technology_group = aboriginal_tech }
+			NOT = { technology_group = polynesian_tech }
+		}
+
+		# Destaca no mapa as províncias que já cumprem os requisitos para perder o modificador
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				has_province_modifier = slow_colonization_modifier
+				has_province_modifier = slower_colonization_modifier
+				has_province_modifier = ultra_slower_colonization_modifier
+			}
+		}
+
+		# Pode ser tomada se houver pelo menos uma província totalmente colonizada, com a cultura e religião do dono
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = SAC_allow_remove_modifiers_tt
+				any_owned_province = {
+					is_city = yes
+					has_owner_culture = yes
+					has_owner_religion = yes
+					OR = {
+						has_province_modifier = slow_colonization_modifier
+						has_province_modifier = slower_colonization_modifier
+						has_province_modifier = ultra_slower_colonization_modifier
+					}
+				}
+			}
+		}
+
+		# Remove os modificadores apenas das províncias que cumprem todos os requisitos
+		effect = {
+			every_owned_province = {
+				limit = {
+					is_city = yes
+					has_owner_culture = yes
+					has_owner_religion = yes
+					OR = {
+						has_province_modifier = slow_colonization_modifier
+						has_province_modifier = slower_colonization_modifier
+						has_province_modifier = ultra_slower_colonization_modifier
+					}
+				}
+				remove_province_modifier = slow_colonization_modifier
+				remove_province_modifier = slower_colonization_modifier
+				remove_province_modifier = ultra_slower_colonization_modifier
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

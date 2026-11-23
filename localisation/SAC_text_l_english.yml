@@ -16,3 +16,7 @@
  SAC_malaria.3.t:0 "Africans Declare Independence"
  SAC_malaria.3.d:0 "The african people have revolted against our rule, governing them is too expensive so we will just let them be."
  SAC_malaria.3.a:0 "I'll be back!"
+
+ remove_sac_colonization_modifiers_title:0 "Integrate Inhospitable Territories"
+ remove_sac_colonization_modifiers_desc:0 "With the permanent establishment of our colonists, our faith, and customs in new lands, we can finally overcome the natural barriers and local diseases that hindered our administration."
+ SAC_allow_remove_modifiers_tt:0 "Has at least one province fully colonized with our Primary Culture, Official Religion, and a modifier of slow colonization."
